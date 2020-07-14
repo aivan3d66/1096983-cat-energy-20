@@ -1,8 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ivan Adamouski](https://up.htmlacademy.ru/adaptive/20/user/1096983).
-* Наставник: [Александр Григорьев]
-(https://htmlacademy.ru/profile/id43108).
+* Наставник: [Александр Григорьев](https://htmlacademy.ru/profile/id43108).
 
 ---
 
