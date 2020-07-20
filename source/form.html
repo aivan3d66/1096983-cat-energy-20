@@ -6,19 +6,17 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-logo">
-        <a class="page-logo__icon">
-          <img src="https://via.placeholder.com/150x150" alt="Логотип Cat Energy">
-        </a>
-        <a class="page-logo__name">
-          <img src="https://via.placeholder.com/150x150" alt="Название магазина">
+      <div class="page-header__logo">
+        <a class="page-header__logo-link">
+          <img class="page-header__logo-icon" src="https://via.placeholder.com/150x150" alt="Логотип Cat Energy">
+          <img class="page-header__logo-name" src="https://via.placeholder.com/150x150" alt="Название магазина">
         </a>
       </div>
       <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <ul class="main-nav__list">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
           <li class="main-nav__item">
             <a href="index.html">Главная</a>
           </li>
@@ -26,18 +24,18 @@
             <a href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item main-nav__item--active">
-            <a href="form.html">Подбор программы</a>
+            <a href="#">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="page-content">
-
+      <h1 class="visually-hiddeb">Cat Energy - интернет-магазин функционального питания для котов</h1>
     </main>
 
     <footer class="page-footer">
-      <a href="index.html" class="page-footer__logo">
+      <a class="page-footer__logo" href="index.html">
         <img src="https://via.placeholder.com/150x150" alt="Название магазина">
       </a>
       <div class="page-footer__social social">
