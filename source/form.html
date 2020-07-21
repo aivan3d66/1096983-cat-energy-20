@@ -32,6 +32,88 @@
 
     <main class="page-content">
       <h1 class="visually-hiddeb">Cat Energy - интернет-магазин функционального питания для котов</h1>
+
+      <section class="program">
+        <h2 class="section__title program__main-title">Подбор программы</h2>
+        <p class="program__lead">
+          Заполните анкету, и мы подберем программу питания для вашего кота
+        </p>
+        <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="program-form__item">
+            <p class="program__cat-characters">
+              <label for="cat__name">Имя:*</label>
+              <input type="text" id="cat__name" name="name" placeholder="Барсик" maxlength="20">
+            </p>
+            <p class="program__cat-characters">
+              <label for="cat__weigth">Вес (кг):*</label>
+              <input type="number" id="cat__weigth" name="text" placeholder="7" maxlength="2">
+            </p>
+            <p class="program__cat-characters">
+              <label for="cat__age">Возраст (лет):*</label>
+              <input type="number" id="cat__age" name="text" placeholder="7" maxlength="2">
+            </p>
+          </div>
+          <div class="program-form__item">
+            <p class="program__weigth">
+              <label for="slim">Похудение</label>
+              <input class="visually-hidden filter-input-radio" id="slim" type="radio" name="Похудение" checked>
+            </p>
+            <p class="program__weigth">
+              <label for="fat">Набор массы</label>
+              <input class="visually-hidden filter-input filter-input-radio" id="fat" type="radio" name="набор массы">
+            </p>
+            <p class="program__weigth">
+              <label for="unknown">Не знаю (Нужен ваш совет)</label>
+              <input class="visually-hidden filter-input filter-input-radio" id="unknown" type="radio" name="Не знаю">
+            </p>
+          </div>
+          <div class="program-form__item">
+            <h3 class="program__item-title">Контактные данные (владельца кота)</h3>
+            <p class="program__user-contacts">
+              <label for="user-mail">E-mail:*</label>
+              <input type="email" id="user-mail" name="text" placeholder="kuklachev@gmail.com" maxlength="30">
+            </p>
+            <p class="program__user-contacts">
+              <label for="user-phone">Телефон:*</label>
+              <input type="tel" id="user-phone" name="text" placeholder="8 (960) 900-60-90" maxlength="15">
+            </p>
+          </div>
+          <div class="program-form__item">
+            <h3 class="program__item-title">Комментарий</h3>
+            <textarea class="program-form__comment" cols="30" rows="10"  placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+          <div class="program-form__item">
+            <h3 class="program__item-title">Дополнительно</h3>
+            <p class="program__filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" id="filter-splenda" type="checkbox" name="Сахарохзаменитель" checked>
+              <label for="filter-splenda">Сахарохзаменитель</label>
+            </p>
+            <p class="program__filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" id="filter-water" type="checkbox" name="Питьевая вода" >
+              <label for="filter-water">Питьевая вода</label>
+            </p>
+            <p class="program__filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" id="filter-milk"  type="checkbox" name="Молоко">
+              <label for="filter-milk">Молоко</label>
+            </p>
+            <p class="program__filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" id="filter-vitamines" type="checkbox" name="Витамины" >
+              <label for="filter-vitamines">Витамины</label>
+            </p>
+          </div>
+          <button class="btn program-form__button" type="submit">Отправить заявку</button>
+        </form>
+        <small class="program-form__legend">
+        * — Обязательные поля
+        </small>
+      </section>
+
+      <section class="contacts">
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="940" height="436" allowfullscreen></iframe>
+      </section>
     </main>
 
     <footer class="page-footer">
