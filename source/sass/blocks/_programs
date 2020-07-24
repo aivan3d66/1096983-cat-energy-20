@@ -1,0 +1,10 @@
+.programs {
+	padding: 0 20px;
+	margin: 0 auto;
+
+	border: 2px solid red;
+}
+
+.programs__item {
+	background-color: $special_gray;
+}

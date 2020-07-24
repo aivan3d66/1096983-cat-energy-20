@@ -1,0 +1,13 @@
+.additional-goods {
+	padding: 0 20px;
+	margin: 0 auto;
+
+	border: 2px solid red;
+}
+
+.additional-goods__promotion {
+	background-image: url("../../img/gift-photo-mobile@1x.jpg");
+	background-color: $basic_green;
+	background-size: 280px 289px;
+	background-repeat: no-repeat;
+}

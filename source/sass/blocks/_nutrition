@@ -1,0 +1,10 @@
+.nutrition {
+	margin: 0 auto;
+	padding: 0 20px;
+
+	background-image: url("../../img/index-background-mobile@1x.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	border: 2px solid red;
+}
