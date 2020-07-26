@@ -1,1 +1,17 @@
-// Начните писать стили здесь
+/* Файловая структура проекта */
+
+@import 'base/_typography';
+@import 'base/_reset';
+@import 'components/_buttons';
+@import 'blocks/_page-content';
+@import 'blocks/_page-header';
+@import 'blocks/_nutrition';
+@import 'blocks/_programs';
+@import 'blocks/_explanation';
+@import 'blocks/_example';
+@import 'blocks/_contacts';
+@import 'blocks/_page-footer';
+@import 'blocks/_catalog';
+@import 'blocks/_product-card';
+@import 'blocks/_additional-goods';
+@import 'blocks/_program';
