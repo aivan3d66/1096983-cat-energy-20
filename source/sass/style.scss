@@ -1,17 +1,67 @@
 /* Файловая структура проекта */
 
-@import 'base/_typography';
-@import 'base/_reset';
-@import 'components/_buttons';
-@import 'blocks/_page-content';
-@import 'blocks/_page-header';
-@import 'blocks/_nutrition';
-@import 'blocks/_programs';
-@import 'blocks/_explanation';
-@import 'blocks/_example';
-@import 'blocks/_contacts';
-@import 'blocks/_page-footer';
-@import 'blocks/_catalog';
-@import 'blocks/_product-card';
-@import 'blocks/_additional-goods';
-@import 'blocks/_program';
+@import 'fonts';
+@import 'scaffolding';
+@import 'blocks/page-content';
+@import 'blocks/page-header';
+@import 'blocks/nutrition';
+@import 'blocks/programs';
+@import 'blocks/explanation';
+@import 'blocks/example';
+@import 'blocks/contacts';
+@import 'blocks/page-footer';
+@import 'blocks/catalog';
+@import 'blocks/product-card';
+@import 'blocks/additional-goods';
+@import 'blocks/program';
+
+// Цветовая палитра
+
+  $basic_black: #000000;
+  $basic_white: #ffffff;
+  $basic_green: #68B738;
+  $basic_gray: #F2F2F2;
+  $special_gray: #EAEAEA;
+  $special_dark-gray: #444444;
+  $special_dark-gray-2: #222222;
+  $status_error: #FF8282;
+
+// Шрифты
+
+  $basic_font: "Oswald", sans-serif;
+  $additional_font: "Arial", sans-serif;
+
+// Стилизация кнопок
+
+.btn {
+  padding: 30px 10px;
+  display: block;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #ffffff;
+  background-color: $basic_green;
+}
+
+.catalog__button--gray {
+	color: #000000;
+
+	background-color: $basic_gray;
+}
+
+.program-form__button {
+  width: 100%;
+  margin-bottom: 70px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border-style: none;
+}
