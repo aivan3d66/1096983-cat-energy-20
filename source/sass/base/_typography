@@ -14,7 +14,7 @@
   $basic_font: "Oswald", sans-serif;
   $additional_font: "Arial", sans-serif;
 
-// Стилизация текстового содержимого
+// Стилизация текстового содержимого главной страницы
 
 .nutrition__title {
   font-weight: normal;
@@ -131,6 +131,8 @@
   line-height: 12px;
 }
 
+// Стилизация содержимого странийца каталога
+
 .catalog__main-title {
   font-weight: normal;
   font-size: 36px;
@@ -175,7 +177,7 @@
 }
 
 .additional-goods__title {
-  font-weight: 500;
+  font-weight: normal;
   font-size: 24px;
   line-height: 100%;
   text-align: center;
@@ -204,4 +206,39 @@
   font-size: 16px;
   line-height: 125%;
   color: $basic_white;
+}
+
+// Стилизация текстового содержимого страницы формы
+
+.program__main-title {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.program__lead {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__item label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__item input,
+.program-form__item textarea {
+  font-family: "Oswald";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program__item-title {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
 }

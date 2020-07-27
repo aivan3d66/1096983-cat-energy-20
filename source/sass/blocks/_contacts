@@ -4,3 +4,7 @@
 
 	border: 2px solid red;
 }
+
+.contacts--gray {
+	background-color: $basic_gray;
+}

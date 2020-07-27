@@ -18,3 +18,15 @@
 
 	background-color: $basic_gray;
 }
+
+.program-form__button {
+  width: 100%;
+  margin-bottom: 70px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border-style: none;
+}
