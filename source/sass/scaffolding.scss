@@ -14,7 +14,49 @@
   $basic_font: "Oswald", sans-serif;
   $additional_font: "Arial", sans-serif;
 
-// Стилизация текстового содержимого
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $basic_black;
+
+  background-color: $basic_white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $basic_black;
+}
+
+// Стилизация текстового содержимого главной страницы
 
 .nutrition__title {
   font-weight: normal;
@@ -72,10 +114,33 @@
   line-height: 129%;
 }
 
-.example__toggle {
+.example__food-cost {
+  font-style: normal;
   font-weight: normal;
-  font-size: 4em;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 143%;
+}
+
+.example__achievement dt {
+  font-family: $basic_font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.example__achievement dd {
+  font-family: $additional_font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.example__toggle span {
+  font-size: 16px;
+  line-height: 125%;
 }
 
 .example__food-cost {
@@ -107,29 +172,7 @@
   line-height: 18px;
 }
 
-.example__food-cost {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 143%;
-}
-
-.example__achievement dt {
-  font-family: $basic_font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 24px;
-  text-transform: uppercase;
-}
-
-.example__achievement dd {
-  font-family: $additional_font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 12px;
-}
+// Стилизация содержимого странийца каталога
 
 .catalog__main-title {
   font-weight: normal;
@@ -175,7 +218,7 @@
 }
 
 .additional-goods__title {
-  font-weight: 500;
+  font-weight: normal;
   font-size: 24px;
   line-height: 100%;
   text-align: center;
@@ -204,4 +247,39 @@
   font-size: 16px;
   line-height: 125%;
   color: $basic_white;
+}
+
+// Стилизация текстового содержимого страницы формы
+
+.program__main-title {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.program__lead {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__item label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__item input,
+.program-form__item textarea {
+  font-family: "Oswald";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program__item-title {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
 }
