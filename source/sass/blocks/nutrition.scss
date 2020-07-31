@@ -1,10 +1,91 @@
+// Вьюпорты
+
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1140px;
+
 .nutrition {
 	margin: 0 auto;
 	padding: 0 20px;
+	max-width: 1440px;
+	text-align: center;
 
-	background-image: url("../../img/index-background-mobile@1x.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
 
 	border: 2px solid red;
+}
+
+@media (max-width: $mobile-width-only) {
+  .nutrition {
+    margin: 0 auto;
+
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-position: top;
+    background-size: 320px 305px;
+    background-repeat: no-repeat;
+
+    border: 2px solid red;    
+  }
+
+  .nutrition__title {
+    max-width: 300px;
+    margin: 60px auto 0 auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition {
+    padding: 60px 190px 550px 160px;
+
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 709px 609px;
+    background-position: 90px 300px;
+
+    z-index: -1;
+  }
+
+  .nutrition__title {
+    width: 414px;
+    margin: 40px 0;
+
+    text-align: left;
+    font-size: 60px;
+    line-height: 100%;
+    color: #000000;
+  }
+
+  .nutrition__lead {
+    padding: 0 0 50px 0;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 100%;
+    color: #000000;
+    text-align: left;
+  }
+
+  .nutrition img {
+    display: none;
+  }
+
+  .nutrition__button {
+    width: 244px;
+    padding: 14px 26px;
+
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition {
+    position: relative;
+    padding: 150px 110px 250px 110px;;
+    border: 2px solid red;
+
+    background-image: url("../img/index-can-desktop@1x.png");
+    background-position: 500px 40px;
+    z-index: 1;
+  }
 }

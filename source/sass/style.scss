@@ -15,27 +15,34 @@
 @import 'blocks/additional-goods';
 @import 'blocks/program';
 
+// Вьюпорты
+
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
 // Цветовая палитра
 
-  $basic_black: #000000;
-  $basic_white: #ffffff;
-  $basic_green: #68B738;
-  $basic_gray: #F2F2F2;
-  $special_gray: #EAEAEA;
-  $special_dark-gray: #444444;
-  $special_dark-gray-2: #222222;
-  $status_error: #FF8282;
+$basic_black: #000000;
+$basic_white: #ffffff;
+$basic_green: #68B738;
+$basic_gray: #F2F2F2;
+$special_gray: #EAEAEA;
+$special_gray-2: #D9D9D9;
+$special_dark-gray: #444444;
+$special_dark-gray-2: #222222;
+$status_error: #FF8282;
 
 // Шрифты
 
-  $basic_font: "Oswald", sans-serif;
-  $additional_font: "Arial", sans-serif;
+$basic_font: "Oswald", sans-serif;
+$additional_font: "Arial", sans-serif;
 
 // Стилизация кнопок
 
 .btn {
-  padding: 30px 10px;
   display: block;
+  padding: 15px 10px;
 
   font-style: normal;
   font-weight: normal;
@@ -45,23 +52,151 @@
   text-align: center;
 
   color: #ffffff;
-  background-color: $basic_green;
+  background-color: #68B738;
+
+  &:hover,
+  &:focus {
+  background-color: #5EAA2F;
+  }
+
+  &:active {
+  color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .catalog__button--gray {
-	color: #000000;
+  background-color: #F2F2F2;
+  color:  #000000;
 
-	background-color: $basic_gray;
+  &:hover,
+  &:focus {
+    background-color: #EBEBEB;
+    color:  #000000;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .program-form__button {
   width: 100%;
   margin-bottom: 70px;
+
   font-family: "Oswald";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
   border-style: none;
+}
+
+// Гамбургер
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 100px;
+
+  width: 50px;
+  margin: 0 auto;
+}
+
+.hamburger {
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  right: -100px;
+  top: 15px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 9px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+.hamburger2 .bar2,
+.hamburger3 .bar3,
+.hamburger4 .bar4 {
+  top: 9px;
+}
+
+.hamburger4 .bar5 {
+  bottom: 0px;
+}
+
+.hamburger4 .bar {
+  transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s;
+}
+
+.hamburger4 .bar2 {
+  width: 1px;
+  transform: rotate(90deg);
+  left: 13.5px;
+}
+
+.hamburger4 .bar3 {
+  width: 1px;
+  left: 13.5px;
+
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar1{
+  transform: rotate(45deg);
+  transform-origin: 5%;
+  width: 28px;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar2 {
+  transform: translateX(-40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar3 {
+  transform: translateX(40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar4 {
+  transform-origin: 5%;
+  transform: rotate(-45deg);
+  width: 28px;
 }

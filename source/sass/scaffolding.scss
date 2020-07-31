@@ -1,18 +1,19 @@
 // Цветовая палитра
 
-  $basic_black: #000000;
-  $basic_white: #ffffff;
-  $basic_green: #68B738;
-  $basic_gray: #F2F2F2;
-  $special_gray: #EAEAEA;
-  $special_dark-gray: #444444;
-  $special_dark-gray-2: #222222;
-  $status_error: #FF8282;
+$basic_black: #000000;
+$basic_white: #ffffff;
+$basic_green: #68B738;
+$basic_gray: #F2F2F2;
+$special_gray: #EAEAEA;
+$special_dark-gray-2: #222222;
+$special_dark-gray: #444444;
+$special_dark-gray-2: #222222;
+$status_error: #FF8282;
 
 // Шрифты
 
-  $basic_font: "Oswald", sans-serif;
-  $additional_font: "Arial", sans-serif;
+$basic_font: "Oswald", sans-serif;
+$additional_font: "Arial", sans-serif;
 
 html {
   box-sizing: border-box;
@@ -179,7 +180,7 @@ a {
   font-size: 36px;
   line-height: 100%;
 
-  text-align: center;
+  text-align: left;
 }
 
 .product-card__title {
