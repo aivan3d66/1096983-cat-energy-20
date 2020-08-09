@@ -1,13 +1,254 @@
-.additional-goods {
-	padding: 0 20px;
-	margin: 0 auto;
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
 
-	border: 2px solid red;
+.additional-goods {
+	padding: 20px 20px;
+	margin: 0 auto;
+	max-width: 1440px;
+	min-width: 320px;
+	
+	border: 1px solid red;
 }
 
 .additional-goods__promotion {
 	background-image: url("../../img/gift-photo-mobile@1x.jpg");
 	background-color: $basic_green;
-	background-size: 280px 289px;
+	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+
+@media (max-width: $mobile-width-only) {
+	.additional-goods__item {
+		padding: 20px 0 20px 0;
+		border-bottom: 1px solid #C0C0C0;
+	}
+
+	.additional-goods__title {
+		margin: 0;
+		padding: 20px 20px 35px 0;
+
+		border-bottom: 1px solid #C0C0C0;
+	}
+
+	.additional-goods__item-title {
+		margin: 0;
+		padding: 0 10px 15px 0;
+	}
+
+	.additional-goods__composition {
+		margin: 0;
+		padding: 0 10px 15px 0;
+		width: 100%;
+
+		td:nth-child(2) {
+			text-align: right;
+		}
+	}
+
+	.additional-goods__promotion {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+
+		text-align: center;
+
+		min-height: 289px;
+		background-image: url("../img/gift-photo-mobile@1x.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	 
+		svg  {
+		position: relative;
+		top: 50%;
+		width: 80px;
+		height: 80px;
+
+		margin: 0 auto;
+		fill: #ffffff;
+	 }
+
+		p {
+			padding: 20px;
+	 }
+ }
+}
+
+@media (min-width: $tablet-width) {
+	.additional-goods {
+		padding: 0 30px;
+	}
+
+	.additional-goods__item {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+
+		padding: 37px;
+		width: 100%;
+
+		border: 1px solid #C0C0C0;
+
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3) {
+			border-bottom: none;
+		}
+	}
+
+	.additional-goods__title {
+		margin: 0;
+		padding: 20px 20px 35px 0;
+
+		font-weight: normal;
+		font-size: 36px;
+		line-height: 36px;
+		text-align: left;
+	}
+
+	.additional-goods__item-title {
+		font-size: 20px;
+		line-height: 20px;
+
+		margin: 0 0 20px 0;
+	}
+
+	.additional-goods__composition { 
+
+		td {
+			text-align: right;
+			font-size: 16px;
+			line-height: 20px;
+		}
+	
+		td:nth-child(2) {
+			width: 100px;
+		}
+	}
+
+	.additional-goods__promotion {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+
+		min-height: 200px;
+		margin: 70px 0;
+
+		background-image: url("../img/gift-photo-tablet@1x.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+
+    svg {
+			position: relative;
+			top: 30%;
+			width: 80px;
+			height: 80px;
+
+			margin: 0 auto;
+			fill: #ffffff;
+		}
+	}
+
+	.additional-goods__text {
+		position: relative;
+		top: 30%;
+		left: 30%;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: left;
+	}
+
+	.additional-goods__button {
+		grid-column: 1 / 3;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.additional-goods {
+		padding: 30px 110px;
+	}
+
+	.additional-goods__wrapepr-inner {
+		display: grid;
+		grid-template-columns: auto 245px;
+		grid-template-rows: auto;
+		grid-column-gap: 20px;
+	}
+
+	.additional-goods__promotion {
+		position: relative;
+		margin: 0;
+		padding: 0;
+
+		background-image: url("../img/gift-photo-desktop@1x.jpg");
+		background-repeat: no-repeat;
+		background-size: 245px 289px;
+		background-position: center;
+
+		svg  {
+			position: relative;
+			top: 24%;
+			left: 60px;
+			width: 80px;
+			height: 80px;
+
+			margin: 0 auto;
+			fill: #ffffff;
+		}
+	}
+
+	.additional-goods__list {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+	}
+
+	.additional-goods__item  {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: 50px;
+
+		padding: 10px 0;
+
+		border-right: none;
+		border-left: none;
+		border-bottom: none;
+		border-collapse: collapse;
+		border-spacing: inherit;
+
+		h3 {
+			margin: auto 0;
+			width: 165px;
+		}
+
+		&:last-child {
+		border-bottom: 1px solid #C0C0C0;
+		}
+	}
+
+	.additional-goods__composition {
+		position: relative;
+		min-width: 240px;
+		margin: auto 0;
+
+		text-align: left;
+	}
+
+	.additional-goods__button {
+		grid-column: -1 / 3;
+	}
+
+	.contacts--gray {
+		background-color: #F2F2F2;
+	}
+
+	.additional-goods__text {
+		position: absolute;
+		top: 60%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
 }

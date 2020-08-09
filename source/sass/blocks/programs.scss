@@ -2,7 +2,7 @@
 
 $mobile-width-only: 767px;
 $tablet-width: 768px;
-$desktop-width: 1140px;
+$desktop-width: 1440px;
 
 // Цветовая палитра
 
@@ -18,10 +18,11 @@ $status_error: #FF8282;
 
 .programs {
 	max-width: 1440px;
+	min-width: 320px;
 	padding: 20px 20px;
 	margin: 0 auto;
 
-	border: 2px solid red;
+	border: 1px solid red;
 }
 
 .programs__item {
@@ -32,7 +33,6 @@ $status_error: #FF8282;
 	margin: 0 auto 20px auto;
 
 	background-color: $basic_gray;
-	border: 1px solid blue;
 
 	z-index: 1;
 
@@ -92,6 +92,40 @@ $status_error: #FF8282;
 	}
 }
 
+.programs__button {
+	position: relative;
+	color: $basic_black;
+
+	 &::after {
+		position: absolute;
+		content: "";
+		top: 7px;
+		right: -30px;
+
+		width: 22px;
+		height: 15px;
+		background-image: url("../img/icon-right-arrow-long.svg");
+		background-repeat: no-repeat;
+	}
+	
+	&:hover::after,
+	&:focus::after {
+		position: absolute;
+		content: "";
+		top: 7px;
+		right: -40px;
+
+		width: 32px;
+		height: 15px;
+		background-image: url("../img/icon-right-arrow-verylong.svg");
+	}
+
+	&:active,
+	&:active::after {
+		opacity: 0.5;
+	}
+}
+
 @media (max-width: $mobile-width-only) {
 	.programs {
 		display: grid;
@@ -115,96 +149,115 @@ $status_error: #FF8282;
 		padding: 30px;
 	}
 
-  .programs__item {
-    padding: 5%;
-    max-width: 708px;
-    margin-bottom: 30px;
-  }
+	.programs__item {
+		min-height: 372px;
+		padding:  30px 52px;
+		max-width: 708px;
+		margin-bottom: 30px;
 
-  .programs__title {
-    padding: 0 22px 0 22px;
+		a {
+			margin-left: 20px;
 
-    text-align: left;
-    font-size: 36px;
-    line-height: 36px;
-  }
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
 
-  .programs__description {
-    max-width: 380px;
-    padding: 0 22px 0 22px;
+	.programs__title {
+		padding: 0 22px 0 22px;
 
-    font-size: 16px;
-    line-height: 24px;
-  }
+		text-align: left;
+		font-size: 36px;
+		line-height: 36px;
+	}
 
-  .programs__item a {
-    margin-left: 20px;
+	.programs__description {
+		max-width: 380px;
+		padding: 10px 22px 20px 22px;
 
-    font-size: 20px;
-    line-height: 30px;
-  }
+		font-size: 16px;
+		line-height: 24px;
+	}
 
 	.programs__item {
 		&::before {
-		top: 100px;
-		left: 440px;
+			top: 100px;
+			left: 440px;
 
-		width: 170px;
-		height: 170px;
+			width: 170px;
+			height: 170px;
 		}
 	}
 
 	.programs__slimming {
 		&::after {
-		content: "";
-		position: absolute;
-		top: 60px;
-		left: 440px;
+			content: "";
+			position: absolute;
+			top: 60px;
+			left: 440px;
 
-		width: 250px;
-		height: 250px;
+			width: 250px;
+			height: 250px;
 
-		background-size: 160px 160px;
+			background-size: 160px 160px;
 		}
 	}
 
-  .programs__fat {
-  	&::after {
-		top: 60px;
-		left: 420px;
+	.programs__fat {
+		&::after {
+			top: 60px;
+			left: 420px;
 
-		width: 250px;
-		height: 250px;
+			width: 250px;
+			height: 250px;
 
-		background-size: 200px 200px;
-  	}
-  }
+			background-size: 200px 200px;
+		}
+	}
+
+	.programs__button {
+		&::after {
+			top: 10px;
+			right: -40px;
+			width: 22px;
+			height: 15px;
+		}
+		
+		&:hover::after,
+		&:focus::after {
+			top: 10px;
+			right: -51px;
+
+			width: 32px;
+			height: 15px;
+		}
+	}	
 }
 
 @media (min-width: $desktop-width) {
-  .programs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 40px;
+	.programs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		grid-gap: 40px;
 
-    margin: 0 auto;
-    padding: 20px 110px;
-  }
+		margin: 0 auto;
+		padding: 0 110px;
+	}
 
-  .programs__title {
-    text-align: center;
-    padding: 0 22px 20px 62px;
-  }
+	.programs__title {
+		text-align: center;
+		padding: 0 22px 20px 62px;
+	}
 
-  .programs__description {
-    width: auto;
-    padding: 10px 22px;
-  }
+	.programs__description {
+		width: auto;
+		padding: 10px 22px;
+	}
 
 	.programs__item {
-		min-height: 374px;
-
+		margin: 0;
+		
 		&::before {
 		top: 30px;
 		left: 44px;
@@ -223,17 +276,20 @@ $status_error: #FF8282;
 		background-size: 100px 100px;
 	}
 
-	.programs__fat::after {
-		top: 0;
-		left: 22px;
+	.programs__fat {
 
-		width: 180px;
-		height: 190px;
+		&::after {
+			top: 0;
+			left: 22px;
 
-		background-size: 110px 110px;
-	}
+			width: 180px;
+			height: 190px;
 
-	.programs__fat h3 {
-		padding-left: 100px;
+			background-size: 110px 110px;
+		}
+
+		h3 {
+		 padding-left: 100px;
+	 }
 	}
 }

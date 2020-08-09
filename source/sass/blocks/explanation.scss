@@ -1,23 +1,25 @@
 $mobile-width-only: 767px;
 $tablet-width: 768px;
-$desktop-width: 1200px;
+$desktop-width: 1440px;
 
 .explanation {
 	max-width: 1440px;
-	padding: 0 20px;
+	min-width: 320px;
+	padding: 20px;
 	margin: 0 auto;
 
-	border: 2px solid red;
+	h2 {
+		margin-top: 10px;
+	}
 }
 
 .explanation__list {
-  display: block;
-  position: relative;
-}
+	display: block;
+	position: relative;
 
-.explanation__list li {
-	border: 2px solid green;
-	counter-increment: list-counter;
+	li {
+		counter-increment: list-counter;
+	}
 }
 
 .explanation__item {
@@ -29,25 +31,27 @@ $desktop-width: 1200px;
 
 @media (max-width: $mobile-width-only) {
 	.explanation__description {
-		max-width: 198px;
-		margin: 0 0 5px 70px;
+		max-width: 280px;
+		padding: 0;
+		margin: 0;
+		margin-left: 69px;
 
 		text-align: left;
 
-	&::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		content: "";
-		width: 60px;
-		height: 60px;
-		background-color: #68B738;
-		z-index: 1;
-	}
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			width: 60px;
+			height: 60px;
+			background-color: #68B738;
+			z-index: 1;
+		}
 	}
 }
 
-.description-folia::after {
+.explanation__description--folia::after {
 	content: "";
 	position: absolute;
 	top: 5px;
@@ -59,7 +63,7 @@ $desktop-width: 1200px;
 	z-index: 3;
 }
 
-.description-water::after {
+.explanation__description--water::after {
 	content: "";
 	position: absolute;
 	top: 5px;
@@ -72,7 +76,7 @@ $desktop-width: 1200px;
 	z-index: 3;
 }
 
-.description-eat::after {
+.explanation__description--eat::after {
 	content: "";
 	position: absolute;
 	top: 5px;
@@ -84,7 +88,7 @@ $desktop-width: 1200px;
 	z-index: 3;
 }
 
-.description-time::after {
+.explanation__description--time::after {
 	content: "";
 	position: absolute;
 	top: 5px;
@@ -99,10 +103,11 @@ $desktop-width: 1200px;
 @media (min-width: $tablet-width) {
 	.explanation {
 		padding: 30px 30px;
-	}
 
-	.explanation__item {
-		min-height: 280px;
+		li {
+			max-width: 230px;
+			min-height: 280px;
+		}
 	}
 
 	.explanation__title {
@@ -119,49 +124,50 @@ $desktop-width: 1200px;
 
 		width: 708px;
 		margin: 0 auto;
-	}
 
-	.explanation__list li::before {
-		position: absolute;
-		width: 40px;
-		height: 40px;
-		right: 120px;
-		top: 90px;
-		content: "" counter(list-counter);
+		 li::before {
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			right: 85px;
+			top: -30px;
+			content: "" counter(list-counter);
 
-		font-weight: bold;
-		font-size: 250px;
-		color: #f2f2f2;
+			font-weight: normal;
+			font-size: 280px;
+      line-height: 280px;
+			color: #f2f2f2;
 
-		z-index: -1;
+			z-index: -1;
+		}
 	}
 
 	.explanation__description {
-		width: 80%;
+		width: 100%;
 		margin-left: 0;
 		margin-top: 100px;
 		margin-bottom: 20px;
-		padding: 20px 10px 0 0;
+		padding: 20px 0 0 0;
 
 		font-size: 16px;
 		line-height: 24px;
+
+	  &::before {
+			position: absolute;
+			top: 10px;
+			content: "";
+			width: 80px;
+			height: 80px;
+
+			background-color: #68B738;
+			z-index: 1;
+		}
 	}
 
-	.explanation__description::before {
-		position: absolute;
-		top: 10px;
-		content: "";
-		width: 80px;
-		height: 80px;
-
-		background-color: #68B738;
-		z-index: 1;
-	}
-
-	.description-folia::after,
-	.description-water::after,
-	.description-eat::after,
-	.description-time::after {
+	.explanation__description--folia::after,
+	.explanation__description--water::after,
+	.explanation__description--eat::after,
+	.explanation__description--time::after {
 		top: 25px;
 		left: 15px;
 		width: 60px;
@@ -176,33 +182,10 @@ $desktop-width: 1200px;
 
 	.explanation__list {
 		display: grid;
-		grid-template-columns: auto auto auto auto;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: auto;
 		grid-column-gap: 20px;
 
 		width: 100%;
-	}
-
-	.explanation__item {
-		min-height: 280px;
-
-		&:last-child {
-			margin-right: 0;
-		}
-
-		&::before {
-			width: 80px;
-			height: 80px;
-		}
-	}
-
-	.description-folia::after,
-	.description-water::after,
-	.description-eat::after,
-	.description-time::after {
-		top: 20px;
-		left: 10px;
-		width: 60px;
-		height: 60px;
 	}
 }

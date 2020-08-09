@@ -2,7 +2,6 @@
 
 @import 'fonts';
 @import 'scaffolding';
-@import 'blocks/page-content';
 @import 'blocks/page-header';
 @import 'blocks/nutrition';
 @import 'blocks/programs';
@@ -10,8 +9,8 @@
 @import 'blocks/example';
 @import 'blocks/contacts';
 @import 'blocks/page-footer';
-@import 'blocks/catalog';
 @import 'blocks/product-card';
+@import 'blocks/catalog';
 @import 'blocks/additional-goods';
 @import 'blocks/program';
 
@@ -19,15 +18,17 @@
 
 $mobile-width-only: 767px;
 $tablet-width: 768px;
-$desktop-width: 1200px;
+$desktop-width: 1440px;
 
 // Цветовая палитра
 
 $basic_black: #000000;
 $basic_white: #ffffff;
 $basic_green: #68B738;
+$basic_green-2: #5EAA2F;
 $basic_gray: #F2F2F2;
 $special_gray: #EAEAEA;
+$special_gray-1: #CDCDCD;
 $special_gray-2: #D9D9D9;
 $special_dark-gray: #444444;
 $special_dark-gray-2: #222222;
@@ -51,12 +52,12 @@ $additional_font: "Arial", sans-serif;
   text-transform: uppercase;
   text-align: center;
 
-  color: #ffffff;
-  background-color: #68B738;
+  color: $basic_white;
+  background-color: $basic_green;
 
   &:hover,
   &:focus {
-  background-color: #5EAA2F;
+  background-color: $basic_green-2;
   }
 
   &:active {
@@ -65,13 +66,13 @@ $additional_font: "Arial", sans-serif;
 }
 
 .catalog__button--gray {
-  background-color: #F2F2F2;
-  color:  #000000;
+  background-color: $basic_gray;
+  color: $basic_black;
 
   &:hover,
   &:focus {
     background-color: #EBEBEB;
-    color:  #000000;
+    color: $basic_black;
   }
 
   &:active {
@@ -110,7 +111,7 @@ $additional_font: "Arial", sans-serif;
   height: 20px;
   position: relative;
   right: -100px;
-  top: 15px;
+  top: 22px;
 }
 
 @media (max-width: $mobile-width-only) {
