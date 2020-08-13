@@ -22,11 +22,14 @@
 @media (max-width: $mobile-width-only) {
 	.contacts__text-info {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto;
-		grid-gap: 20px;
+		grid-template-columns: 1fr auto;
+		grid-template-rows: 114px;
 
-		padding: 20px;
+		padding: 20px 20px 0 20px;
+
+		p {
+			width: 140px;
+		}
 	}
 }
 

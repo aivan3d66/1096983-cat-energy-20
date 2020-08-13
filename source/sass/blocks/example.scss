@@ -41,7 +41,6 @@ $status_error: #FF8282;
 
 	.example__description {
 		width: 100%;
-		padding: 5px 20px 5px 0;
 		margin: 30px 0;
 	}
 
@@ -60,6 +59,19 @@ $status_error: #FF8282;
 	width: 100%;
 	margin: 0 auto;
 	padding: 0;
+
+	dd {
+		position: absolute;
+		bottom: -18px;
+		left: 25px;
+		width: 70px;
+		margin: 0;
+		padding: 0;
+
+		text-align: center;
+
+		background-color: $special_gray;
+	}
 }
 
 .example__column {
@@ -72,25 +84,10 @@ $status_error: #FF8282;
 
 	border: 1px solid $special_gray-1;
 	border-radius: 5px;
-}
 
-.example__achievement dd {
-	position: absolute;
-	bottom: -15px;
-	left: 25px;
-	width: 70px;
-	margin: 0;
-	padding: 0;
-
-	text-align: center;
-}
-
-.example__column-right dd {
-	left: 25px;
-}
-
-.example__achievement dd {
-	background-color: $special_gray;
+	&-right dd {
+		left: 25px;
+	}
 }
 
 @media (min-width: $tablet-width) {

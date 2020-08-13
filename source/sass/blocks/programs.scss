@@ -27,6 +27,7 @@ $status_error: #FF8282;
 
 .programs__item {
 	position: relative;
+	z-index: 1;
 
 	width: 100%;
 	padding: 20px 10%;
@@ -34,7 +35,9 @@ $status_error: #FF8282;
 
 	background-color: $basic_gray;
 
-	z-index: 1;
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	&::before {
 		content: "";
@@ -242,7 +245,7 @@ $status_error: #FF8282;
 		grid-gap: 40px;
 
 		margin: 0 auto;
-		padding: 0 110px;
+		padding: 20px 110px;
 	}
 
 	.programs__title {

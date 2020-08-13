@@ -11,7 +11,7 @@ $desktop-width: 1440px;
 	border: 1px solid red;
 
 	h2 {
-		margin-top: 10px;
+		margin-top: 0;
 	}
 }
 
@@ -20,15 +20,12 @@ $desktop-width: 1440px;
 	position: relative;
 
 	li {
+		position: relative;
+		margin-bottom: 20px;
+		padding: 0;
+		max-width: 280px;		
 		counter-increment: list-counter;
 	}
-}
-
-.explanation__item {
-	position: relative;
-	margin-bottom: 20px;
-	padding: 0;
-	max-width: 280px;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -105,6 +102,13 @@ $desktop-width: 1440px;
 @media (min-width: $tablet-width) {
 	.explanation {
 		padding: 30px 30px;
+		border-bottom: 1px solid #E6E6E6;
+
+		h2 {
+			margin-top: 10px;
+			font-size: 60px;
+			line-height: 60px;
+		}
 
 		li {
 			max-width: 230px;
@@ -112,19 +116,14 @@ $desktop-width: 1440px;
 		}
 	}
 
-	.explanation__title {
-		font-size: 60px;
-		line-height: 60px;
-	}
-
 	.explanation__list {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1rf;
-		grid-column-gap: 100px;
-		grid-row-gap: 60px;
+		grid-column-gap: 200px;
+		grid-row-gap: 0;
 
-		width: 708px;
+		max-width: 708px;
 		margin: 0 auto;
 
 		 li::before {
@@ -137,7 +136,7 @@ $desktop-width: 1440px;
 
 			font-weight: normal;
 			font-size: 280px;
-      line-height: 280px;
+			line-height: 280px;
 			color: #f2f2f2;
 
 			z-index: -1;
@@ -154,7 +153,7 @@ $desktop-width: 1440px;
 		font-size: 16px;
 		line-height: 24px;
 
-	  &::before {
+		&::before {
 			position: absolute;
 			top: 10px;
 			content: "";
@@ -177,17 +176,22 @@ $desktop-width: 1440px;
 	}
 }
 
-@media (min-width: 1140px) {
+@media (min-width: $desktop-width) {
 	.explanation {
 		padding: 0 110px;
+
+		h2 {
+			margin-top: 20px;
+		}
 	}
 
 	.explanation__list {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 230px 230px 230px 230px;
 		grid-template-rows: auto;
-		grid-column-gap: 20px;
+		grid-column-gap: 90px;
 
 		width: 100%;
+		margin: 0;
 	}
 }
