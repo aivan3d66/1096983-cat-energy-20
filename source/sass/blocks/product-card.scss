@@ -1,3 +1,132 @@
-.product-card {
-	
+@media (max-width: $mobile-width-only) {
+	.product-card {
+		display: grid;
+		grid-template-columns: 140px 140px;
+		grid-template-rows: 60px 80px 46px;
+
+		width: 280px;
+		padding: 20px 0;
+		margin: 0;
+
+		border-bottom: 1px solid #C0C0C0;
+	}
+
+	.product-card img {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+	}
+
+	.product-card__title {
+		grid-column: 1 / 2;
+		grid-row: 2 / 1;
+
+		width: 100px;
+		height: auto;
+		margin: 0;
+	}
+
+	.product-card__composition {
+		grid-column: 2 / 2;
+		grid-row: 2 / 2;
+
+		margin: 0;
+	}
+
+	.product-card__button {
+		grid-column: 1 / -1;
+		grid-row: 3 / 3;
+
+		width: auto;
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.product-card {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+
+		width: 324px;
+		height: 511px;
+
+		padding: 0 40px 40px 40px;
+		margin: 0 30px 100px 0;
+		border: none;
+		background: linear-gradient(to top, #F2F2F2 85%, #ffffff 30%);
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+
+	.product-card img {
+		display: block;
+		width: auto;
+		height: auto;
+
+		margin: 0 auto;
+	}	
+
+	.product-card__title {
+		width: 170px;
+		margin: 0 auto;
+		padding: 20px;
+
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+	}
+
+	.product-card__composition {
+		border-collapse: collapse;
+		width: 100%;
+		padding: 20px 0 20px 0;
+		margin-bottom: 20px;
+		font-size: 16px;
+		line-height: 16px;
+
+		td {
+			padding-bottom: 15px;
+			border-bottom: 1px solid #CDCDCD;
+		}
+
+		td:nth-child(2n) {
+			text-align: right;
+		}
+	}
+
+	.product-card__button {
+		width: 100%;
+	}
+}
+
+@media (min-width: 1130px) {
+	.product-card {
+		max-width: 245px;
+		padding: 35px;
+		margin: 0;
+
+		background-color: #F2F2F2;
+	}
+
+	.product-card__title {
+		width: 100%;
+	}
+}
+
+@media (min-width: 1440px) {
+	.product-card {
+		max-width: 245px;
+		padding: 35px;
+		margin: 0;
+
+		background-color: #F2F2F2;
+	}
+
+	.product-card__title {
+		width: 100%;
+		margin: 0 auto;
+	}
 }
