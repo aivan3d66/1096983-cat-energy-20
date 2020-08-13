@@ -31,9 +31,9 @@
 	.catalog__show-more {
 		position: relative;
 		display: block;
-		padding: 50px 0 40px 0;
+		padding: 60px 0 20px 0;
 		margin: 0;
-		max-width: 280px;
+
 		background-color: #ffffff;
 	}
 }
@@ -59,7 +59,7 @@
 		font-size: 60px;
 		line-height: 60px;
 
-		margin-bottom: 100px;		
+		margin-bottom: 100px;
 	}
 
 	.catalog__show-more {
@@ -68,7 +68,7 @@
 		width: 320px;
 		height: 430px;
 
-		padding: 30px 30px 38px 30px;
+		padding: 50px 30px 38px 30px;
 
 		border: 2px solid #F2F2F2;
 		background: none;
@@ -85,7 +85,7 @@
 	}
 
 	.catalog__description {
-		width: 167px;
+		width: 177px;
 		margin: 0 auto;
 		margin-bottom: 87px;
 		padding: 0 5px;
@@ -97,7 +97,6 @@
 
 	.catalog__button--gray {
 		width: 100%;
-		background-color: #f2f2f2f2;
 		color: #000000;
 	}	
 }
@@ -113,11 +112,7 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: auto;
 
-		grid-gap: 100px 30px;
-	}
-
-	.catalog__show-more {
-		background-color: #ffffff;
+		grid-gap: 60px 30px;
 	}
 }
 
@@ -127,15 +122,6 @@
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: auto;
 
-		grid-gap: 100px 70px;
+		grid-gap: 60px 75px;
 	}
-
-	.catalog__show-more {
-		background: none;
-	}
-
-	.catalog__button--gray {
-		background-color: #f2f2f2f2;
-		color: #000000;
-	}	
 }
