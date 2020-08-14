@@ -1,18 +1,24 @@
 .contacts {
+	background-image: url("../../img/bg-map-mobile@1x.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.contacts__wrapper-inner {
 	position: relative;
 	padding: 0;
 	margin: 0 auto;
 	max-width: 1440px;
 	min-width: 320px;
-	border: 1px solid red;
 }
 
 .contacts__map-wrapepr {
 	height: 400px;
+}
 
-	background-image: url("../../img/bg-map-mobile@1x.png");
-	background-repeat: no-repeat;
-	background-size: cover;
+.contacts__text-info {
+	background-color: #ffffff;
 }
 
 .contacts--gray {
@@ -34,11 +40,18 @@
 }
 
 @media (min-width: $tablet-width) {
+	.contacts {
+		background-image: url("../../img/bg-map-tablet@1x.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
 	.contacts__text-info {
 		display: flex;
 		justify-content: space-between;
-
-		padding: 0 70px;
+		height: 200px;
+		padding: 45px 70px 40px 70px;
 	}
 
 	.contacts__lead {
@@ -54,33 +67,25 @@
 		font-size: 16px;
 		line-height: 20px;
 	}
-
-	.contacts__map-wrapepr {
-		height: 400px;
-
-		background-image: url("../../img/bg-map-tablet@1x.png");
-		background-repeat: no-repeat;
-		background-size: cover;
-	}	
 }
 
 @media (min-width: $desktop-width) {
+	.contacts {
+		background-image: url("../../img/bg-map-desktop@1x.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
 	.contacts__text-info {
 		position: absolute;
+		z-index: 1;
 		top: 100px;
 		left: 110px;
 		width: 500px;
 		margin: 0;
-		padding: 20px 40px;
+		padding: 45px 40px;
 		
 		background-color: #ffffff;
 	}
-
-	.contacts__map-wrapepr {
-		height: 400px;
-
-		background-image: url("../../img/bg-map-desktop@1x.png");
-		background-repeat: no-repeat;
-		background-size: contain;
-	}		
 }

@@ -8,8 +8,6 @@ $desktop-width: 1440px;
 	padding: 20px;
 	margin: 0 auto;
 
-	border: 1px solid red;
-
 	h2 {
 		margin-top: 0;
 	}
@@ -179,7 +177,8 @@ $desktop-width: 1440px;
 @media (min-width: $desktop-width) {
 	.explanation {
 		padding: 0 110px;
-
+		border-bottom: none;
+		
 		h2 {
 			margin-top: 20px;
 		}
