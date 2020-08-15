@@ -1,5 +1,5 @@
 .contacts {
-	background-image: url("../../img/bg-map-mobile@1x.png");
+	background-image: url("../../img/bg-map-mobile@2x.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -14,14 +14,11 @@
 }
 
 .contacts__map-wrapepr {
+	position: relative;
 	height: 400px;
 }
 
 .contacts__text-info {
-	background-color: #ffffff;
-}
-
-.contacts--gray {
 	background-color: $basic_gray;
 }
 
@@ -41,7 +38,7 @@
 
 @media (min-width: $tablet-width) {
 	.contacts {
-		background-image: url("../../img/bg-map-tablet@1x.png");
+		background-image: url("../../img/bg-map-tablet@2x.png");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -71,7 +68,7 @@
 
 @media (min-width: $desktop-width) {
 	.contacts {
-		background-image: url("../../img/bg-map-desktop@1x.png");
+		background-image: url("../../img/bg-map-desktop@2x.png");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;

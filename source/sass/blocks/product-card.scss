@@ -61,13 +61,23 @@
 		}
 	}
 
-	.product-card img {
-		display: block;
-		width: auto;
-		height: auto;
+	.product-card {
+		&:nth-child(1n) img {
+			display: block;
+			width: auto;
+			height: 172px;
 
-		margin: 0 auto;
-	}	
+			margin: 0 auto;
+		}	
+
+		&:nth-child(2n) img {
+			display: block;
+			width: auto;
+			height: 200px;
+
+			margin: 0 auto;
+		}	
+	}
 
 	.product-card__title {
 		width: 170px;

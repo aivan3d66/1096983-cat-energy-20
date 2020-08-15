@@ -28,6 +28,18 @@
 	}
 }
 
+.copyright__link-logo {
+	position: relative;
+}
+
+.page-footer__academy-logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+}
+
 @media (max-width: $mobile-width-only) {
 	.page-footer__wrapper {
 		display: grid;
@@ -68,15 +80,15 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
+		width: 100%;
 		padding: 20px 0 0 0;
 	}
 
 	.copyright__link-logo {
 		width: 45px;
 		height: 40px;
-		}
 	}
+}
 
 @media (min-width: $tablet-width) {
 	.page-footer__wrapper {
