@@ -10,6 +10,8 @@ $desktop-width: 1440px;
 	max-width: 1440px;
 	padding: 0 20px;
 	margin: 0 auto;
+
+	overflow: hidden;
 }
 
 .program__item-title {
@@ -65,7 +67,7 @@ $desktop-width: 1440px;
 
 		small {
 			position: absolute;
-			bottom: 20px;
+			bottom: -30px;
 			left: 0;
 			width: 100%;
 			margin: 0 auto;
@@ -131,7 +133,7 @@ $desktop-width: 1440px;
 		grid-gap: 20px;
 
 		width: auto;
-		padding: 0 30px;
+		padding: 0 70px;
 
 		h2 {
 			font-size: 60px;
@@ -215,12 +217,6 @@ $desktop-width: 1440px;
 
 	.program__user-contacts svg {
 		right: 50px;
-
-		&:nth-child(1) {
-			top: 0;
-			right: 200px;
-			z-index: 3;
-		}
 	}
 }
 
@@ -362,10 +358,15 @@ $desktop-width: 1440px;
 	content: "";
 	position: absolute;
 	top: 5px;
-	left: -32px;
-	width: 14px;
-	height: 14px;
+	left: -33px;
+	width: 15px;
+	height: 15px;
 	border-radius: 50%;
 	background-color: #68B738;
 	border-color: #BABABA;
+
+	@media (min-width: 1440px) {
+		top: 4px;
+		left: -32px;
+	}
 }
