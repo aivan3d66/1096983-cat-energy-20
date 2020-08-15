@@ -63,6 +63,7 @@ $desktop-width: 1440px;
 		grid-template-rows: auto;
 		
 		padding: 10px 0;
+		border-bottom: 1px solid #E6E6E6;
 	}
 
 	.main-nav__list {
@@ -178,6 +179,15 @@ $desktop-width: 1440px;
 		background-position: right;
 		background-repeat: no-repeat;
 	}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+	.index-page::after {
+		background-image: url("img/index-background-desktop@2x.jpg");
+		background-size: auto;
+		background-position: right;
+		background-repeat: no-repeat;    
+	}
+}
 
 	.main-nav__list {
 		display: flex;

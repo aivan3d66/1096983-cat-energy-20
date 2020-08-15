@@ -7,6 +7,14 @@
 	margin: 0 auto;
 }
 
+.catalog__show-more svg {
+	position: absolute;
+	top: 20px;
+	left: 125px;
+	width: 30px;
+	height: 30px;
+}
+
 @media (max-width: $mobile-width-only) {
 	.catalog__products {
 		display: grid;
@@ -71,6 +79,14 @@
 		border: 2px solid #F2F2F2;
 		background: none;
 		background-color: #ffffff;
+
+		svg {
+			top: 50px;
+			left: 130px;
+			width: 60px;
+			height: 60px;
+			fill: #D3D3D3;
+		}
 	}
 
 	.catalog__title {
@@ -111,6 +127,14 @@
 		grid-template-rows: auto;
 
 		grid-gap: 60px 30px;
+	}
+
+	.catalog__show-more {
+		padding-bottom: 30px;
+
+		svg {
+			left: 95px;
+		}	
 	}
 }
 

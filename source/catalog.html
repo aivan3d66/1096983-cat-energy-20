@@ -50,6 +50,10 @@
         c0,0,0,0,0,0s0,0,0,0H27.7c0,0,0,0,0,0s0,0,0,0H5.2c0,0,0,0,0,0s0,0,0,0h-2c-0.4,0-0.7-0.3-0.7-0.7v-9.4c0-0.4,0.3-0.7,0.7-0.7h49.2
         c0.4,0,0.7,0.3,0.7,0.7V24.7z"/>
       </symbol>
+      <symbol id="icon-plus" viewBox="0 0 60 60">
+        <polygon class="st0" points="60,29.5 30.5,29.5 30.5,0 29.5,0 29.5,29.5 0,29.5 0,30.5 29.5,30.5 29.5,60 30.5,60 30.5,30.5
+        60,30.5 "/>
+      </symbol>
     </svg>
     <header class="page-header">
       <div class="page-header__logo">
@@ -331,6 +335,9 @@
             <a class="btn product-card__button" href="#">Заказать</a>
           </article>
           <article class="product-card catalog__show-more">
+            <svg>
+              <use xlink:href="#icon-plus"></use>
+            </svg>
             <p class="catalog__title">Показать ещё 100500 товаров</p>
             <p class="catalog__description">На самом деле вкусов гораздо больше!</p>
             <a class="btn catalog__button--gray" href="#">Показать всё</a>
@@ -394,10 +401,10 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts catalog-contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
         <div class="contacts__wrapper-inner">
-          <div class="contacts__text-info">
+          <div class="contacts__text-info contacts--gray">
             <p class="contacts__lead">Приглашаем к сотрудничеству дилеров!</p>
             <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           </div>
