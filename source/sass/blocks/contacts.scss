@@ -1,8 +1,17 @@
 .contacts {
-	background-image: url("../../img/bg-map-mobile@2x.png");
+	background-image: url("../../img/bg-map-mobile@1x.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+	.contacts {
+		background-image: url("img/bg-map-mobile@2x.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;    
+	}
 }
 
 .contacts__wrapper-inner {
@@ -19,7 +28,7 @@
 }
 
 .contacts__text-info {
-	background-color: $basic_gray;
+	background-color: #ffffff;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -38,10 +47,19 @@
 
 @media (min-width: $tablet-width) {
 	.contacts {
-		background-image: url("../../img/bg-map-tablet@2x.png");
+		background-image: url("../../img/bg-map-tablet@1x.png");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+	}
+
+	@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+		.contacts {
+			background-image: url("img/bg-map-tablet@2x.png");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
 	}
 
 	.contacts__text-info {
@@ -49,6 +67,10 @@
 		justify-content: space-between;
 		height: 200px;
 		padding: 45px 70px 40px 70px;
+	}
+
+	.contacts--gray {
+		background-color: $basic_gray;
 	}
 
 	.contacts__lead {
@@ -68,10 +90,19 @@
 
 @media (min-width: $desktop-width) {
 	.contacts {
-		background-image: url("../../img/bg-map-desktop@2x.png");
+		background-image: url("../../img/bg-map-desktop@1x.png");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+	}
+
+	@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+		.contacts {
+			background-image: url("img/bg-map-desktop@2x.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
 	}
 
 	.contacts__text-info {
@@ -82,7 +113,9 @@
 		width: 500px;
 		margin: 0;
 		padding: 45px 40px;
-		
-		background-color: #ffffff;
 	}
+
+	.contacts .contacts--gray {
+		background-color: #ffffff; 
+	}	
 }

@@ -10,13 +10,37 @@ $desktop-width: 1440px;
 	max-width: 1440px;
 	padding: 0 20px;
 	margin: 0 auto;
-
-	overflow: hidden;
 }
 
 .program__item-title {
+	position: relative;
 	padding: 10px 10px 20px 0;
 	margin: 0;
+	width: 100%;
+
+	&::after {
+		position: absolute;
+		content: "";
+		top: 23px;
+		left: 100%;
+
+		width: 300%;
+		height: 3px;
+
+		background-color: #68B738;
+	}
+}
+
+.program__item-contacts::after {
+	left: 105%;
+}
+
+.program__item-comment::after {
+	left: 70%;
+}
+
+.program__item-more::after {
+	left: 80%;
 }
 
 .program-form__item {
@@ -41,16 +65,15 @@ $desktop-width: 1440px;
 	}
 }
 
-.program__user-contacts input {
+.program__user-contacts {
 	position: relative;
-}
+	svg {
+		position: absolute;
+		right: 20px;
 
-.program__user-contacts svg {
-	position: absolute;
-	right: 20px;
-
-	width: 20px;
-	height: 20px;
+		width: 20px;
+		height: 20px;
+	}
 }
 
 .program__user-contacts input:focus + svg {
@@ -184,6 +207,39 @@ $desktop-width: 1440px;
 		}
 	}
 
+	.program__item-title {
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 60px;
+			left: -53%;
+			width: 50%;
+			height: 3px;
+
+			background-color: #68B738;
+		}
+
+		&::after {
+			top: 60px;
+			left: 90%;
+
+			width: 300%;
+		}
+	}
+
+	.program__item-contact::after {
+		left: 88%;
+	}
+
+	.program__item-comment::after {
+		left: 35%;
+	}
+
+	.program__item-more::after {
+		left: 40%;
+	}	
+
 	.program__cat-characters,
 	.program__user-contacts {
 		display: flex;
@@ -259,6 +315,18 @@ $desktop-width: 1440px;
 			padding: 0;
 		}
 	}
+
+	.program__item-contact::after {
+		left: 45%;
+	}
+
+	.program__item-comment::after {
+		left: 18%;
+	}
+
+	.program__item-more::after {
+		left: 22%;
+	}	
 
 	.program-form__wrapper-inner {
 		display: grid;
@@ -358,15 +426,15 @@ $desktop-width: 1440px;
 	content: "";
 	position: absolute;
 	top: 5px;
-	left: -33px;
-	width: 15px;
-	height: 15px;
+	left: -32px;
+	width: 14px;
+	height: 14px;
 	border-radius: 50%;
 	background-color: #68B738;
 	border-color: #BABABA;
 
 	@media (min-width: 1440px) {
-		top: 4px;
+		top: 5px;
 		left: -32px;
 	}
 }

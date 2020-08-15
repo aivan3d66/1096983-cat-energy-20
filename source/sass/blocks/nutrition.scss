@@ -18,19 +18,26 @@ $desktop-width: 1440px;
 
 @media (max-width: $mobile-width-only) {
 	.nutrition {
+		height: 480px;
 		margin: 0 auto;
 
 		background-image: url("../img/index-background-mobile@1x.jpg");
 		background-position: top;
 		background-size: contain;
 		background-repeat: no-repeat;
-
-		border: 1px solid red;    
 	}
+
+	@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+		.nutrition {
+			background-image: url("img/index-background-mobile@2x.jpg");
+			background-size: 640px auto;
+		}
+	}	
 
 	.nutrition__title {
 		max-width: 300px;
-		margin: 60px auto 0 auto;
+		padding-top: 60px;
+		margin: 0 auto 0 auto;
 	}
 
 	.nutrition__button {
