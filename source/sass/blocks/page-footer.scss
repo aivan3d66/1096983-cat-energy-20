@@ -1,149 +1,149 @@
 .page-footer {
-	background-color: $basic_gray;
+  background-color: $basic_gray;
 }
 
 .page-footer__wrapper {
-	max-width: 1440px;
-	min-width: 320px;	
-	padding: 20px 20px;
-	margin: 0 auto;
+  max-width: 1440px;
+  min-width: 320px; 
+  padding: 20px 20px;
+  margin: 0 auto;
 }
 
 .social__list {
-	display: grid;
-	grid-template-columns: 60px 60px 60px;
-	grid-template-rows: 30px;
+  display: grid;
+  grid-template-columns: 60px 60px 60px;
+  grid-template-rows: 30px;
 
-	padding: 20px 0;
+  padding: 20px 0;
 }
 
 .social__item svg {
-	&:hover,
-	&:focus {
-		fill: #68B738;
-	}
-	&:active {
-		fill: #68B738;
-		opacity: 0.3;
-	}
+  &:hover,
+  &:focus {
+    fill: #68B738;
+  }
+  &:active {
+    fill: #68B738;
+    opacity: 0.3;
+  }
 }
 
 .copyright__link-logo {
-	position: relative;
+  position: relative;
 }
 
 .page-footer__academy-logo {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 40px;
-	height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
 }
 
 @media (max-width: $mobile-width-only) {
-	.page-footer__wrapper {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: auto;
+  .page-footer__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 
-		padding: 20px 20px;
-		margin: 0 auto;
-	}
+    padding: 20px 20px;
+    margin: 0 auto;
+  }
 
-	.page-footer__logo {
-		width: 128px;
-		margin: 0 auto;
-		padding: 10px 0 20px 0;
-	}
+  .page-footer__logo {
+    width: 128px;
+    margin: 0 auto;
+    padding: 10px 0 20px 0;
+  }
 
-	.social__list {
-		display: grid;
-		grid-template-columns: auto 50px auto;
-		grid-template-rows: 1fr;
+  .social__list {
+    display: grid;
+    grid-template-columns: auto 50px auto;
+    grid-template-rows: 1fr;
 
-		padding: 20px 0;
-		text-align: center;
+    padding: 20px 0;
+    text-align: center;
 
-		width: 100%;
-		margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 
-		border-top: 1px solid #C0C0C0;
-		border-bottom: 1px solid #C0C0C0;
-	}
+    border-top: 1px solid #C0C0C0;
+    border-bottom: 1px solid #C0C0C0;
+  }
 
-	.social__item svg{
-		width: 20px;
-		height: 20px;
-	}
+  .social__item svg{
+    width: 20px;
+    height: 20px;
+  }
 
-	.page-footer__copyright {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		padding: 20px 0 0 0;
-	}
+  .page-footer__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0 0 0;
+  }
 
-	.copyright__link-logo {
-		width: 45px;
-		height: 40px;
-	}
+  .copyright__link-logo {
+    width: 45px;
+    height: 40px;
+  }
 }
 
 @media (min-width: $tablet-width) {
-	.page-footer__wrapper {
-		display: grid;
-		grid-template-columns: 1fr auto 1fr;
-		grid-template-rows: 150px;
+  .page-footer__wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 150px;
 
-		margin: 0 auto;
-		padding: 0 30px;
-	}
+    margin: 0 auto;
+    padding: 0 30px;
+  }
 
-	.page-footer__logo {
-		display: block;
-		width: 130px;
-		padding: 20px 0;
-		margin: auto 0;
-	}
+  .page-footer__logo {
+    display: block;
+    width: 130px;
+    padding: 20px 0;
+    margin: auto 0;
+  }
 
-	.page-footer__social {
-		margin: auto 0;
-	}
+  .page-footer__social {
+    margin: auto 0;
+  }
 
-	.social__list {
-		margin: 0 auto;
-		text-align: center;
-		border: none;
-	}
+  .social__list {
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+  }
 
-	.social__item svg{
-		width: 22px;
-		height: 22px;
-	}
+  .social__item svg{
+    width: 22px;
+    height: 22px;
+  }
 
-	.page-footer__copyright {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
+  .page-footer__copyright {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-		padding: 20px 0;
-	}
+    padding: 20px 0;
+  }
 
-	.copyright__link-logo {
-		width: 45px;
-		height: 40px;
-		margin-left: 20px;
-	}
+  .copyright__link-logo {
+    width: 45px;
+    height: 40px;
+    margin-left: 20px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-	.page-footer__wrapper {
-		padding: 20px 110px;
-	}
+  .page-footer__wrapper {
+    padding: 20px 110px;
+  }
 
-	.social__item svg{
-		width: 23px;
-		height: 23px;
-	}
+  .social__item svg{
+    width: 23px;
+    height: 23px;
+  }
 }

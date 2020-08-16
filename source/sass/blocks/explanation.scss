@@ -3,194 +3,194 @@ $tablet-width: 768px;
 $desktop-width: 1440px;
 
 .explanation {
-	max-width: 1440px;
-	min-width: 320px;
-	padding: 20px;
-	margin: 0 auto;
+  max-width: 1440px;
+  min-width: 320px;
+  padding: 20px;
+  margin: 0 auto;
 
-	h2 {
-		margin-top: 0;
-	}
+  h2 {
+    margin-top: 0;
+  }
 }
 
 .explanation__list {
-	display: block;
-	position: relative;
+  display: block;
+  position: relative;
 
-	li {
-		position: relative;
-		margin-bottom: 20px;
-		padding: 0;
-		max-width: 280px;		
-		counter-increment: list-counter;
-	}
+  li {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0;
+    max-width: 280px;   
+    counter-increment: list-counter;
+  }
 }
 
 @media (max-width: $mobile-width-only) {
-	.explanation__description {
-		max-width: 280px;
-		padding: 0;
-		margin: 0;
-		margin-left: 69px;
+  .explanation__description {
+    max-width: 280px;
+    padding: 0;
+    margin: 0;
+    margin-left: 69px;
 
-		text-align: left;
+    text-align: left;
 
-		&::before {
-			position: absolute;
-			top: 0;
-			left: 0;
-			content: "";
-			width: 60px;
-			height: 60px;
-			background-color: #68B738;
-			z-index: 1;
-		}
-	}
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 60px;
+      height: 60px;
+      background-color: #68B738;
+      z-index: 1;
+    }
+  }
 }
 
 .explanation__description--folia::after {
-	content: "";
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 60px;
-	height: 60px;
-	background-image: url("../img/advantage-leaf@1x.png");
-	background-position: 0 0;
-	z-index: 3;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/advantage-leaf@1x.png");
+  background-position: 0 0;
+  z-index: 3;
 }
 
 .explanation__description--water::after {
-	content: "";
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 60px;
-	height: 60px;
-	background-image: url("../img/advantage-powder@1x.png");
-	background-position: 0 0;
-	background-repeat: no-repeat;
-	z-index: 3;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/advantage-powder@1x.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  z-index: 3;
 }
 
 .explanation__description--eat::after {
-	content: "";
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 60px;
-	height: 60px;
-	background-image: url("../img/advantage-dining@1x.png");
-	background-position: 0 0;
-	z-index: 3;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/advantage-dining@1x.png");
+  background-position: 0 0;
+  z-index: 3;
 }
 
 .explanation__description--time::after {
-	content: "";
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 60px;
-	height: 60px;
-	background-image: url("../img/advantage-clock@1x.png");
-	background-position: 0 0;
-	z-index: 3;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/advantage-clock@1x.png");
+  background-position: 0 0;
+  z-index: 3;
 }
 
 @media (min-width: $tablet-width) {
-	.explanation {
-		padding: 30px 30px;
-		border-bottom: 1px solid #E6E6E6;
+  .explanation {
+    padding: 30px 30px;
+    border-bottom: 1px solid #E6E6E6;
 
-		h2 {
-			margin-top: 10px;
-			font-size: 60px;
-			line-height: 60px;
-		}
+    h2 {
+      margin-top: 10px;
+      font-size: 60px;
+      line-height: 60px;
+    }
 
-		li {
-			max-width: 230px;
-			min-height: 280px;
-		}
-	}
+    li {
+      max-width: 230px;
+      min-height: 280px;
+    }
+  }
 
-	.explanation__list {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1rf;
-		grid-column-gap: 200px;
-		grid-row-gap: 0;
+  .explanation__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1rf;
+    grid-column-gap: 200px;
+    grid-row-gap: 0;
 
-		max-width: 708px;
-		margin: 0 auto;
+    max-width: 708px;
+    margin: 0 auto;
 
-		 li::before {
-			position: absolute;
-			width: 40px;
-			height: 40px;
-			right: 85px;
-			top: -30px;
-			content: "" counter(list-counter);
+     li::before {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      right: 85px;
+      top: -30px;
+      content: "" counter(list-counter);
 
-			font-weight: normal;
-			font-size: 280px;
-			line-height: 280px;
-			color: #f2f2f2;
+      font-weight: normal;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
 
-			z-index: -1;
-		}
-	}
+      z-index: -1;
+    }
+  }
 
-	.explanation__description {
-		width: 100%;
-		margin-left: 0;
-		margin-top: 100px;
-		margin-bottom: 20px;
-		padding: 20px 0 0 0;
+  .explanation__description {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    padding: 20px 0 0 0;
 
-		font-size: 16px;
-		line-height: 24px;
+    font-size: 16px;
+    line-height: 24px;
 
-		&::before {
-			position: absolute;
-			top: 10px;
-			content: "";
-			width: 80px;
-			height: 80px;
+    &::before {
+      position: absolute;
+      top: 10px;
+      content: "";
+      width: 80px;
+      height: 80px;
 
-			background-color: #68B738;
-			z-index: 1;
-		}
-	}
+      background-color: #68B738;
+      z-index: 1;
+    }
+  }
 
-	.explanation__description--folia::after,
-	.explanation__description--water::after,
-	.explanation__description--eat::after,
-	.explanation__description--time::after {
-		top: 25px;
-		left: 15px;
-		width: 60px;
-		height: 60px;
-	}
+  .explanation__description--folia::after,
+  .explanation__description--water::after,
+  .explanation__description--eat::after,
+  .explanation__description--time::after {
+    top: 25px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-	.explanation {
-		padding: 0 110px;
-		border-bottom: none;
-		
-		h2 {
-			margin-top: 20px;
-		}
-	}
+  .explanation {
+    padding: 0 110px;
+    border-bottom: none;
+    
+    h2 {
+      margin-top: 20px;
+    }
+  }
 
-	.explanation__list {
-		display: grid;
-		grid-template-columns: 230px 230px 230px 230px;
-		grid-template-rows: auto;
-		grid-column-gap: 90px;
+  .explanation__list {
+    display: grid;
+    grid-template-columns: 230px 230px 230px 230px;
+    grid-template-rows: auto;
+    grid-column-gap: 90px;
 
-		width: 100%;
-		margin: 0;
-	}
+    width: 100%;
+    margin: 0;
+  }
 }

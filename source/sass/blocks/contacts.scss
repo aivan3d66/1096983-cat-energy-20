@@ -1,121 +1,121 @@
 .contacts {
-	background-image: url("../../img/bg-map-mobile@1x.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+  background-image: url("../../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-	.contacts {
-		background-image: url("img/bg-map-mobile@2x.png");
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;    
-	}
+  .contacts {
+    background-image: url("img/bg-map-mobile@2x.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+  }
 }
 
 .contacts__wrapper-inner {
-	position: relative;
-	padding: 0;
-	margin: 0 auto;
-	max-width: 1440px;
-	min-width: 320px;
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-width: 320px;
 }
 
 .contacts__map-wrapepr {
-	position: relative;
-	height: 400px;
+  position: relative;
+  height: 400px;
 }
 
 .contacts__text-info {
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 @media (max-width: $mobile-width-only) {
-	.contacts__text-info {
-		display: grid;
-		grid-template-columns: 1fr auto;
-		grid-template-rows: 114px;
+  .contacts__text-info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 114px;
 
-		padding: 20px 20px 0 20px;
+    padding: 20px 20px 0 20px;
 
-		p {
-			width: 140px;
-		}
-	}
+    p {
+      width: 140px;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
-	.contacts {
-		background-image: url("../../img/bg-map-tablet@1x.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-	}
+  .contacts {
+    background-image: url("../../img/bg-map-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
-	@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-		.contacts {
-			background-image: url("img/bg-map-tablet@2x.png");
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-		}
-	}
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .contacts {
+      background-image: url("img/bg-map-tablet@2x.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
 
-	.contacts__text-info {
-		display: flex;
-		justify-content: space-between;
-		height: 200px;
-		padding: 45px 70px 40px 70px;
-	}
+  .contacts__text-info {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    padding: 45px 70px 40px 70px;
+  }
 
-	.contacts--gray {
-		background-color: $basic_gray;
-	}
+  .contacts--gray {
+    background-color: $basic_gray;
+  }
 
-	.contacts__lead {
-		width: 171px;
+  .contacts__lead {
+    width: 171px;
 
-		font-size: 20px;
-		line-height: 21px;
-	}
+    font-size: 20px;
+    line-height: 21px;
+  }
 
-	.contacts__address {
-		width: 159px;
+  .contacts__address {
+    width: 159px;
 
-		font-size: 16px;
-		line-height: 20px;
-	}
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-	.contacts {
-		background-image: url("../../img/bg-map-desktop@1x.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-	}
+  .contacts {
+    background-image: url("../../img/bg-map-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
-	@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-		.contacts {
-			background-image: url("img/bg-map-desktop@2x.png");
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: cover;
-		}
-	}
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .contacts {
+      background-image: url("img/bg-map-desktop@2x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
 
-	.contacts__text-info {
-		position: absolute;
-		z-index: 1;
-		top: 100px;
-		left: 110px;
-		width: 500px;
-		margin: 0;
-		padding: 45px 40px;
-	}
+  .contacts__text-info {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 110px;
+    width: 500px;
+    margin: 0;
+    padding: 45px 40px;
+  }
 
-	.contacts .contacts--gray {
-		background-color: #ffffff; 
-	}	
+  .contacts .contacts--gray {
+    background-color: #ffffff; 
+  } 
 }

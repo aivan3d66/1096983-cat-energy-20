@@ -17,290 +17,290 @@ $special_dark-gray-2: #222222;
 $status_error: #FF8282;
 
 .example {
-	background-color: $special_gray;
+  background-color: $special_gray;
 }
 
 .example__wrapper {
-	position: relative;
-	padding: 0 20px;
-	margin: 0 auto;
-	max-width: 1440px;
-	min-width: 320px;
+  position: relative;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-width: 320px;
 }
 
 @media (max-width: $mobile-width-only) {
-	.example__wrapper {
-		padding-top: 30px;
-		padding-bottom: 50px;
-	}
+  .example__wrapper {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
 
-	.example__title {
-		margin: 0;
-	}
+  .example__title {
+    margin: 0;
+  }
 
-	.example__description {
-		width: 100%;
-		margin: 30px 0;
-	}
+  .example__description {
+    width: 100%;
+    margin: 30px 0;
+  }
 
-	.example__food-cost {
-		padding: 20px 20px;
-		text-align: center;
-	}
+  .example__food-cost {
+    padding: 20px 20px;
+    text-align: center;
+  }
 }
 
 .example__achievement {
-	display: grid;
-	grid-template-columns: 124px 124px;
-	grid-template-rows: auto;
-	grid-column-gap: 10px;
+  display: grid;
+  grid-template-columns: 124px 124px;
+  grid-template-rows: auto;
+  grid-column-gap: 10px;
 
-	width: 100%;
-	margin: 0 auto;
-	padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
 
-	dd {
-		position: absolute;
-		bottom: -18px;
-		left: 25px;
-		width: 70px;
-		margin: 0;
-		padding: 0;
+  dd {
+    position: absolute;
+    bottom: -18px;
+    left: 25px;
+    width: 70px;
+    margin: 0;
+    padding: 0;
 
-		text-align: center;
+    text-align: center;
 
-		background-color: $special_gray;
-	}
+    background-color: $special_gray;
+  }
 }
 
 .example__column {
-	position: relative;
-	margin: 0;
-	padding: 15px 10px;
-	min-width: 124px;
+  position: relative;
+  margin: 0;
+  padding: 15px 10px;
+  min-width: 124px;
 
-	text-align: center;
+  text-align: center;
 
-	border: 1px solid $special_gray-1;
-	border-radius: 5px;
+  border: 1px solid $special_gray-1;
+  border-radius: 5px;
 
-	&-right dd {
-		left: 25px;
-	}
+  &-right dd {
+    left: 25px;
+  }
 }
 
 @media (min-width: $tablet-width) {
-	.example {
-		background: linear-gradient(to top, $basic_gray 50%, $basic_white 50%);
-	}
+  .example {
+    background: linear-gradient(to top, $basic_gray 50%, $basic_white 50%);
+  }
 
-	.example__wrapper {
-		padding: 20px 30px 10px 30px;
-	}
+  .example__wrapper {
+    padding: 20px 30px 10px 30px;
+  }
 
-	.example__title {
-		padding: 0 20px 20px 0;
-		font-size: 60px;
-		line-height: 60px;
-	}
+  .example__title {
+    padding: 0 20px 20px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
 
-	.example__description {
-		padding: 0 20px 0 0;
-		margin: 30px 0;
-		font-size: 16px;
-		line-height: 24px;
-	}
+  .example__description {
+    padding: 0 20px 0 0;
+    margin: 30px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-	.example__achievement {
-		display: grid;
-		grid-template-columns: 162px 162px;
-		grid-template-rows: auto;
-		grid-column-gap: 42px;
+  .example__achievement {
+    display: grid;
+    grid-template-columns: 162px 162px;
+    grid-template-rows: auto;
+    grid-column-gap: 42px;
 
-		margin-bottom: 10px;
+    margin-bottom: 10px;
 
-		dt {
-			font-size: 30px;
-			line-height: 37px;
-		}
+    dt {
+      font-size: 30px;
+      line-height: 37px;
+    }
 
-		dd {
-			bottom: -8px;
-			left: 25px;
-			width: 110px;
-			padding: 0;
-			margin: 0;
+    dd {
+      bottom: -8px;
+      left: 25px;
+      width: 110px;
+      padding: 0;
+      margin: 0;
 
-			font-size: 14px;
-			line-height: 14px;
+      font-size: 14px;
+      line-height: 14px;
 
-			background-color: $basic_white;
-		}
-	}
+      background-color: $basic_white;
+    }
+  }
 
-	.example__column-right dd {
-		width: 130px;
-		left: 15px;
-	}
+  .example__column-right dd {
+    width: 130px;
+    left: 15px;
+  }
 
-	.example__food-cost {
-		position: absolute;
-		top: 300px;
-		right: 50px;
-		width: 174px;
+  .example__food-cost {
+    position: absolute;
+    top: 300px;
+    right: 50px;
+    width: 174px;
 
-		font-size: 20px;
-		line-height: 20px;
-		text-align: right;
-	}
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
 }
 
 @media (min-width: $desktop-width) {
-	.example {
-		background: linear-gradient(to top, $basic_gray 76%, $basic_white 50%);
-	}
+  .example {
+    background: linear-gradient(to top, $basic_gray 76%, $basic_white 50%);
+  }
 
-	.example__wrapper {
-		position: relative;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto;
+  .example__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
 
-		padding: 0 110px;		
-	}
+    padding: 0 110px;   
+  }
 
-	.example__description {
-		width: 440px;
-	}
+  .example__description {
+    width: 440px;
+  }
 
-	.example__slider {
-		position: relative;
-		max-width: 690px;
-	}
+  .example__slider {
+    position: relative;
+    max-width: 690px;
+  }
 
-	.example__food-cost {
-		position: relative;
-		top: 130px;
-		left: 0;
+  .example__food-cost {
+    position: relative;
+    top: 130px;
+    left: 0;
 
-		width: 100%;
+    width: 100%;
 
-		text-align: left;
-	}
+    text-align: left;
+  }
 
-	.example__achievement dd {
-		background-color: $basic_gray;
-	}
+  .example__achievement dd {
+    background-color: $basic_gray;
+  }
 }
 
 // Слайдер
 
 .example__slider {
-	text-align: center;
-	margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {
-	.example__slider {
-		width: 708px;
-		height: 620px;
-	}
+  .example__slider {
+    width: 708px;
+    height: 620px;
+  }
 
-	.example__slider img {
-		width: 100%;
-		height: auto;
-	}
+  .example__slider img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .example__slider input {
-	display: none;
+  display: none;
 }
 
 #slide1:checked ~ .slides .slides__wrapper {
-	margin-left: 0;
+  margin-left: 0;
 }
 
 #slide2:checked ~ .slides .slides__wrapper {
-	margin-left: -110%;
+  margin-left: -110%;
 }
 
 .overflow {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .slides__wrapper {
-	width: 500%;
+  width: 500%;
 }
 
 .slider__item {
-	width: 20%;
-	float: left;
+  width: 20%;
+  float: left;
 }
 
 .active {
-	position: relative;
-	width: 100px;
-	height: 15px;
-	margin: 10px auto;
+  position: relative;
+  width: 100px;
+  height: 15px;
+  margin: 10px auto;
 
-	background-color: $basic_white;
-	border: 1px solid $special_gray-1;
-	border-radius: 10px;
+  background-color: $basic_white;
+  border: 1px solid $special_gray-1;
+  border-radius: 10px;
 
-	&::before {
-		position: absolute;
-		content: "Было";
-		top: -6px;
-		left: -50px;
+  &::before {
+    position: absolute;
+    content: "Было";
+    top: -6px;
+    left: -50px;
 
-		font-size: 16px;
-		line-height: 20px;
-		text-transform: uppercase;
-	}
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
 
-	&::after {
-		position: absolute;
-		content: "Стало";
-		top: -6px;
-		left: 110px;
+  &::after {
+    position: absolute;
+    content: "Стало";
+    top: -6px;
+    left: 110px;
 
-		font-size: 16px;
-		line-height: 20px;
-		text-transform: uppercase;
-	}
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
 }
 
 .active__dots {
-	border-radius: 5px;
-	display: inline-block;
-	width: 45px;
-	height: 8px;
-	background-color: transparent;
+  border-radius: 5px;
+  display: inline-block;
+  width: 45px;
+  height: 8px;
+  background-color: transparent;
 
-	cursor: pointer;
+  cursor: pointer;
 
-	&:nth-child(1) {
-		position: absolute;
-		top: 3px;
-		left: 3px;
-	}
+  &:nth-child(1) {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+  }
 
-	&:nth-child(2) {
-		position: absolute;
-		top: 3px;
-		right: 3px;
-	}
+  &:nth-child(2) {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+  }
 }
 
 #slide1:checked ~ .active label:nth-child(1),
 #slide2:checked ~ .active label:nth-child(2) {
-	background: $basic_green;
-	border-color: $special_gray-1;
+  background: $basic_green;
+  border-color: $special_gray-1;
 }
 
 // Анимация слайдера
 
 .slides__wrapper {
-	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-	transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
 }
