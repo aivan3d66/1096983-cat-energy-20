@@ -16,10 +16,6 @@ $desktop-width: 1440px;
 
 .main-nav__item {
   position: relative;
-
-  font-size: 18px;
-  line-height: 133%;
-  text-transform: uppercase;
   color: #000000;
 
   &:last-child {
@@ -74,6 +70,12 @@ $desktop-width: 1440px;
 
     padding: 0;
     margin-top: 10px;
+
+    li {
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: bold;
+    }
   }
 
   .page-header__logo {
@@ -92,13 +94,13 @@ $desktop-width: 1440px;
   .main-nav__list li {
     text-align: center;
     width: 100%;
-    padding: 20px 0 20px 0;
+    padding: 22px 0 22px 0;
     margin: 0;
 
     border-top: 1px solid #E6E6E6;
 
     &:last-child {
-      padding-bottom: 10px;
+      padding-bottom: 13px;
     }
   }
 
@@ -117,7 +119,7 @@ $desktop-width: 1440px;
   }
 
   .page-header__logo img {
-    margin: 20px 20px 20px 0;
+    margin: 25px 0 20px 0;
     width: 174px;
     height: auto;
   }
@@ -127,28 +129,22 @@ $desktop-width: 1440px;
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 42px;
   }
 
   .main-nav__item {
     position: relative;
     padding: 0;
-    margin-right: 30px;
-    margin-bottom: 20px;
-
-    &:last-child {
-      padding-right: 0;
-      margin-right: 0;
-    }
+    margin: 0 0 20px 36px;
   }
 
   .main-nav__item--active a::after {
     content: "";
     position: absolute;
-    top: 30px;
+    top: 32px;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 2px;
     background-color: #68B738;
     border-radius: 100px;
   }
@@ -161,7 +157,7 @@ $desktop-width: 1440px;
   }
 
   .page-header__logo img {
-    margin-top: 40px;
+    margin-top: 52px;
     width: 204px;
     height: auto;
   } 
@@ -195,7 +191,8 @@ $desktop-width: 1440px;
     width: 100%;
     justify-content: flex-end;
 
-    margin-top: 60px;
+    margin-top: 70px;
+    margin-left: 35px;
   }
 
   .index-page a {
@@ -214,12 +211,12 @@ $desktop-width: 1440px;
 
   .index-page .main-nav__item--active::after {
     position: absolute;
-    top: 30px;
-    left: -1px;
+    top: 34px;
+    left: 6px;
     content: ' ';
 
-    width: 100%;
-    height: 4px;
+    width: 90%;
+    height: 2px;
 
     background-color: #ffffff;
     border-radius: 100px;

@@ -3,9 +3,11 @@
 $basic_black: #000000;
 $basic_white: #ffffff;
 $basic_green: #68B738;
+$basic_green-2: #5EAA2F;
 $basic_gray: #F2F2F2;
 $special_gray: #EAEAEA;
-$special_dark-gray-2: #222222;
+$special_gray-1: #CDCDCD;
+$special_gray-2: #D9D9D9;
 $special_dark-gray: #444444;
 $special_dark-gray-2: #222222;
 $status_error: #FF8282;
@@ -61,7 +63,72 @@ a {
   overflow: hidden;
 }
 
+// Стилизация кнопок
+
+.btn {
+  display: block;
+  padding: 10px;
+  height: 40px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $basic_white;
+  
+  background-color: $basic_green;
+
+  &:hover,
+  &:focus {
+  background-color: $basic_green-2;
+  }
+
+  &:active {
+  color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.catalog__button--gray {
+  height: 40px;
+  padding: 10px 0 10px 0;
+
+  color: $basic_black;
+  background-color: $basic_gray;  
+
+  &:hover,
+  &:focus {
+    background-color: #EBEBEB;
+    color: $basic_black;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.program-form__button {
+  margin-bottom: 70px;
+
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  border-style: none;
+}
+
 // Стилизация текстового содержимого главной страницы
+
+.main-nav__item {
+  font-size: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
 
 .nutrition__title {
   font-weight: normal;
@@ -85,8 +152,6 @@ a {
   font-size: 24px;
   line-height: 154%;
   text-transform: uppercase;
-
-  text-align: center;
 }
 
 .programs__description {
@@ -141,11 +206,13 @@ a {
   font-weight: normal;
   font-size: 12px;
   line-height: 12px;
+  text-transform: lowercase;
 }
 
-.example__toggle span {
+.example__slider-description {
   font-size: 16px;
   line-height: 125%;
+  text-transform: uppercase;
 }
 
 .example__food-cost {
@@ -153,14 +220,13 @@ a {
   font-size: 14px;
   line-height: 143%;
 
-  text-align: center;
   text-transform: uppercase;
 }
 
 .contacts__lead {
   font-weight: normal;
   font-size: 16px;
-  line-height: 112%;
+  line-height: 19px;
   text-transform: uppercase;
 }
 
@@ -200,7 +266,7 @@ a {
 .product-card__composition {
   font-family: $additional_font;
   font-size: 12px;
-  line-height: 133%;
+  line-height: 16px;
 
   color: $special_dark-gray;
 }

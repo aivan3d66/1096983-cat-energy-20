@@ -39,59 +39,6 @@ $status_error: #FF8282;
 $basic_font: "Oswald", sans-serif;
 $additional_font: "Arial", sans-serif;
 
-// Стилизация кнопок
-
-.btn {
-  display: block;
-  padding: 15px 10px;
-
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  text-align: center;
-
-  color: $basic_white;
-  background-color: $basic_green;
-
-  &:hover,
-  &:focus {
-  background-color: $basic_green-2;
-  }
-
-  &:active {
-  color: rgba(255, 255, 255, 0.3);
-  }
-}
-
-.catalog__button--gray {
-  background-color: $basic_gray;
-  color: $basic_black;
-
-  &:hover,
-  &:focus {
-    background-color: #EBEBEB;
-    color: $basic_black;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-}
-
-.program-form__button {
-  margin-bottom: 70px;
-
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-
-  border-style: none;
-}
 
 // Гамбургер
 
@@ -105,12 +52,13 @@ $additional_font: "Arial", sans-serif;
 }
 
 .hamburger {
+  position: relative;
+  right: -108px;
+  top: 20px;
+
   margin: 0;
   width: 20px;
   height: 20px;
-  position: relative;
-  right: -100px;
-  top: 22px;
 }
 
 @media (max-width: $mobile-width-only) {

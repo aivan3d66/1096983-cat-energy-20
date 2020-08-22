@@ -6,10 +6,12 @@ $desktop-width: 1440px;
 
 .nutrition {
   position: relative;
+
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1440px;
   min-width: 320px; 
+
   text-align: center;
 
   background-size: contain;
@@ -36,24 +38,36 @@ $desktop-width: 1440px;
 
   .nutrition__title {
     max-width: 300px;
-    padding-top: 60px;
+    padding-top: 28px;
     margin: 0 auto 0 auto;
+  }
+
+  .nutrition__lead {
+    margin: 26px 0;
   }
 
   .nutrition__button {
     max-width: 280px;
     margin: 0 auto;
+    padding: 11px 10px 10px 10px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .nutrition {
-    padding: 60px 140px 550px 140px;
+    padding: 37px 140px 528px 87px;
+    margin: 0 auto;
+    width: 709px;
+
+    a {
+      height: 52px;
+    }
   }
 
   .nutrition__title {
     width: 414px;
-    margin: 40px 0;
+    margin: 0;
+    margin-bottom: 41px;
 
     text-align: left;
     font-size: 60px;
@@ -73,8 +87,8 @@ $desktop-width: 1440px;
 
   .nutrition img {
     position: absolute;
-    top: 32%;
-    left: 10%;
+    top: 236px;
+    left: -2px;
 
     width: 709px;
     height: 609px;
@@ -83,16 +97,18 @@ $desktop-width: 1440px;
   }
 
   .nutrition__button {
-    width: 244px;
-    padding: 14px 26px;
-
+    width: 240px;
+    padding: 17px 10px;
+    margin: 0;
+    
     font-size: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .nutrition {
-    padding: 100px 100px 250px 100px;
+    padding: 84px 100px 250px 90px;
+    width: 100%;
   }
 
   .nutrition__wrapper {
@@ -102,6 +118,9 @@ $desktop-width: 1440px;
   .nutrition img {
     position: absolute;
     top: 0;
-    left: 35%;
+    left: 39%;
+
+    width: 552px;
+    height: 499px;
   } 
 }
