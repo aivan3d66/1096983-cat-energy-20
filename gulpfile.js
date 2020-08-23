@@ -1,3 +1,4 @@
+  
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
@@ -7,11 +8,10 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require('gulp-csso');
 const rename = require("gulp-rename");
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
-const svgstore = require('gulp-svgstore');
+const imagemin = require("gulp-imagemin");
+const svgstore = require("gulp-svgstore");
+const webp = require("gulp-webp");
 const del = require("del");
-
 
 // Styles
 
@@ -23,6 +23,7 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
@@ -63,31 +64,22 @@ exports.default = gulp.series(
 
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.mozjpeg({progressive: true}),
-      imagemin.svgo()
-    ]))
+  .pipe(imagemin([
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+    imagemin.svgo()
+]))
 }
 
 exports.images = images;
 
-
-const formatWebp = () => {
-  return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"));
-}
-
-exports.webp = formatWebp;
-
-// Sprite
+// Create sprite
 
 const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
-    .pipe(svgstore())
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
+  .pipe(svgstore())
+  .pipe(rename("sprite.svg"))
+  .pipe(gulp.dest("source/img"));
 }
 
 exports.sprite = sprite;
@@ -96,36 +88,36 @@ exports.sprite = sprite;
 
 const copy = () => {
   return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
+    "source/fonts/*.{woff,woff2}",
     "source/js/**",
-    "source/*.ico"
-  ], {
-    base: "source"
+    "source/*.ico",
+    "source/*.html"
+  ],{
+    base:"source"
   })
   .pipe(gulp.dest("build"));
 };
-
 exports.copy = copy;
 
 // Cleaning build
 
 const clean = () => {
-  return del("build");
+  return del ("build");
 };
-
 exports.clean = clean;
 
-// Create
+// Webp
 
-const build = () => gulp.series (
-  "clean",
-  "copy",
-  "css",
-  "sprite",
-  "html"
-);
+const webpic = () => {
+  return gulp.src("source/img/**/*.{png,jpg}")
+  .pipe(webp({ality:90}))
+  .pipe(gulp.dest("source/img"))
+}
+exports.webpic = webpic;
+
+// Create build
+
+const build = gulp.series(clean, images, copy, styles);
 
 exports.build = build;
-
-

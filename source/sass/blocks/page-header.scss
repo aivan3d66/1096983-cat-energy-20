@@ -171,6 +171,8 @@ $desktop-width: 1440px;
     height: 696px;
 
     z-index: -1;
+    background: linear-gradient(to right, $basic_white 1%, $basic_green-2 1%);
+
     background-image: url(../img/index-background-desktop@1x.jpg);
     background-position: right;
     background-repeat: no-repeat;
@@ -181,7 +183,7 @@ $desktop-width: 1440px;
     background-image: url("img/index-background-desktop@2x.jpg");
     background-size: auto;
     background-position: right;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
   }
 }
 

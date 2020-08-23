@@ -416,7 +416,6 @@ a {
     width: 720px;
     height: 696px;
     z-index: -1;
-    background: linear-gradient(to right, #ffffff 1%, #5EAA2F 1%);
     background-image: url(../img/index-background-desktop@1x.jpg);
     background-position: right;
     background-repeat: no-repeat; } }
@@ -462,6 +461,7 @@ a {
   max-width: 1440px;
   min-width: 320px;
   text-align: center;
+  background-color: #000000;
   background-size: contain;
   background-repeat: no-repeat; }
 
@@ -529,7 +529,8 @@ a {
 @media (min-width: 1440px) {
   .nutrition {
     padding: 84px 100px 250px 90px;
-    width: 100%; }
+    width: 100%;
+    background: linear-gradient(to right, #ffffff 14%, #68B738 40%); }
   .nutrition__wrapper {
     padding: 0 100px; }
   .nutrition img {
@@ -1943,7 +1944,7 @@ a {
   content: "";
   position: absolute;
   top: 6px;
-  left: -38px;
+  left: -30px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -2315,4 +2316,4 @@ a {
   transform: rotate(-45deg);
   width: 28px; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */
