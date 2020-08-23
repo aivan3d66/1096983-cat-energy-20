@@ -20,6 +20,10 @@ $status_error: #FF8282;
   background-color: $special_gray;
 }
 
+.example__range-wrapper {
+  display: none;
+}
+
 .example__wrapper {
   position: relative;
   padding: 26px 20px 50px 20px;
@@ -279,6 +283,10 @@ $status_error: #FF8282;
     height: 232px;
   }
 
+  .example__item-cat {
+    display: none;
+  }
+
   .example__slider img {
     width: auto;
     height: auto;
@@ -366,10 +374,15 @@ $status_error: #FF8282;
     margin: 0 auto;
   }
 
+  .item--hidden {
+    display: none;
+  }
+
   .example__item-cat {
     position: absolute;
     top: 4px;
     left: 0;
+    display: block;
 
     height: 100%;
     width: 48%;
@@ -382,6 +395,7 @@ $status_error: #FF8282;
     position: relative;
     top: 24px;
     content: "";
+    display: block;
     width: 428px;
     height: 6px;
 

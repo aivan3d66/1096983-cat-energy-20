@@ -12,6 +12,7 @@ const imagemin = require("gulp-imagemin");
 const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
 const del = require("del");
+const jsmin = require("gulp-jsmin");
 
 // Styles
 
@@ -49,6 +50,34 @@ const server = (done) => {
 
 exports.server = server;
 
+// JSmin
+
+const jsmini = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(jsmin())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('build/js'));
+};
+
+
+exports.jsmini = jsmini;
+
+// Copying build
+
+const copy = () => {
+  return gulp.src([
+    "source/img/**",
+    "source/fonts/*.{woff,woff2}",
+    "source/js/**",
+    "source/*.ico",
+    "source/*.html"
+  ],{
+    base:"source"
+  })
+  .pipe(gulp.dest("build"));
+};
+exports.copy = copy;
+
 // Watcher
 
 const watcher = () => {
@@ -57,7 +86,7 @@ const watcher = () => {
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  copy, styles, server, watcher
 );
 
 // Optimization
@@ -83,23 +112,6 @@ const sprite = () => {
 }
 
 exports.sprite = sprite;
-
-
-// Copying build
-
-const copy = () => {
-  return gulp.src([
-    "source/img/**",
-    "source/fonts/*.{woff,woff2}",
-    "source/js/**",
-    "source/*.ico",
-    "source/*.html"
-  ],{
-    base:"source"
-  })
-  .pipe(gulp.dest("build"));
-};
-exports.copy = copy;
 
 // Cleaning build
 
