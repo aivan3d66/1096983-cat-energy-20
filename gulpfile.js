@@ -84,6 +84,7 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
+
 // Copying build
 
 const copy = () => {
