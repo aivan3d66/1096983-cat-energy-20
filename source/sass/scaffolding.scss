@@ -3,9 +3,11 @@
 $basic_black: #000000;
 $basic_white: #ffffff;
 $basic_green: #68B738;
+$basic_green-2: #5EAA2F;
 $basic_gray: #F2F2F2;
 $special_gray: #EAEAEA;
-$special_dark-gray-2: #222222;
+$special_gray-1: #CDCDCD;
+$special_gray-2: #D9D9D9;
 $special_dark-gray: #444444;
 $special_dark-gray-2: #222222;
 $status_error: #FF8282;
@@ -16,285 +18,349 @@ $basic_font: "Oswald", sans-serif;
 $additional_font: "Arial", sans-serif;
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 *, *:before, *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 
-	font-family: "Oswald", "Arial", sans-serif;
-	font-size: 14px;
-	line-height: 24px;
-	font-weight: 400;
-	color: $basic_black;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $basic_black;
 
-	background-color: $basic_white;
+  background-color: $basic_white;
 }
 
 ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
-	text-decoration: none;
-	color: $basic_black;
+  text-decoration: none;
+  color: $basic_black;
 }
 
 .page-content {
-	overflow: hidden;
+  overflow: hidden;
+}
+
+// Стилизация кнопок
+
+.btn {
+  display: block;
+  padding: 10px;
+  height: 40px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $basic_white;
+  
+  background-color: $basic_green;
+
+  &:hover,
+  &:focus {
+  background-color: $basic_green-2;
+  }
+
+  &:active {
+  color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.catalog__button--gray {
+  height: 40px;
+  padding: 10px 0 10px 0;
+
+  color: $basic_black;
+  background-color: $basic_gray;  
+
+  &:hover,
+  &:focus {
+    background-color: #EBEBEB;
+    color: $basic_black;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.program-form__button {
+  margin-bottom: 70px;
+
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  border-style: none;
 }
 
 // Стилизация текстового содержимого главной страницы
 
+.main-nav__item {
+  font-size: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
 .nutrition__title {
-	font-weight: normal;
-	font-size: 36px;
-	line-height: 36px;
-	text-align: center;
-	color: $basic_white;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: $basic_white;
 }
 
 .nutrition__lead {
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 14px;
-	text-align: center;
-	text-transform: uppercase;
-	color: $basic_white;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic_white;
 }
 
 .programs__title {
-	font-weight: normal;
-	font-size: 24px;
-	line-height: 154%;
-	text-transform: uppercase;
-
-	text-align: center;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 154%;
+  text-transform: uppercase;
 }
 
 .programs__description {
-	font-family: $additional_font;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 129%;
+  font-family: $additional_font;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 129%;
 }
 
 .programs__item a {
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 100%;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
 
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .explanation__title,
 .example__title {
-	font-weight: normal;
-	font-size: 36px;
-	line-height: 111%;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 111%;
 }
 
 .explanation__description,
 .example__description {
-	font-family: $additional_font;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 18px;
+  font-family: $additional_font;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .example__food-cost {
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 143%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 143%;
 }
 
 .example__achievement dt {
-	font-family: $basic_font;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	line-height: 24px;
-	text-transform: uppercase;
+  font-family: $basic_font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
 }
 
 .example__achievement dd {
-	font-family: $additional_font;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 12px;
+  font-family: $additional_font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
 }
 
-.example__toggle span {
-	font-size: 16px;
-	line-height: 125%;
+.example__slider-description {
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
 }
 
 .example__food-cost {
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 143%;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 143%;
 
-	text-align: center;
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .contacts__lead {
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 112%;
-	text-transform: uppercase;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
 }
 
 .contacts__address {
-	font-family: $additional_font;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 143%;
+  font-family: $additional_font;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 143%;
 }
 
 .copyright__link {
-	font-family: $additional_font;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 18px;
+  font-family: $additional_font;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 // Стилизация содержимого странийца каталога
 
 .catalog__main-title {
-	font-weight: normal;
-	font-size: 36px;
-	line-height: 100%;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 100%;
 
-	text-align: left;
+  text-align: left;
 }
 
 .product-card__title {
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 125%;
-	text-transform: uppercase;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
 
-	color: $special_dark-gray-2;
+  color: $special_dark-gray-2;
 }
 
 .product-card__composition {
-	font-family: $additional_font;
-	font-size: 12px;
-	line-height: 133%;
+  font-family: $additional_font;
+  font-size: 12px;
+  line-height: 16px;
 
-	color: $special_dark-gray;
+  color: $special_dark-gray;
 }
 
 .catalog__title {
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 125%;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
 
-	text-align: center;
-	text-transform: uppercase;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .catalog__description {
-	font-family: $additional_font;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 133%;
-	color: $special_dark-gray;
-	text-align: center;
+  font-family: $additional_font;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 133%;
+  color: $special_dark-gray;
+  text-align: center;
 }
 
 .additional-goods__title {
-	font-weight: normal;
-	font-size: 24px;
-	line-height: 100%;
-	text-align: center;
-	color: $basic_black;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  color: $basic_black;
 }
 
 .additional-goods__item-title {
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 100%;
-	text-transform: uppercase;
-	color: $special_dark-gray-2;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: $special_dark-gray-2;
 }
 
 .additional-goods__composition {
-	font-family: $additional_font;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 100%;
-	color: $special_dark-gray;
+  font-family: $additional_font;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+  color: $special_dark-gray;
 }
 
 .additional-goods__text {
-	font-family: $additional_font;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 125%;
-	color: $basic_white;
+  font-family: $additional_font;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: $basic_white;
 }
 
 // Стилизация текстового содержимого страницы формы
 
 .program__main-title {
-	font-weight: normal;
-	font-size: 36px;
-	line-height: 36px;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
 }
 
 .program__lead {
-	font-size: 14px;
-	line-height: 18px;
-	text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 
 .program-form__item label {
-	font-size: 16px;
-	line-height: 18px;
-	text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 
 .program-form__item input,
 .program-form__item textarea {
-	font-family: "Oswald";
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 18px;
-	text-transform: uppercase;
+  font-family: "Oswald";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 
 .program__item-title {
-	font-weight: normal;
-	font-size: 24px;
-	line-height: 26px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
 }
 
 .program-form__legend {
-	font-family: "Arial";
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 16px;
-	text-align: center;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 }
