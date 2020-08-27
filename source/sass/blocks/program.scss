@@ -1,13 +1,7 @@
-// Вьюпорты
-
-$mobile-width-only: 767px;
-$tablet-width: 768px;
-$desktop-width: 1440px;
-
 .program {
   position: relative;
   min-width: 320px;
-  max-width: 1440px;
+  max-width: 1220px;
   padding: 0 20px;
   margin: 0 auto;
 
@@ -32,7 +26,7 @@ $desktop-width: 1440px;
     width: 300%;
     height: 2px;
 
-    background-color: #68B738;
+    background-color: $basic_green;
   }
 }
 
@@ -70,18 +64,18 @@ $desktop-width: 1440px;
 
   input,
   textarea {
-    border-color: #F2F2F2;
+    border-color: $basic_gray;
     border-style: solid;
   }
 
   input:hover,
   textarea:hover {
-    border-color: #CDCDCD;
+    border-color: $special_gray-1;
   }
 
   input:active,
   textarea:active {
-    border-color: #000000;
+    border-color: $basic_black;
   }
 }
 
@@ -98,7 +92,7 @@ $desktop-width: 1440px;
 }
 
 .program__user-contacts input:focus + svg {
-  fill: #68B738;
+  fill: $basic_green;
 }
 
 /* Радио батоны */
@@ -108,6 +102,11 @@ $desktop-width: 1440px;
   margin-left: 45px;
 }
 
+.filter-input-radio:disabled + label,
+.filter-input-checkbox:disabled + label {
+  opacity: 0.3;
+}
+
 .filter-input-radio + label::before {
   content: "";
   position: absolute;
@@ -115,16 +114,15 @@ $desktop-width: 1440px;
   left: -46px;
   width: 30px;
   height: 30px;
-  border: 2px solid #CDCDCD;
+  border: 2px solid $special_gray-1;
   border-radius: 50%;
 
   cursor: pointer;
-
   opacity: 0.6;
 }
 
 .filter-input-radio + label:hover::before {
-  border-color: #BABABA;
+  border-color: $special_gray-3;
 }
 
 .filter-input-radio:checked + label::after {
@@ -135,8 +133,8 @@ $desktop-width: 1440px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: #68B738;
-  border-color: #BABABA;
+  background-color: $basic_green;
+  border-color: #bababa;
 }
 
 @media (min-width: 768px) {
@@ -145,8 +143,8 @@ $desktop-width: 1440px;
   }
 
   .filter-input-radio + label::before {
-    top: -4px;
-    left: -60px;
+    top: -5px;
+    left: -61px;
     width: 40px;
     height: 40px;
   }
@@ -173,13 +171,13 @@ $desktop-width: 1440px;
   left: -40px;
   width: 30px;
   height: 30px;
-  border: 2px solid #F2F2F2;
+  border: 2px solid $basic_gray;
 
   cursor: pointer;
 }
 
 .filter-input-checkbox:checked + label::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: -3px;
@@ -188,7 +186,7 @@ $desktop-width: 1440px;
   width: 30px;
   height: 30px;
 
-  background-image: url('../../img/icon-tick.svg');
+  background-image: url("../../img/icon-tick.svg");
   background-size: 15px 15px;
   background-repeat: no-repeat;
   background-position: center;
@@ -218,7 +216,6 @@ $desktop-width: 1440px;
 
 @media (max-width: $mobile-width-only) {
   .program {
-
     small {
       position: absolute;
       bottom: -38px;
@@ -252,7 +249,7 @@ $desktop-width: 1440px;
       width: 100%;
       height: 150px;
 
-      border: 1px solid #F2F2F2;
+      border: 1px solid $basic_gray;
     }
 
     &:last-child {
@@ -264,8 +261,8 @@ $desktop-width: 1440px;
   .program-form__item-weigth {
     margin-bottom: 12px;
 
-    border-top: 1px solid #D9D9D9;
-    border-bottom: 1px solid #D9D9D9;
+    border-top: 1px solid $special_gray-3;
+    border-bottom: 1px solid $special_gray-3;
   }
 
   .program__cat-characters,
@@ -286,7 +283,7 @@ $desktop-width: 1440px;
 }
 
 @media (min-width: $tablet-width) {
-  .program  {
+  .program {
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
@@ -366,7 +363,7 @@ $desktop-width: 1440px;
       width: 50%;
       height: 2px;
 
-      background-color: #68B738;
+      background-color: $basic_green;
     }
 
     &::after {
@@ -403,7 +400,7 @@ $desktop-width: 1440px;
     &::after {
       left: 40%;
     }
-  }   
+  }
 
   .program__cat-characters,
   .program__user-contacts {
@@ -414,20 +411,20 @@ $desktop-width: 1440px;
       flex-grow: 1;
     }
 
-    input{
+    input {
       flex-grow: 20;
       padding: 24px 0 24px 20px;
       margin-bottom: 6px;
       height: 46px;
     }
-  }  
+  }
 
   .program-form__item-weigth {
     height: 200px;
     padding: 30px;
     margin: 66px 0 30px 0;
 
-    border: 1px solid #F2F2F2;
+    border: 1px solid $basic_gray;
 
     p {
       margin: 0;
@@ -454,7 +451,7 @@ $desktop-width: 1440px;
 
 @media (min-width: $desktop-width) {
   .program {
-    padding: 0 110px;
+    padding: 0 30px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -467,7 +464,7 @@ $desktop-width: 1440px;
     }
 
     small {
-      right: 35%;
+      right: 27%;
     }
 
     button {
@@ -499,13 +496,13 @@ $desktop-width: 1440px;
     }
   }
 
-  .program__item-title{
+  .program__item-title {
     padding: 14px 0;
     margin: 0 0 50px 0;
 
     &::before {
       top: 34px;
-      left: -53%;
+      left: -52%;
       height: 2px;
     }
 
@@ -513,7 +510,6 @@ $desktop-width: 1440px;
       top: 37px;
     }
   }
-
 
   .program__item-contact {
     margin-bottom: 54px;
@@ -527,7 +523,7 @@ $desktop-width: 1440px;
   .program__user-contacts svg {
     top: 16px;
     right: 20px;
-  }  
+  }
 
   .program__item-comment {
     &::before {
@@ -543,7 +539,7 @@ $desktop-width: 1440px;
     &::after {
       left: 22%;
     }
-  }   
+  }
 
   .program-form__wrapper-inner {
     display: grid;
@@ -578,8 +574,3 @@ $desktop-width: 1440px;
     }
   }
 }
-
-
-
-
-

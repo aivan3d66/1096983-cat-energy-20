@@ -1,5 +1,6 @@
 var navMain = document.querySelector('.main-nav__list');
 var navToggle = document.querySelector('.hamburger');
+var inputBorder = document.querySelector('.program-form__input');
 
 navMain.classList.remove('main-nav--nojs');
 

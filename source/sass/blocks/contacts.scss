@@ -10,7 +10,7 @@
     background-image: url("img/bg-map-mobile@2x.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
   }
 }
 
@@ -18,7 +18,7 @@
   position: relative;
   padding: 0;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1220px;
   min-width: 320px;
 }
 
@@ -28,17 +28,17 @@
   height: 362px;
 }
 
-  iframe {
-    width: 100%;
-    height: 100%;
-  }
+iframe {
+  width: 100%;
+  height: 100%;
+}
 
-  .contacts .contacts--gray {
-    background-color: $basic_gray; 
-  } 
+.contacts .contacts--gray {
+  background-color: $basic_gray;
+}
 
 .contacts__text-info {
-  background-color: #ffffff;
+  background-color: $basic_white;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -152,7 +152,7 @@
     iframe {
       width: 100%;
       height: 100%;
-    }    
+    }
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -165,17 +165,17 @@
   }
 
   .contacts__map-wrapepr::after {
-      position: absolute;
-      z-index: 3;
-      top: 138px;
-      left: 63%;
-    }
+    position: absolute;
+    z-index: 3;
+    top: 138px;
+    left: 63%;
+  }
 
   .contacts__text-info {
     position: absolute;
     z-index: 1;
     top: 100px;
-    left: 110px;
+    left: 30px;
     width: 570px;
     margin: 0;
     padding: 45px 84px 45px 76px;
@@ -184,8 +184,8 @@
       text-align: left;
     }
   }
-  
+
   .contacts .contacts--gray {
-    background-color: #ffffff; 
-  } 
+    background-color: #ffffff;
+  }
 }

@@ -1,11 +1,7 @@
-$mobile-width-only: 767px;
-$tablet-width: 768px;
-$desktop-width: 1440px;
-
 .additional-goods {
   padding: 0 20px;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1220px;
   min-width: 320px;
 }
 
@@ -21,7 +17,7 @@ $desktop-width: 1440px;
     width: 300%;
     height: 3px;
 
-    background-color: #68B738;
+    background-color: $basic_green;
   }
 }
 
@@ -59,7 +55,7 @@ $desktop-width: 1440px;
   .additional-goods__item {
     padding: 14px 0 20px 0;
 
-    border-bottom: 1px solid #C0C0C0;
+    border-bottom: 1px solid $special_gray-3;
 
     h3 {
       margin: 0;
@@ -67,12 +63,12 @@ $desktop-width: 1440px;
     }
 
     &:first-child {
-      border-top: 1px solid #C0C0C0;
+      border-top: 1px solid $special_gray-3;
     }
 
     a {
       height: 40px;
-      padding: 10px 0 10px 0
+      padding: 10px 0;
     }
   }
 
@@ -97,14 +93,14 @@ $desktop-width: 1440px;
 
     background-image: url("../img/gift-photo-mobile@2x.jpg");
 
-    svg  {
+    svg {
       position: relative;
       top: 66px;
       width: 60px;
       height: 60px;
 
       margin: 0 auto;
-      fill: #ffffff;
+      fill: $basic_white;
     }
 
     p {
@@ -142,7 +138,7 @@ $desktop-width: 1440px;
       width: 50%;
       height: 3px;
 
-      background-color: #68B738;
+      background-color: $basic_green;
     }
   }
 
@@ -154,7 +150,7 @@ $desktop-width: 1440px;
     padding: 24px 37px;
     width: 100%;
 
-    border: 1px solid #C0C0C0;
+    border: 1px solid $special_gray-3;
 
     &:nth-child(1),
     &:nth-child(2),
@@ -174,7 +170,7 @@ $desktop-width: 1440px;
     }
   }
 
-  .additional-goods__composition { 
+  .additional-goods__composition {
     margin: 0;
 
     td {
@@ -182,7 +178,7 @@ $desktop-width: 1440px;
       font-size: 16px;
       line-height: 20px;
     }
-  
+
     td:nth-child(2) {
       width: 90px;
     }
@@ -205,7 +201,7 @@ $desktop-width: 1440px;
       height: 62px;
 
       margin: 0 auto;
-      fill: #ffffff;
+      fill: $basic_white;
     }
 
     p {
@@ -235,7 +231,7 @@ $desktop-width: 1440px;
 
 @media (min-width: $desktop-width) {
   .additional-goods {
-    padding: 0 110px 88px 110px;
+    padding: 0 30px 88px 30px;
   }
 
   .additional-goods__title {
@@ -263,12 +259,13 @@ $desktop-width: 1440px;
     margin: 0;
     padding: 0;
 
+    background-color: $basic_green;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-size: 245px 289px;
     background-position: center;
 
-    svg  {
+    svg {
       position: relative;
       top: 64px;
       left: 91px;
@@ -292,7 +289,7 @@ $desktop-width: 1440px;
     grid-template-rows: auto;
   }
 
-  .additional-goods__item  {
+  .additional-goods__item {
     display: grid;
     grid-template-columns: 1fr 1fr 244px;
     grid-template-rows: 1fr;
@@ -312,7 +309,7 @@ $desktop-width: 1440px;
     }
 
     &:last-child {
-      border-bottom: 1px solid #C0C0C0;
+      border-bottom: 1px solid $special_gray-3;
     }
   }
 

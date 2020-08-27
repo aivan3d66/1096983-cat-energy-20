@@ -59,4 +59,3 @@ function drags(dragElement, exampleCatElement, container) {
     exampleCatElement.removeClass('resizable');
   });
 }
-
