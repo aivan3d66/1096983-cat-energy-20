@@ -97,20 +97,20 @@
         <p class="program__lead">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
-        <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="program-form form__validation" action="https://echo.htmlacademy.ru" method="post">
           <div class="program-form__wrapper-inner">
             <div class="program-form__item program-form__cat-characters">
               <p class="program__cat-characters">
                 <label for="cat__name">Имя:*</label>
-                <input class="program-form__input" type="text" id="cat__name" name="name" placeholder="Барсик" maxlength="20" required>
+                <input class="program-form__input input-name form-field" type="text" id="cat__name" name="name" placeholder="Барсик" minlength="3" pattern="^[А-Яа-яЁё\s]+$" required>
               </p>
               <p class="program__cat-characters">
                 <label for="cat__weigth">Вес (кг):*</label>
-                <input class="program-form__input" type="number" id="cat__weigth" name="text" placeholder="7" required>
+                <input class="program-form__input input-weigth form-field" type="number" id="cat__weigth" name="text" placeholder="7" required>
               </p>
               <p class="program__cat-characters">
                 <label for="cat__age">Возраст (лет):*</label>
-                <input class="program-form__input" type="number" id="cat__age" name="text" placeholder="7" required>
+                <input class="program-form__input input-age form-field" type="number" id="cat__age" name="text" placeholder="7" required>
               </p>
             </div>
             <div class="program-form__item program-form__item-weigth">
@@ -133,15 +133,15 @@
             <div class="program-form__wrapper-inner">
               <p class="program__user-contacts">
                 <label for="user-mail">E-mail:*</label>
-                <input class="user-mail program-form__input" type="email" id="user-mail" name="text" placeholder="kuklachev@gmail.com" maxlength="30" required>
-                <svg class="program__user-mail">
+                <input class="user-mail form-field input-mail program-form__input" type="email" id="user-mail" name="text" placeholder="kuklachev@gmail.com" maxlength="30" required>
+                <svg class="program__user-mail mail-icon">
                   <use xlink:href="#icon-mail"></use>
                 </svg>
               </p>
               <p class="program__user-contacts">
                 <label for="user-phone">Телефон:*</label>
-                <input class="user-phone program-form__input" type="tel" id="user-phone" name="text" placeholder="8 (960) 900-60-90" maxlength="15" required>
-                <svg class="program__user-phone">
+                <input class="user-phone form-field input-phone program-form__input" type="tel" id="user-phone" name="phone" placeholder="8 (960) 900-60-90" maxlength="11" minlength="11" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+                <svg class="program__user-phone phone-icon">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
               </p>
@@ -242,5 +242,6 @@
       </div>
     </footer>
   <script src="js/script.js"></script>
+  <script src="js/form-script.js"></script>
   </body>
 </html>

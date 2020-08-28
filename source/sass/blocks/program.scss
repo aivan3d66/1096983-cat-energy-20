@@ -64,6 +64,7 @@
 
   input,
   textarea {
+    outline: none;
     border-color: $basic_gray;
     border-style: solid;
   }
@@ -74,7 +75,9 @@
   }
 
   input:active,
-  textarea:active {
+  input:focus,
+  textarea:active,
+  textarea:focus {
     border-color: $basic_black;
   }
 }
