@@ -27,8 +27,8 @@ function drags(dragElement, exampleCatElement, container) {
       containerOffset = container.offset().left,
       containerWidth = container.outerWidth();
 
-      minLeft = containerOffset + 10;
-      maxLeft = containerOffset + containerWidth - dragWidth - 10;
+      minLeft = containerOffset + 110;
+      maxLeft = containerOffset + containerWidth - dragWidth - 150;
 
   dragElement.parents().on("mousemove touchmove", function(e) {
 
