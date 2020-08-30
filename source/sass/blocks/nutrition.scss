@@ -1,16 +1,10 @@
-// Вьюпорты
-
-$mobile-width-only: 767px;
-$tablet-width: 768px;
-$desktop-width: 1440px;
-
 .nutrition {
   position: relative;
 
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1440px;
-  min-width: 320px; 
+  min-width: 320px;
 
   text-align: center;
   background-size: contain;
@@ -33,7 +27,7 @@ $desktop-width: 1440px;
       background-image: url("img/index-background-mobile@2x.jpg");
       background-size: 640px auto;
     }
-  } 
+  }
 
   .nutrition__title {
     max-width: 300px;
@@ -71,7 +65,7 @@ $desktop-width: 1440px;
     text-align: left;
     font-size: 60px;
     line-height: 100%;
-    color: #000000;
+    color: $basic_black;
   }
 
   .nutrition__lead {
@@ -80,7 +74,7 @@ $desktop-width: 1440px;
 
     font-size: 20px;
     line-height: 100%;
-    color: #000000;
+    color: $basic_black;
     text-align: left;
   }
 
@@ -99,7 +93,7 @@ $desktop-width: 1440px;
     width: 240px;
     padding: 17px 10px;
     margin: 0;
-    
+
     font-size: 20px;
   }
 }
@@ -110,9 +104,34 @@ $desktop-width: 1440px;
     width: 100%;
   }
 
+  .nutrition::after {
+    position: absolute;
+    top: -23%;
+    left: 50%;
+    content: "";
+    width: 720px;
+    height: 696px;
+
+    z-index: -2;
+    background: linear-gradient(to right, $basic_white 1%, $basic_green-2 1%);
+
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .nutrition::after {
+      background-image: url("img/index-background-desktop@2x.jpg");
+      background-size: auto;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+  }
+
   .nutrition__wrapper {
     padding: 0 100px;
-  } 
+  }
 
   .nutrition img {
     position: absolute;
@@ -121,5 +140,5 @@ $desktop-width: 1440px;
 
     width: 552px;
     height: 499px;
-  } 
+  }
 }

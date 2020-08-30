@@ -2,15 +2,16 @@
 
 $basic_black: #000000;
 $basic_white: #ffffff;
-$basic_green: #68B738;
-$basic_green-2: #5EAA2F;
-$basic_gray: #F2F2F2;
-$special_gray: #EAEAEA;
-$special_gray-1: #CDCDCD;
-$special_gray-2: #D9D9D9;
+$basic_green: #68b738;
+$basic_green-2: #5eaa2f;
+$basic_gray: #f2f2f2;
+$special_gray: #eaeaea;
+$special_gray-1: #cdcdcd;
+$special_gray-2: #d9d9d9;
 $special_dark-gray: #444444;
 $special_dark-gray-2: #222222;
-$status_error: #FF8282;
+$special_dark-gray-3: #ebebeb;
+$status_error: #ff8282;
 
 // Шрифты
 
@@ -20,7 +21,10 @@ $additional_font: "Arial", sans-serif;
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -77,16 +81,16 @@ a {
   text-transform: uppercase;
   text-align: center;
   color: $basic_white;
-  
+
   background-color: $basic_green;
 
   &:hover,
   &:focus {
-  background-color: $basic_green-2;
+    background-color: $basic_green-2;
   }
 
   &:active {
-  color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -95,11 +99,11 @@ a {
   padding: 10px 0 10px 0;
 
   color: $basic_black;
-  background-color: $basic_gray;  
+  background-color: $basic_gray;
 
   &:hover,
   &:focus {
-    background-color: #EBEBEB;
+    background-color: $special_dark-gray-3;
     color: $basic_black;
   }
 
@@ -111,7 +115,7 @@ a {
 .program-form__button {
   margin-bottom: 70px;
 
-  font-family: "Oswald";
+  font-family: $basic_font;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -125,7 +129,6 @@ a {
 
 .main-nav__item {
   font-size: 20px;
-  font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
 }
@@ -212,14 +215,6 @@ a {
 .example__slider-description {
   font-size: 16px;
   line-height: 125%;
-  text-transform: uppercase;
-}
-
-.example__food-cost {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 143%;
-
   text-transform: uppercase;
 }
 
@@ -343,7 +338,7 @@ a {
 
 .program-form__item input,
 .program-form__item textarea {
-  font-family: "Oswald";
+  font-family: $basic_font;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
@@ -357,7 +352,7 @@ a {
 }
 
 .program-form__legend {
-  font-family: "Arial";
+  font-family: $additional_font;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

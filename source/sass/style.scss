@@ -1,44 +1,45 @@
 /* Файловая структура проекта */
 
-@import 'fonts';
-@import 'scaffolding';
-@import 'blocks/page-header';
-@import 'blocks/nutrition';
-@import 'blocks/programs';
-@import 'blocks/explanation';
-@import 'blocks/example';
-@import 'blocks/contacts';
-@import 'blocks/page-footer';
-@import 'blocks/product-card';
-@import 'blocks/catalog';
-@import 'blocks/additional-goods';
-@import 'blocks/program';
+@import "fonts";
+@import "scaffolding";
+@import "blocks/page-header";
+@import "blocks/nutrition";
+@import "blocks/programs";
+@import "blocks/explanation";
+@import "blocks/example";
+@import "blocks/contacts";
+@import "blocks/page-footer";
+@import "blocks/product-card";
+@import "blocks/catalog";
+@import "blocks/additional-goods";
+@import "blocks/program";
 
 // Вьюпорты
 
 $mobile-width-only: 767px;
 $tablet-width: 768px;
-$desktop-width: 1440px;
+$desktop-width: 1220px;
 
 // Цветовая палитра
 
 $basic_black: #000000;
 $basic_white: #ffffff;
-$basic_green: #68B738;
-$basic_green-2: #5EAA2F;
-$basic_gray: #F2F2F2;
-$special_gray: #EAEAEA;
-$special_gray-1: #CDCDCD;
-$special_gray-2: #D9D9D9;
+$basic_green: #68b738;
+$basic_green-2: #5eaa2f;
+$basic_gray: #f2f2f2;
+$special_gray: #eaeaea;
+$special_gray-1: #cdcdcd;
+$special_gray-2: #d9d9d9;
+$special_gray-3: #c0c0c0;
 $special_dark-gray: #444444;
 $special_dark-gray-2: #222222;
-$status_error: #FF8282;
+$special_dark-gray-3: #ebebeb;
+$status_error: #ff8282;
 
 // Шрифты
 
-$basic_font: "Oswald", sans-serif;
+$basic_font: "Oswald", "Arial", sans-serif;
 $additional_font: "Arial", sans-serif;
-
 
 // Гамбургер
 
@@ -74,11 +75,11 @@ $additional_font: "Arial", sans-serif;
 }
 
 .hamburger .bar {
+  display: block;
   padding: 0;
   width: 20px;
   height: 2px;
-  background-color: #000000;
-  display: block;
+  background-color: $basic_black;
   border-radius: 4px;
   transition: all 0.4s ease-in-out;
   position: absolute;
@@ -108,7 +109,7 @@ $additional_font: "Arial", sans-serif;
 }
 
 .hamburger4 .bar5 {
-  bottom: 0px;
+  bottom: 0;
 }
 
 .hamburger4 .bar {
@@ -124,10 +125,9 @@ $additional_font: "Arial", sans-serif;
 .hamburger4 .bar3 {
   width: 1px;
   left: 13.5px;
-
 }
 
-.checkbox1:checked + label > .hamburger1 > .bar1{
+.checkbox1:checked + label > .hamburger1 > .bar1 {
   transform: rotate(45deg);
   transform-origin: 5%;
   width: 28px;

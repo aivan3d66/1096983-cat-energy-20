@@ -1,8 +1,26 @@
+// Вьюпорты
+
 $mobile-width-only: 767px;
 $tablet-width: 768px;
-$desktop-width: 1440px;
+$desktop-width: 1220px;
 
-.page-header {
+// Цветовая палитра
+
+$basic_black: #000000;
+$basic_white: #ffffff;
+$basic_green: #68b738;
+$basic_green-2: #5eaa2f;
+$basic_gray: #f2f2f2;
+$special_gray: #eaeaea;
+$special_gray-1: #cdcdcd;
+$special_gray-2: #d9d9d9;
+$special_gray-3: #c0c0c0;
+$special_dark-gray: #444444;
+$special_dark-gray-2: #222222;
+$special_dark-gray-3: #ebebeb;
+$status_error: #ff8282;
+
+.header-wrapper {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 500px;
@@ -10,13 +28,23 @@ $desktop-width: 1440px;
 
   padding: 0 20px;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1220px;
   min-width: 320px;
+}
+
+.page-header__logo-link {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-nav__item {
   position: relative;
-  color: #000000;
+  color: $basic_black;
 
   &:last-child {
     padding-right: 0;
@@ -53,13 +81,13 @@ $desktop-width: 1440px;
 }
 
 @media (max-width: $mobile-width-only) {
-  .page-header {
+  .header-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    
+
     padding: 10px 0;
-    border-bottom: 1px solid #E6E6E6;
+    border-bottom: 1px solid $special_gray;
   }
 
   .main-nav__list {
@@ -70,12 +98,6 @@ $desktop-width: 1440px;
 
     padding: 0;
     margin-top: 10px;
-
-    li {
-      font-size: 20px;
-      line-height: 20px;
-      font-weight: bold;
-    }
   }
 
   .page-header__logo {
@@ -97,7 +119,11 @@ $desktop-width: 1440px;
     padding: 22px 0 22px 0;
     margin: 0;
 
-    border-top: 1px solid #E6E6E6;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+
+    border-top: 1px solid $special_gray;
 
     &:last-child {
       padding-bottom: 13px;
@@ -110,7 +136,7 @@ $desktop-width: 1440px;
 }
 
 @media (min-width: $tablet-width) {
-  .page-header {
+  .header-wrapper {
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto;
@@ -145,47 +171,49 @@ $desktop-width: 1440px;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #68B738;
+    background-color: $basic_green;
     border-radius: 100px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    padding: 0 110px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .header-wrapper {
     margin: 0 auto;
   }
 
   .page-header__logo img {
     margin-top: 52px;
     width: 204px;
-    height: auto;
-  } 
+  }
 
-  .index-page::after {
+  .index-page__background::after {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 50%;
     content: "";
     width: 720px;
     height: 696px;
 
     z-index: -1;
     background: linear-gradient(to right, $basic_white 1%, $basic_green-2 1%);
-
-    background-image: url(../img/index-background-desktop@1x.jpg);
+    background-image: url("../img/index-background-desktop@1x.jpg");
     background-position: right;
     background-repeat: no-repeat;
   }
 
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .index-page::after {
-    background-image: url("img/index-background-desktop@2x.jpg");
-    background-size: auto;
-    background-position: right;
-    background-repeat: no-repeat;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .index-page__background::after {
+      background-image: url("img/index-background-desktop@2x.jpg");
+      background-size: auto;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
   }
-}
 
   .main-nav__list {
     display: flex;
@@ -194,11 +222,10 @@ $desktop-width: 1440px;
     justify-content: flex-end;
 
     margin-top: 70px;
-    margin-left: 35px;
   }
 
   .index-page a {
-    color: #ffffff;
+    color: $basic_white;
   }
 
   .main-nav__item {
@@ -208,19 +235,19 @@ $desktop-width: 1440px;
     font-size: 20px;
     line-height: 30px;
     text-transform: uppercase;
-    color: #000000;
+    color: $basic_black;
   }
 
   .index-page .main-nav__item--active::after {
     position: absolute;
     top: 34px;
     left: 6px;
-    content: ' ';
+    content: "";
 
     width: 90%;
     height: 2px;
 
-    background-color: #ffffff;
+    background-color: $basic_white;
     border-radius: 100px;
-  } 
+  }
 }

@@ -1,23 +1,5 @@
-// Вьюпорты
-
-$mobile-width-only: 767px;
-$tablet-width: 768px;
-$desktop-width: 1440px;
-
-// Цветовая палитра
-
-$basic_black: #000000;
-$basic_white: #ffffff;
-$basic_green: #68B738;
-$basic_gray: #F2F2F2;
-$special_gray: #EAEAEA;
-$special_gray-2: #D9D9D9;
-$special_dark-gray: #444444;
-$special_dark-gray-2: #222222;
-$status_error: #FF8282;
-
 .programs {
-  max-width: 1440px;
+  max-width: 1220px;
   min-width: 320px;
   padding: 24px 20px 20px 20px;
   margin: 0 auto;
@@ -41,13 +23,13 @@ $status_error: #FF8282;
     position: absolute;
     top: 24px;
     left: 22px;
-    z-index: -1;  
+    z-index: -1;
     content: "";
 
     width: 50px;
     height: 50px;
 
-    background-color: #68B738;
+    background-color: $basic_green;
     border-radius: 50%;
   }
 }
@@ -56,7 +38,7 @@ $status_error: #FF8282;
   position: relative;
   color: $basic_black;
 
-   &::after {
+  &::after {
     position: absolute;
     content: "";
     top: 6px;
@@ -67,7 +49,7 @@ $status_error: #FF8282;
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
   }
-  
+
   &:hover::after,
   &:focus::after {
     position: absolute;
@@ -153,6 +135,14 @@ $status_error: #FF8282;
       font-size: 20px;
       line-height: 30px;
     }
+
+    &::before {
+      top: 92px;
+      left: 445px;
+
+      width: 200px;
+      height: 200px;
+    }
   }
 
   .programs__cat-slim {
@@ -193,16 +183,6 @@ $status_error: #FF8282;
     line-height: 24px;
   }
 
-  .programs__item {
-    &::before {
-      top: 92px;
-      left: 445px;
-
-      width: 200px;
-      height: 200px;
-    }
-  }
-
   .programs__button {
     &::after {
       top: 10px;
@@ -210,7 +190,7 @@ $status_error: #FF8282;
       width: 22px;
       height: 15px;
     }
-    
+
     &:hover::after,
     &:focus::after {
       top: 10px;
@@ -219,7 +199,7 @@ $status_error: #FF8282;
       width: 32px;
       height: 15px;
     }
-  } 
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -227,22 +207,24 @@ $status_error: #FF8282;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 80px;
+    grid-column-gap: 80px;
 
+    width: 1220px;
     margin: 0 auto;
-    padding: 20px 110px;
+    padding: 0;
   }
 
   .programs__title {
-    padding: 0 22px 0px 44px;
+    padding: 0 22px 0 44px;
     margin-bottom: 64px;
     text-align: center;
   }
 
   .programs__item {
     margin: 0;
+
     width: 570px;
-    
+
     &::before {
       top: 46px;
       left: 50px;
@@ -256,7 +238,7 @@ $status_error: #FF8282;
       padding: 10px 22px;
     }
   }
-  
+
   .programs__cat-slim {
     position: absolute;
     z-index: 1;
@@ -275,5 +257,4 @@ $status_error: #FF8282;
     width: 134px;
     height: 56px;
   }
-
 }
