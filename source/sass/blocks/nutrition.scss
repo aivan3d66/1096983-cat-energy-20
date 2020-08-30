@@ -17,10 +17,8 @@
 
 .nutrition {
   position: relative;
-
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1440px;
   min-width: 320px;
 
   text-align: center;
@@ -64,7 +62,7 @@
 
 @media (min-width: $tablet-width) {
   .nutrition {
-    padding: 37px 140px 528px 87px;
+    padding: 37px 140px 520px 87px;
     margin: 0 auto;
     width: 709px;
 
@@ -116,43 +114,43 @@
 
 @media (min-width: $desktop-width) {
   .nutrition {
-    height: 550px;
-    padding: 84px 100px 250px 80px;
+    height: 300px;
     width: 100%;
-
-    background: linear-gradient(to right, $basic_white 50%, $basic_green-2 50%);
+    padding: 0 0 554px 0;
+    background: linear-gradient(to right, $basic_white 50%, #65a93c 50%);
   }
 
-  .nutrition::after {
+  .nutrition__background {
     position: absolute;
-    top: -26%;
-    left: 50%;
-    content: "";
-    width: 720px;
-    height: 696px;
-
     z-index: 1;
+    top: -142px;
+    right: 0;
+    content: "";
+    width: 50%;
+    height: 696px;
 
     background-image: url("../../img/index-background-desktop@1x.jpg");
     background-position: right;
-    background-size: contain;
+    background-size: auto auto;
     background-repeat: no-repeat;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .nutrition::after {
+    .nutrition__background::after {
       background-image: url("../../img/index-background-desktop@2x.jpg");
     }
   }
 
   .nutrition__wrapper {
-    padding: 0 100px;
+    width: 1220px;
+    padding: 84px 100px 0 110px;
+    margin: 0 auto;
   }
 
   .nutrition img {
     position: absolute;
     top: 0;
-    left: 39%;
+    left: 40%;
 
     width: 552px;
     height: 499px;

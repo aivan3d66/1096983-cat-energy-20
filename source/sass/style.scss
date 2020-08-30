@@ -1,124 +1,18 @@
-/* Файловая структура проекта */
+// Файловая структура проекта
 
 @import "variables";
 @import "fonts";
 @import "scaffolding";
 @import "blocks/page-header";
+@import "blocks/main-nav";
 @import "blocks/nutrition";
 @import "blocks/programs";
 @import "blocks/explanation";
 @import "blocks/example";
 @import "blocks/contacts";
 @import "blocks/page-footer";
+@import "blocks/footer-social";
 @import "blocks/product-card";
 @import "blocks/catalog";
 @import "blocks/additional-goods";
 @import "blocks/program";
-
-// Гамбургер
-
-.main-nav__toggle {
-  position: absolute;
-  top: 2px;
-  right: 100px;
-
-  width: 50px;
-  margin: 0 auto;
-}
-
-.hamburger {
-  position: relative;
-  right: -108px;
-  top: 20px;
-
-  margin: 0;
-  width: 20px;
-  height: 20px;
-}
-
-@media (max-width: $mobile-width-only) {
-  .hamburger {
-    display: block;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .hamburger {
-    display: none;
-  }
-}
-
-.hamburger .bar {
-  display: block;
-  padding: 0;
-  width: 20px;
-  height: 2px;
-  background-color: $basic_black;
-  border-radius: 4px;
-  transition: all 0.4s ease-in-out;
-  position: absolute;
-}
-
-.bar1 {
-  top: 0;
-}
-
-.bar2,
-.bar3 {
-  top: 9px;
-}
-
-.bar3 {
-  right: 0;
-}
-
-.bar4 {
-  bottom: 0;
-}
-
-.hamburger2 .bar2,
-.hamburger3 .bar3,
-.hamburger4 .bar4 {
-  top: 9px;
-}
-
-.hamburger4 .bar5 {
-  bottom: 0;
-}
-
-.hamburger4 .bar {
-  transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s;
-}
-
-.hamburger4 .bar2 {
-  width: 1px;
-  transform: rotate(90deg);
-  left: 13.5px;
-}
-
-.hamburger4 .bar3 {
-  width: 1px;
-  left: 13.5px;
-}
-
-.checkbox1:checked + label > .hamburger1 > .bar1 {
-  transform: rotate(45deg);
-  transform-origin: 5%;
-  width: 28px;
-}
-
-.checkbox1:checked + label > .hamburger1 > .bar2 {
-  transform: translateX(-40px);
-  background-color: transparent;
-}
-
-.checkbox1:checked + label > .hamburger1 > .bar3 {
-  transform: translateX(40px);
-  background-color: transparent;
-}
-
-.checkbox1:checked + label > .hamburger1 > .bar4 {
-  transform-origin: 5%;
-  transform: rotate(-45deg);
-  width: 28px;
-}

@@ -1,32 +1,3 @@
-// Цветовая палитра
-
-$basic_black: #000000;
-$basic_white: #ffffff;
-$basic_green: #68b738;
-$basic_green-2: #5eaa2f;
-$basic_gray: #f2f2f2;
-$special_gray: #eaeaea;
-$special_gray-1: #cdcdcd;
-$special_gray-2: #d9d9d9;
-$special_gray-3: #c0c0c0;
-$special_dark-gray: #444444;
-$special_dark-gray-2: #222222;
-$special_dark-gray-3: #ebebeb;
-$status_error: #ff8282;
-
-.main-nav__list {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  width: 100%;
-
-  padding: 0;
-  margin: 0;
-  margin-top: 10px;
-
-  list-style: none;
-}
-
 .header-wrapper {
   position: relative;
   display: grid;
@@ -49,48 +20,6 @@ $status_error: #ff8282;
   }
 }
 
-.main-nav__item {
-  position: relative;
-
-  font-size: 20px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: $basic_black;
-
-  &:last-child {
-    padding-right: 0;
-  }
-}
-
-.main-nav__item a {
-  &:hover,
-  &:focus {
-    opacity: 0.5;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(-1500px);
-  }
-
-  40% {
-    transform: translateY(-500px);
-  }
-
-  80% {
-    transform: translateY(-20px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: $mobile-width-only) {
   .header-wrapper {
     display: grid;
@@ -101,46 +30,12 @@ $status_error: #ff8282;
     border-bottom: 1px solid $special_gray;
   }
 
+  .index--content {
+    overflow: hidden;
+  }
+
   .page-header__logo {
     margin-left: 20px;
-  }
-
-  .main-nav--closed {
-    display: none;
-  }
-
-  .main-nav--opened {
-    display: grid;
-    animation: bounce 0.5s;
-  }
-
-  .main-nav__list li {
-    text-align: center;
-    width: 100%;
-    padding: 22px 0 22px 0;
-    margin: 0;
-
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: bold;
-
-    border-top: 1px solid $special_gray;
-
-    &:last-child {
-      padding-bottom: 13px;
-    }
-  }
-
-  .main-nav__item--active::after {
-    display: none;
-  }
-
-  .main-nav--nojs {
-    display: block;
-  }
-
-  .main-nav__toggle--nojs {
-    display: none;
   }
 }
 
@@ -158,39 +53,9 @@ $status_error: #ff8282;
     width: 174px;
     height: auto;
   }
-
-  .main-nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 42px;
-  }
-
-  .main-nav__item {
-    position: relative;
-    padding: 0;
-    margin: 0 0 20px 36px;
-  }
-
-  .main-nav__item--active a::after {
-    content: "";
-    position: absolute;
-    top: 32px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: $basic_green;
-    border-radius: 100px;
-  }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header {
-    margin: 0 auto;
-    overflow: hidden;
-  }
-
   .header-wrapper {
     margin: 0 auto;
   }
@@ -198,33 +63,6 @@ $status_error: #ff8282;
   .page-header__logo img {
     margin-top: 52px;
     width: 204px;
-  }
-
-  .index-page__background {
-    position: relative;
-    z-index: 1;
-    background: linear-gradient(to right, $basic_white 50%, $basic_green-2 50%);
-  }
-
-  .index-page__background::after {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    content: "";
-    width: 720px;
-    height: 696px;
-
-    z-index: -1;
-    background-image: url("../../img/index-background-desktop@1x.jpg");
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .index-page__background::after {
-      background-image: url("../../img/index-background-desktop@2x.jpg");
-    }
   }
 
   .main-nav__list {
@@ -236,30 +74,11 @@ $status_error: #ff8282;
     margin-top: 70px;
   }
 
-  .index-page a {
-    color: $basic_white;
-  }
+  .index-page {
+    background: linear-gradient(to right, $basic_white 50%, #65a93c 50%);
 
-  .main-nav__item {
-    position: relative;
-    padding: 0 10px 0 10px;
-
-    font-size: 20px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: $basic_black;
-  }
-
-  .index-page .main-nav__item--active::after {
-    position: absolute;
-    top: 34px;
-    left: 6px;
-    content: "";
-
-    width: 90%;
-    height: 2px;
-
-    background-color: $basic_white;
-    border-radius: 100px;
+    a {
+      color: $basic_white;
+    }
   }
 }
