@@ -1,3 +1,27 @@
+.additional-goods__item-title {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: $special_dark-gray-2;
+}
+
+.additional-goods__composition {
+  font-family: $additional_font;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+  color: $special_dark-gray;
+}
+
+.additional-goods__text {
+  font-family: $additional_font;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: $basic_white;
+}
+
 .additional-goods {
   padding: 0 20px;
   margin: 0 auto;
@@ -7,6 +31,12 @@
 
 .additional-goods__title {
   position: relative;
+
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  color: $basic_black;
 
   &::after {
     position: absolute;
@@ -21,6 +51,13 @@
   }
 }
 
+.additional-goods__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
 .additional-goods__promotion {
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
   background-color: $basic_green;
@@ -30,7 +67,7 @@
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .additional-goods__promotion {
-    background-image: url("img/gift-photo-mobil@2x.jpg");
+    background-image: url("../../img/gift-photo-mobil@2x.jpg");
   }
 }
 
@@ -90,8 +127,6 @@
     min-height: 289px;
 
     text-align: center;
-
-    background-image: url("../img/gift-photo-mobile@2x.jpg");
 
     svg {
       position: relative;
@@ -191,7 +226,7 @@
     min-height: 200px;
     margin: 76px 0;
 
-    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-image: url("../../img/gift-photo-tablet@1x.jpg");
 
     svg {
       position: relative;
@@ -211,7 +246,7 @@
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .additional-goods__promotion {
-      background-image: url("img/gift-photo-tablet@2x.jpg");
+      background-image: url("../../img/gift-photo-tablet@2x.jpg");
     }
   }
 
@@ -260,7 +295,7 @@
     padding: 0;
 
     background-color: $basic_green;
-    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-image: url("../../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-size: 245px 289px;
     background-position: center;
@@ -279,7 +314,7 @@
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .additional-goods__promotion {
-      background-image: url("img/gift-photo-desktop@2x.jpg");
+      background-image: url("../../img/gift-photo-desktop@2x.jpg");
     }
   }
 

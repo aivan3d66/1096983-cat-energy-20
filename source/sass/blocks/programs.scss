@@ -1,3 +1,25 @@
+.programs__title {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 154%;
+  text-transform: uppercase;
+}
+
+.programs__description {
+  font-family: $additional_font;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 129%;
+}
+
+.programs__item a {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+
+  text-transform: uppercase;
+}
+
 .programs {
   max-width: 1220px;
   min-width: 320px;
@@ -92,6 +114,10 @@
     }
   }
 
+  .programs__fat h3 {
+    margin-left: 40px;
+  }
+
   .programs__description {
     margin: 0;
     margin-bottom: 16px;
@@ -183,6 +209,10 @@
     line-height: 24px;
   }
 
+  .programs__description-pro {
+    max-width: 388px;
+  }
+
   .programs__button {
     &::after {
       top: 10px;
@@ -211,7 +241,7 @@
 
     width: 1220px;
     margin: 0 auto;
-    padding: 0;
+    padding: 60px 0 0 0;
   }
 
   .programs__title {

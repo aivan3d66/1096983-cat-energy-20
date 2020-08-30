@@ -1,9 +1,3 @@
-// Вьюпорты
-
-$mobile-width-only: 767px;
-$tablet-width: 768px;
-$desktop-width: 1220px;
-
 // Цветовая палитра
 
 $basic_black: #000000;
@@ -19,6 +13,19 @@ $special_dark-gray: #444444;
 $special_dark-gray-2: #222222;
 $special_dark-gray-3: #ebebeb;
 $status_error: #ff8282;
+
+.main-nav__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+
+  list-style: none;
+}
 
 .header-wrapper {
   position: relative;
@@ -44,6 +51,10 @@ $status_error: #ff8282;
 
 .main-nav__item {
   position: relative;
+
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
   color: $basic_black;
 
   &:last-child {
@@ -90,16 +101,6 @@ $status_error: #ff8282;
     border-bottom: 1px solid $special_gray;
   }
 
-  .main-nav__list {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    width: 100%;
-
-    padding: 0;
-    margin-top: 10px;
-  }
-
   .page-header__logo {
     margin-left: 20px;
   }
@@ -131,6 +132,14 @@ $status_error: #ff8282;
   }
 
   .main-nav__item--active::after {
+    display: none;
+  }
+
+  .main-nav--nojs {
+    display: block;
+  }
+
+  .main-nav__toggle--nojs {
     display: none;
   }
 }
@@ -191,6 +200,12 @@ $status_error: #ff8282;
     width: 204px;
   }
 
+  .index-page__background {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to right, $basic_white 50%, $basic_green-2 50%);
+  }
+
   .index-page__background::after {
     position: absolute;
     top: 0;
@@ -200,18 +215,15 @@ $status_error: #ff8282;
     height: 696px;
 
     z-index: -1;
-    background: linear-gradient(to right, $basic_white 1%, $basic_green-2 1%);
-    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-image: url("../../img/index-background-desktop@1x.jpg");
     background-position: right;
+    background-size: contain;
     background-repeat: no-repeat;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .index-page__background::after {
-      background-image: url("img/index-background-desktop@2x.jpg");
-      background-size: auto;
-      background-position: right;
-      background-repeat: no-repeat;
+      background-image: url("../../img/index-background-desktop@2x.jpg");
     }
   }
 

@@ -1,3 +1,20 @@
+.nutrition__title {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: $basic_white;
+}
+
+.nutrition__lead {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic_white;
+}
+
 .nutrition {
   position: relative;
 
@@ -16,7 +33,7 @@
     height: 480px;
     margin: 0 auto;
 
-    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-image: url("../../img/index-background-mobile@1x.jpg");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -24,8 +41,7 @@
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .nutrition {
-      background-image: url("img/index-background-mobile@2x.jpg");
-      background-size: 640px auto;
+      background-image: url("../../img/index-background-mobile@2x.jpg");
     }
   }
 
@@ -86,7 +102,7 @@
     width: 709px;
     height: 609px;
 
-    z-index: -1;
+    z-index: 2;
   }
 
   .nutrition__button {
@@ -100,32 +116,32 @@
 
 @media (min-width: $desktop-width) {
   .nutrition {
-    padding: 84px 100px 250px 90px;
+    height: 550px;
+    padding: 84px 100px 250px 80px;
     width: 100%;
+
+    background: linear-gradient(to right, $basic_white 50%, $basic_green-2 50%);
   }
 
   .nutrition::after {
     position: absolute;
-    top: -23%;
+    top: -26%;
     left: 50%;
     content: "";
     width: 720px;
     height: 696px;
 
-    z-index: -2;
-    background: linear-gradient(to right, $basic_white 1%, $basic_green-2 1%);
+    z-index: 1;
 
-    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-image: url("../../img/index-background-desktop@1x.jpg");
     background-position: right;
+    background-size: contain;
     background-repeat: no-repeat;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .nutrition::after {
-      background-image: url("img/index-background-desktop@2x.jpg");
-      background-size: auto;
-      background-position: right;
-      background-repeat: no-repeat;
+      background-image: url("../../img/index-background-desktop@2x.jpg");
     }
   }
 
