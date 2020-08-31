@@ -8,7 +8,6 @@
     <link rel="preload" href="fonts/oswaldmedium.woff2.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
   </head>
   <body class="page__body">
     <svg style="display: none">
@@ -83,7 +82,7 @@
       </symbol>
     </svg>
     <header class="page-header index-page">
-      <div class="header-wrapper index-page__background">
+      <div class="header-wrapper">
         <div class="page-header__logo">
           <a class="page-header__logo-link">
             <picture>
@@ -104,23 +103,23 @@
                 <span class="bar bar4"></span>
               </span>
             </label>
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Подбор программы</a>
+              </li>
+            </ul>
           </div>
-          <ul class="main-nav__list main-nav--closed">
-            <li class="main-nav__item main-nav__item--active">
-              <a href="#">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </ul>
         </nav>
       </div>
     </header>
 
-    <main class="page-content">
+    <main class="index--content">
       <h1 class="visually-hidden">Cat Energy - интернет-магазин функционального питания для котов</h1>
       <section class="nutrition">
         <h2 class="visually-hidden">Подбор программ питания</h2>
@@ -138,6 +137,7 @@
           </picture>
           <a href="form.html" class="btn nutrition__button">Подобрать программу</a>
         </div>
+        <span class="nutrition__background"></span>
       </section>
 
       <section class="programs">
@@ -150,17 +150,17 @@
           <p class="programs__description">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
-          <a href="#" class="programs__button btn__slim">Каталог Slim</a>
+          <a href="program-slim.html" class="programs__button btn__slim">Каталог Slim</a>
         </div>
         <div class="programs__item programs__fat">
           <h3 class="programs__title programs__title-slim">Набор массы </h3>
           <svg class="programs__cat-pro">
             <use xlink:href="#icon-pro"></use>
           </svg>
-          <p class="programs__description">
+          <p class="programs__description programs__description-pro">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
           </p>
-          <a href="#" class="programs__button btn__pro">Каталог Pro</a>
+          <a href="program-pro.html" class="programs__button btn__pro">Каталог Pro</a>
         </div>
       </section>
 

@@ -1,9 +1,24 @@
+.nutrition__title {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: $basic_white;
+}
+
+.nutrition__lead {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic_white;
+}
+
 .nutrition {
   position: relative;
-
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1440px;
   min-width: 320px;
 
   text-align: center;
@@ -16,7 +31,7 @@
     height: 480px;
     margin: 0 auto;
 
-    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-image: url("../../img/index-background-mobile@1x.jpg");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -24,8 +39,7 @@
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .nutrition {
-      background-image: url("img/index-background-mobile@2x.jpg");
-      background-size: 640px auto;
+      background-image: url("../../img/index-background-mobile@2x.jpg");
     }
   }
 
@@ -48,7 +62,7 @@
 
 @media (min-width: $tablet-width) {
   .nutrition {
-    padding: 37px 140px 528px 87px;
+    padding: 37px 140px 520px 87px;
     margin: 0 auto;
     width: 709px;
 
@@ -86,7 +100,7 @@
     width: 709px;
     height: 609px;
 
-    z-index: -1;
+    z-index: 2;
   }
 
   .nutrition__button {
@@ -100,43 +114,43 @@
 
 @media (min-width: $desktop-width) {
   .nutrition {
-    padding: 84px 100px 250px 90px;
+    height: 300px;
     width: 100%;
+    padding: 0 0 554px 0;
+    background: linear-gradient(to right, $basic_white 50%, #65a93c 50%);
   }
 
-  .nutrition::after {
+  .nutrition__background {
     position: absolute;
-    top: -23%;
-    left: 50%;
+    z-index: 1;
+    top: -142px;
+    right: 0;
     content: "";
-    width: 720px;
+    width: 50%;
     height: 696px;
 
-    z-index: -2;
-    background: linear-gradient(to right, $basic_white 1%, $basic_green-2 1%);
-
-    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-image: url("../../img/index-background-desktop@1x.jpg");
     background-position: right;
+    background-size: auto auto;
     background-repeat: no-repeat;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .nutrition::after {
-      background-image: url("img/index-background-desktop@2x.jpg");
-      background-size: auto;
-      background-position: right;
-      background-repeat: no-repeat;
+    .nutrition__background::after {
+      background-image: url("../../img/index-background-desktop@2x.jpg");
     }
   }
 
   .nutrition__wrapper {
-    padding: 0 100px;
+    width: 1220px;
+    padding: 84px 100px 0 110px;
+    margin: 0 auto;
   }
 
   .nutrition img {
     position: absolute;
     top: 0;
-    left: 39%;
+    left: 40%;
 
     width: 552px;
     height: 499px;

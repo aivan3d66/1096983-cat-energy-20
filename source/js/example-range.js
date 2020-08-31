@@ -1,61 +1,64 @@
-$(document).ready(function() {
-  $('.example__slider-comparsion').each(function() {
-  var cur = $(this);
-  var width = cur.width()+'px';
-    cur.find('.example__item-cat img').css('width', width);
-    drags(cur.find('.example__range'), cur.find('.example__item-cat'), cur);
-  });
-});
+'use strict';
 
-$(window).exampleCat(function() {
-  $('.example__slider-comparsion').each(function() {
-  var cur = $(this);
-  var width = cur.width()+'px';
-  cur.find('.example__item-cat img').css('width', width);
-  });
-});
+var initSlider = () => {
 
-function drags(dragElement, exampleCatElement, container) {
-  dragElement.on('mousedown touchstart', function(e) {
-    dragElement.addClass('draggable');
-    exampleCatElement.addClass('resizable');
+    const updateSlider = (posInPersents) => {
+        sliderItem.style.width = posInPersents + '%';
+        sliderRangePointer.style.left = (posInPersents - 100 * (sliderRangePointer.offsetWidth / 2) / sliderRange.offsetWidth) + '%';
+    }
 
-    var startX = (e.pageX) ? e.pageX :  e.originalEvent.touches[0].pageX;
+    const sliderRangePointerOnMouseUp = () => {
+        posInPersents = posInPersents + shiftInPersents;
 
-    var dragWidth = dragElement.outerWidth(),
-      posX = dragElement.offset().left + dragWidth - startX,
-      containerOffset = container.offset().left,
-      containerWidth = container.outerWidth();
+        window.removeEventListener('mousemove', sliderRangePointerOnMouseMove);
+        window.removeEventListener('mouseup', sliderRangePointerOnMouseUp);
+    }
 
-      minLeft = containerOffset + 110;
-      maxLeft = containerOffset + containerWidth - dragWidth - 150;
+    const sliderRangePointerOnMouseMove = (event) => {
+        end = event.clientX;
+        shift = end - start;
 
-  dragElement.parents().on("mousemove touchmove", function(e) {
+        shiftInPersents = 100 * shift / sliderRange.offsetWidth;
 
-  var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+        if (posInPersents + shiftInPersents >= 0 && posInPersents + shiftInPersents <= 100) {
+            updateSlider(posInPersents + shiftInPersents)
+        }
+    }
 
-  leftValue = moveX + posX - dragWidth;
+    const sliderRangePointerOnMouseDown = (event) => {
+        start = event.clientX;
 
-  if (leftValue < minLeft) {
-    leftValue = minLeft;
-  } else if (leftValue > maxLeft) {
-    leftValue = maxLeft;
-  }
+        window.addEventListener('mousemove', sliderRangePointerOnMouseMove);
+        window.addEventListener('mouseup', sliderRangePointerOnMouseUp);
+    }
 
-  widthValue = (leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth + '%';
+    const slider = document.querySelector('.example__slider');
+    const sliderItem = slider.querySelector('.example__item-cat');
+    const sliderRange = slider.querySelector('.example__range-wrapper');
+    const sliderRangePointer = slider.querySelector('.example__range');
+    sliderRangePointer.addEventListener('mousedown', sliderRangePointerOnMouseDown);
 
-  $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
-  $(this).removeClass('draggable');
-    exampleCatElement.removeClass('resizable');
-  });
-  $('.resizable').css('width', widthValue);
-  }).on('mouseup touchend touchcancel', function() {
-    dragElement.removeClass('draggable');
-    exampleCatElement.removeClass('resizable');
-  });
-    e.preventDefault();
-  }).on('mouseup touchend touchcancel', function(e) {
-    dragElement.removeClass('draggable');
-    exampleCatElement.removeClass('resizable');
-  });
+    let posInPersents = 50;
+    updateSlider(posInPersents);
+
+    let start = null;
+    let shift = null;
+    let shiftInPersents = null;
+    let end = null;
+
+    const sliderButtonBefore = slider.querySelector('.btn-before');
+    const sliderButtonAfter = slider.querySelector('.btn-after');
+
+    sliderButtonBefore.addEventListener('click', function() {
+        posInPersents = 0;
+        updateSlider(posInPersents);
+    });
+
+    sliderButtonAfter.addEventListener('click', function() {
+        posInPersents = 100;
+        updateSlider(posInPersents);
+    });
+
 }
+
+window.addEventListener('load', initSlider);
