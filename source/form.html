@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
+  <body class="page__body no-js">
     <svg style="display: none">
       <symbol id="icon-vk" viewBox="0 0 22 12">
         <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
@@ -64,7 +64,7 @@
           </a>
         </div>
         <nav class="main-nav">
-          <div class="main-nav__toggle">
+          <div class="main-nav__toggle main-nav__toggle--nojs">
             <input type="checkbox" id="checkbox1" class="checkbox1 visually-hidden">
             <label for="checkbox1">
               <span class="hamburger hamburger1">
@@ -74,18 +74,18 @@
                 <span class="bar bar4"></span>
               </span>
             </label>
+            <ul class="main-nav__list main-nav--closed main-nav--nojs">
+              <li class="main-nav__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="main-nav__item  main-nav__item--active">
+                <a href="#">Подбор программы</a>
+              </li>
+            </ul>
           </div>
-          <ul class="main-nav__list main-nav--closed">
-            <li class="main-nav__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-nav__item  main-nav__item--active">
-              <a href="#">Подбор программы</a>
-            </li>
-          </ul>
         </nav>
       </div>
     </header>

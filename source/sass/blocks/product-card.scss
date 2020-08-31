@@ -1,3 +1,20 @@
+.product-card__title {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+
+  color: $special_dark-gray-2;
+}
+
+.product-card__composition {
+  font-family: $additional_font;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: $special_dark-gray;
+}
+
 @media (max-width: $mobile-width-only) {
   .product-card {
     display: grid;
@@ -8,7 +25,7 @@
     padding: 0 20px 24px 20px;
     margin: 0;
 
-    border-bottom: 1px solid $special_gray-3;
+    border-bottom: 1px solid $special_dark-gray-3;
   }
 
   .product-card img {

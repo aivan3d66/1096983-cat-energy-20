@@ -1,3 +1,43 @@
+.program__main-title {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.program__lead {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__item label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__legend {
+  font-family: $additional_font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.program-form__button {
+  margin-bottom: 70px;
+
+  font-family: $basic_font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  border-style: none;
+}
+
 .program {
   position: relative;
   min-width: 320px;
@@ -16,6 +56,10 @@
   padding: 10px 10px 20px 0;
   margin: 0;
   width: 100%;
+
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
 
   &::after {
     position: absolute;
@@ -64,9 +108,18 @@
 
   input,
   textarea {
+    font-family: $basic_font;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
     outline: none;
     border-color: $basic_gray;
     border-style: solid;
+  }
+
+  textarea {
+    resize: vertical;
   }
 
   input:hover,
@@ -323,7 +376,7 @@
   }
 
   .program-form {
-    padding: 0 30px 0 50px;
+    padding: 0 50px;
   }
 
   .program__lead {
