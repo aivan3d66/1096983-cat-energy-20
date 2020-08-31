@@ -92,7 +92,7 @@
   .additional-goods__item {
     padding: 14px 0 20px 0;
 
-    border-bottom: 1px solid $special_gray-3;
+    border-bottom: 1px solid $special_dark-gray-3;
 
     h3 {
       margin: 0;
@@ -100,7 +100,7 @@
     }
 
     &:first-child {
-      border-top: 1px solid $special_gray-3;
+      border-top: 1px solid $special_dark-gray-3;
     }
 
     a {

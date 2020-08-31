@@ -26,8 +26,9 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 
-    padding: 10px 0;
+    padding: 10px 0 0 0;
     border-bottom: 1px solid $special_gray;
+    overflow: hidden;
   }
 
   .index--content {
@@ -36,6 +37,7 @@
 
   .page-header__logo {
     margin-left: 20px;
+    margin-bottom: 10px;
   }
 }
 

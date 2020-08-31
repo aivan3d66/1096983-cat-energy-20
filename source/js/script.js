@@ -1,26 +1,9 @@
-var navMain = document.querySelector('.main-nav__list');
-var toggleJS = document.querySelector('.main-nav__toggle');
-var navToggle = document.querySelector('.hamburger');
 var catName = document.querySelector('.input-name');
 var userMail = document.querySelector('.input-mail');
 var userPhone = document.querySelector('.input-phone');
 var mailIcon = document.querySelector('.mail-icon');
 var phoneIcon = document.querySelector('.phone-icon');
 var grayBtn = document.querySelector('.modal--btn');
-
-navMain.classList.remove('main-nav--nojs');
-toggleJS.classList.remove('main-nav__toggle--nojs');
-
-navToggle.addEventListener('click', function () {
-  'use strict';
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
-});
 
 userMail.addEventListener('input', function () {
   'use strict';
