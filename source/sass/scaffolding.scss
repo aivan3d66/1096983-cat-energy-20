@@ -15,6 +15,7 @@ html {
   margin: -1px;
   border: 0;
   padding: 0;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -35,10 +36,6 @@ body {
 a {
   text-decoration: none;
   color: $basic_black;
-}
-
-.page-content {
-  overflow: hidden;
 }
 
 // Стилизация кнопок

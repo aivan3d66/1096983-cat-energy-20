@@ -3,7 +3,7 @@ var userMail = document.querySelector('.input-mail');
 var userPhone = document.querySelector('.input-phone');
 var mailIcon = document.querySelector('.mail-icon');
 var phoneIcon = document.querySelector('.phone-icon');
-var grayBtn = document.querySelector('.modal--btn');
+var grayBtn = document.querySelector('.product-card__modal-button');
 
 userMail.addEventListener('input', function () {
   'use strict';

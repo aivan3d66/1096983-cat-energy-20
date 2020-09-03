@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body no-js">
+  <body>
     <svg style="display: none">
       <symbol id="icon-vk" viewBox="0 0 22 12">
         <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
@@ -40,10 +40,10 @@
       <symbol id="icon-academy" viewBox="0 0 60 60">
         <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
       </symbol>
-      <symbol class="program__user-mail" id="icon-mail" viewBox="0 0 17 13">
+      <symbol id="icon-mail" viewBox="0 0 17 13">
         <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
       </symbol>
-      <symbol class="program__user-phone" id="icon-phone" viewBox="0 0 20 20">
+      <symbol id="icon-phone" viewBox="0 0 20 20">
         <path d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
         <path
           d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
@@ -53,7 +53,7 @@
       </symbol>
     </svg>
     <header class="page-header">
-      <div class="header-wrapper">
+      <div class="page-header__wrapper">
         <div class="page-header__logo">
           <a class="page-header__logo-link" href="index.html">
             <picture>
@@ -64,7 +64,7 @@
           </a>
         </div>
         <nav class="main-nav">
-          <div class="main-nav__toggle main-nav__toggle--nojs">
+          <div class="main-nav__toggle">
             <input type="checkbox" id="checkbox1" class="checkbox1 visually-hidden">
             <label for="checkbox1">
               <span class="hamburger hamburger1">
@@ -74,7 +74,7 @@
                 <span class="bar bar4"></span>
               </span>
             </label>
-            <ul class="main-nav__list main-nav--closed main-nav--nojs">
+            <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a href="index.html">Главная</a>
               </li>
@@ -93,11 +93,11 @@
     <main class="page-content">
       <h1 class="visually-hidden">Cat Energy - интернет-магазин функционального питания для котов</h1>
       <section class="program">
-        <h2 class="section__title program__main-title">Подбор программы</h2>
+        <h2 class="program__main-title">Подбор программы</h2>
         <p class="program__lead">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
-        <form class="program-form form__validation" action="https://echo.htmlacademy.ru" method="post">
+        <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="program-form__wrapper-inner">
             <div class="program-form__item program-form__cat-characters">
               <p class="program__cat-characters">
@@ -115,20 +115,20 @@
             </div>
             <div class="program-form__item program-form__item-weigth">
               <p class="program__weigth">
-                <input class="visually-hidden filter-input filter-input-radio" id="filter-slim" type="radio" name="program" value="slim" disabled="disabled">
-                <label for="filter-slim">Похудение</label>
+                <input class="visually-hidden filter-input-radio" id="filter-slim" type="radio" name="program" value="slim" checked>
+                <label for="filter-slim" tabindex="0">Похудение</label>
               </p>
               <p class="program__weigth">
-                <input class="visually-hidden filter-input filter-input-radio" id="filter-fat" type="radio" name="program" value="weigth" checked="checked">
-                <label for="filter-fat">Набор массы</label>
+                <input class="visually-hidden filter-input-radio" id="filter-fat" type="radio" name="program" value="weigth">
+                <label for="filter-fat" tabindex="0">Набор массы</label>
               </p>
               <p class="program__weigth">
-                <input class="visually-hidden filter-input filter-input-radio" id="filter-random" type="radio" name="program" value="random">
-                <label for="filter-random">Не знаю (Нужен ваш совет)</label>
+                <input class="visually-hidden filter-input-radio" id="filter-random" type="radio" name="program" value="random">
+                <label for="filter-random" tabindex="0">Не знаю (Нужен ваш совет)</label>
               </p>
             </div>
           </div>
-          <div class="program-form__item">
+          <div class="program-form__item program-form__item-contacts">
             <h3 class="program__item-title program__item-contact">Контактные данные (владельца кота)</h3>
             <div class="program-form__wrapper-inner">
               <p class="program__user-contacts">
@@ -156,25 +156,25 @@
             <div class="program-form__item-wrapper">
               <p class="program__filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" id="filter-splenda" type="checkbox" name="Сахарохзаменитель" checked>
-                <label for="filter-splenda">Сахарохзаменитель</label>
+                <label for="filter-splenda" tabindex="0">Сахарозаменитель</label>
               </p>
               <p class="program__filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-water" type="checkbox" name="Питьевая вода" >
-                <label for="filter-water">Питьевая вода</label>
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-water" type="checkbox" name="Питьевая вода" tabindex="0">
+                <label for="filter-water" tabindex="0">Питьевая вода</label>
               </p>
               <p class="program__filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-milk"  type="checkbox" name="Молоко">
-                <label for="filter-milk">Молоко</label>
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-milk" type="checkbox" name="Молоко" >
+                <label for="filter-milk" tabindex="0">Молоко</label>
               </p>
               <p class="program__filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-vitamines" type="checkbox" name="Витамины" disabled>
-                <label for="filter-vitamines">Витамины</label>
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-vitamines" type="checkbox" name="Витамины">
+                <label for="filter-vitamines" tabindex="0">Витамины</label>
               </p>
             </div>
           </div>
           <button class="btn program-form__button" type="submit">Отправить заявку</button>
         </form>
-        <small class="program-form__legend">
+        <small class="program__legend">
         * — Обязательные поля
         </small>
       </section>
@@ -182,7 +182,7 @@
       <section class="contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
         <div class="contacts__wrapper-inner">
-          <div class="contacts__text-info contacts--gray">
+          <div class="contacts__text-info contacts__text-info--gray">
             <p class="contacts__lead">Приглашаем<br/> к сотрудничеству дилеров!</p>
             <div class="contacts__address">
               <p>ул. Большая Конюшенная, д. 19/8</p>
@@ -202,38 +202,35 @@
         <a class="page-footer__logo" href="index.html">
           <img src="img/logo-footer.svg" width="128" height="24" alt="Название магазина">
         </a>
-        <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Мы в Вконтакте</span>
-                <svg>
-                  <use xlink:href="#icon-vk"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-                <span class="visually-hidden">Мы в Инстаграме</span>
-                <svg>
-                  <use xlink:href="#icon-insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <span class="visually-hidden">Мы в Фейсбуке</span>
-                <svg>
-                  <use xlink:href="#icon-fb"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__item-link social__item-link--vkontakte" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Мы в Вконтакте</span>
+              <svg>
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__item-link social__item-link--instagram" href="https://www.instagram.com/htmlacademy">
+              <span class="visually-hidden">Мы в Инстаграме</span>
+              <svg>
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__item-link social__item-link--facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg>
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
         <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__link copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="page-footer__academy-logo">
               <use xlink:href="#icon-academy"></use>
             </svg>

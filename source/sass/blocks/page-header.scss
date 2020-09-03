@@ -1,4 +1,4 @@
-.header-wrapper {
+.page-header__wrapper {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 500px;
@@ -21,17 +21,13 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .header-wrapper {
+  .page-header__wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 
     padding: 10px 0 0 0;
     border-bottom: 1px solid $special_gray;
-    overflow: hidden;
-  }
-
-  .index--content {
     overflow: hidden;
   }
 
@@ -42,9 +38,9 @@
 }
 
 @media (min-width: $tablet-width) {
-  .header-wrapper {
+  .page-header__wrapper {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 174px auto;
     grid-template-rows: auto;
 
     padding: 0 30px;
@@ -58,25 +54,17 @@
 }
 
 @media (min-width: $desktop-width) {
-  .header-wrapper {
+  .page-header__wrapper {
     margin: 0 auto;
+    padding: 0;
   }
 
   .page-header__logo img {
-    margin-top: 52px;
+    margin-top: 30px;
     width: 204px;
   }
 
-  .main-nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: flex-end;
-
-    margin-top: 70px;
-  }
-
-  .index-page {
+  .page-header--index {
     background: linear-gradient(to right, $basic_white 50%, #65a93c 50%);
 
     a {
