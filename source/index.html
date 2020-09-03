@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
+  <body>
     <svg style="display: none">
       <symbol id="icon-vk" viewBox="0 0 22 12">
         <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
@@ -81,8 +81,8 @@
         </g>
       </symbol>
     </svg>
-    <header class="page-header index-page">
-      <div class="header-wrapper">
+    <header class="page-header page-header--index">
+      <div class="page-header__wrapper">
         <div class="page-header__logo">
           <a class="page-header__logo-link">
             <picture>
@@ -117,10 +117,6 @@
           </div>
         </nav>
       </div>
-    </header>
-
-    <main class="index--content">
-      <h1 class="visually-hidden">Cat Energy - интернет-магазин функционального питания для котов</h1>
       <section class="nutrition">
         <h2 class="visually-hidden">Подбор программ питания</h2>
         <div class="nutrition__wrapper">
@@ -139,7 +135,10 @@
         </div>
         <span class="nutrition__background"></span>
       </section>
+    </header>
 
+    <main class="page-content page-content--index">
+      <h1 class="visually-hidden">Cat Energy - интернет-магазин функционального питания для котов</h1>
       <section class="programs">
         <h2 class="visually-hidden">Виды программ</h2>
         <div class="programs__item programs__slimming">
@@ -150,7 +149,7 @@
           <p class="programs__description">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
-          <a href="program-slim.html" class="programs__button btn__slim">Каталог Slim</a>
+          <a href="program-slim.html" class="programs__button ">Каталог Slim</a>
         </div>
         <div class="programs__item programs__fat">
           <h3 class="programs__title programs__title-slim">Набор массы </h3>
@@ -160,12 +159,12 @@
           <p class="programs__description programs__description-pro">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
           </p>
-          <a href="program-pro.html" class="programs__button btn__pro">Каталог Pro</a>
+          <a href="program-pro.html" class="programs__button ">Каталог Pro</a>
         </div>
       </section>
 
       <section class="explanation">
-        <h2 class="section__title explanation__title">Как это работает</h2>
+        <h2 class="explanation__title">Как это работает</h2>
         <ul class="explanation__list">
           <li class="explanation__item">
             <p class="explanation__description explanation__description--folia">
@@ -184,7 +183,7 @@
           </li>
           <li class="explanation__item">
             <p class="explanation__description explanation__description--time">
-              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+              Уже через месяц наслаждайтесь изменениями к лучшему<br> вашего питомца!
             </p>
           </li>
         </ul>
@@ -219,11 +218,11 @@
               <div class="slides">
                 <div class="overflow">
                   <div class="slides__wrapper example__slider-comparsion">
-                    <div class="slider__item item--hidden">
+                    <div class="slides__item slides__item--hidden">
                       <picture>
-                        <source type="image/webp" media="(min-width: 1220px)" srcset="img/before-desktop@1x.webp 1x, img/webp/before-desktop@2x.webp 2x">
-                        <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/webp/before-tablet@2x.webp 2x">
-                        <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/webp/before-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 1220px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
 
 
                         <source media="(min-width: 1220px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
@@ -231,11 +230,11 @@
                         <img src="img/before-tablet@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Картинка толстого кота">
                       </picture>
                     </div>
-                    <div class="slider__item example__item-cat">
+                    <div class="slides__item example__item-cat">
                       <picture>
-                        <source type="image/webp" media="(min-width: 1220px)" srcset="img/before-desktop@1x.webp 1x, img/webp/before-desktop@2x.webp 2x">
-                        <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/webp/before-tablet@2x.webp 2x">
-                        <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/webp/before-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 1220px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
 
 
                         <source media="(min-width: 1220px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
@@ -243,11 +242,11 @@
                         <img src="img/before-tablet@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Картинка толстого кота">
                       </picture>
                     </div>
-                    <div class="slider__item">
+                    <div class="slides__item">
                       <picture>
-                        <source type="image/webp" media="(min-width: 1220px)" srcset="img/after-desktop@1x.webp 1x, img/webp/after-desktop@2x.webp 2x">
-                        <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/webp/after-tablet@2x.webp 2x">
-                        <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/webp/after-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 1220px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
 
 
                         <source media="(min-width: 1220px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
@@ -268,8 +267,8 @@
               </div>
 
               <div class="example__slider-description">
-                <span class="slider__btn btn-before example__slider-item">Было</span>
-                <span class="slider__btn btn-after example__slider-item">Стало</span>
+                <span class="example__slider-btn btn-before example__slider-item">Было</span>
+                <span class="example__slider-btn btn-after example__slider-item">Стало</span>
               </div>
             </div>
           </div>
@@ -299,37 +298,35 @@
         <a class="page-footer__logo" href="index.html">
           <img src="img/logo-footer.svg" width="128" height="24" alt="Название магазина">
         </a>
-        <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Мы в Вконтакте</span>
-                <svg>
-                  <use xlink:href="#icon-vk"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-                <span class="visually-hidden">Мы в Инстаграме</span>
-                <svg>
-                  <use xlink:href="#icon-insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <span class="visually-hidden">Мы в Фейсбуке</span>
-                <svg>
-                  <use xlink:href="#icon-fb"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__item-link social__item-link--vkontakte" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Мы в Вконтакте</span>
+              <svg>
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__item-link social__item-link--instagram" href="https://www.instagram.com/htmlacademy">
+              <span class="visually-hidden">Мы в Инстаграме</span>
+              <svg>
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__item-link social__item-link--facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg>
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
         <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__link copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="page-footer__academy-logo">
               <use xlink:href="#icon-academy"></use>
             </svg>

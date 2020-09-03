@@ -38,7 +38,7 @@ var initSlider = () => {
     const sliderRangePointer = slider.querySelector('.example__range');
     sliderRangePointer.addEventListener('mousedown', sliderRangePointerOnMouseDown);
 
-    let posInPersents = 50;
+    let posInPersents = 53;
     updateSlider(posInPersents);
 
     let start = null;

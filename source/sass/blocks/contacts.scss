@@ -10,6 +10,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 143%;
+  color: $special_dark-gray;
 }
 
 .contacts {
@@ -50,7 +51,7 @@
   border: none;
 }
 
-.contacts .contacts--gray {
+.contacts .contacts__text-info--gray {
   background-color: $basic_gray;
 }
 
@@ -72,11 +73,12 @@
   }
 
   .contacts__address {
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 0;
 
     p {
       margin: 0;
-      padding: 0;
+      padding-bottom: 1px;
     }
   }
 
@@ -84,7 +86,7 @@
     position: absolute;
     z-index: 3;
     top: 39%;
-    left: 40%;
+    left: 41%;
 
     content: "";
     width: 57px;
@@ -116,12 +118,12 @@
     display: flex;
     justify-content: space-between;
     height: 200px;
-    padding: 45px 70px 40px 70px;
+    padding: 48px 70px 40px 70px;
 
     p {
       width: 160px;
-      margin: 20px 0;
-      padding: 0;
+      margin: 17px 0 19px 0;
+      padding: 0 2px 0 0;
     }
   }
 
@@ -132,14 +134,14 @@
       position: absolute;
       z-index: 3;
       top: 146px;
-      left: 43%;
+      left: 42%;
 
       content: "";
       width: 113px;
       height: 106px;
 
       background-image: url("../../img/map-pin.png");
-      background-size: 113px 106px;
+      background-size: 120px 106px;
     }
   }
 
@@ -161,6 +163,7 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
+    padding: 0;
     background-image: url("../../img/bg-map-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -184,25 +187,25 @@
   .contacts__map-wrapepr::after {
     position: absolute;
     z-index: 3;
-    top: 138px;
-    left: 63%;
+    top: 132px;
+    left: 62.5%;
   }
 
   .contacts__text-info {
     position: absolute;
     z-index: 1;
-    top: 100px;
-    left: 30px;
+    top: 98px;
+    left: 0;
     width: 570px;
     margin: 0;
-    padding: 45px 84px 45px 76px;
+    padding: 46px 85px 45px 76px;
 
     p {
       text-align: left;
     }
   }
 
-  .contacts .contacts--gray {
+  .contacts .contacts__text-info--gray {
     background-color: #ffffff;
   }
 }

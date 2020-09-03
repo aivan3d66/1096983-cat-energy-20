@@ -121,7 +121,7 @@
   .programs__description {
     margin: 0;
     margin-bottom: 16px;
-    padding-top: 32px;
+    padding-top: 30px;
     padding-bottom: 22px;
 
     border-bottom: 1px solid $special_gray-2;
@@ -146,11 +146,11 @@
     flex-direction: column;
     justify-content: space-between;
 
-    min-height: 372px;
+    height: 372px;
     padding: 42px 30px 0 30px;
     width: 708px;
 
-    margin-top: 0;
+    margin-top: 7px;
     margin-bottom: 30px;
 
     a {
@@ -164,7 +164,7 @@
 
     &::before {
       top: 92px;
-      left: 445px;
+      left: 447px;
 
       width: 200px;
       height: 200px;
@@ -175,7 +175,7 @@
     position: absolute;
     z-index: 1;
     top: 82px;
-    right: 90px;
+    right: 92px;
 
     width: 140px;
     height: 190px;
@@ -184,8 +184,8 @@
   .programs__cat-pro {
     position: absolute;
     z-index: 1;
-    top: 133px;
-    right: 27px;
+    top: 134px;
+    right: 28px;
     width: 268px;
     height: 112px;
   }
@@ -241,7 +241,7 @@
 
     width: 1220px;
     margin: 0 auto;
-    padding: 60px 0 0 0;
+    padding: 83px 0 0 0;
   }
 
   .programs__title {
@@ -252,12 +252,11 @@
 
   .programs__item {
     margin: 0;
-
     width: 570px;
 
     &::before {
       top: 46px;
-      left: 50px;
+      left: 52px;
       width: 100px;
       height: 100px;
     }
@@ -269,11 +268,15 @@
     }
   }
 
+  .programs__title-slim {
+    margin-left: 42px;
+  }
+
   .programs__cat-slim {
     position: absolute;
     z-index: 1;
     top: 41px;
-    left: 66px;
+    left: 67px;
 
     width: 70px;
     height: 97px;
@@ -282,8 +285,8 @@
   .programs__cat-pro {
     position: absolute;
     z-index: 1;
-    top: 68px;
-    left: 32px;
+    top: 67px;
+    left: 33px;
     width: 134px;
     height: 56px;
   }

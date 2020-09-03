@@ -82,7 +82,7 @@
     margin: 0;
 
     h2 {
-      margin: 32px 0 34px 0;
+      margin: 28px 0 34px 0;
       padding: 0;
 
       text-align: left;
@@ -90,31 +90,33 @@
   }
 
   .additional-goods__item {
-    padding: 14px 0 20px 0;
+    margin: 0;
+    padding: 14px 0 18px 0;
 
-    border-bottom: 1px solid $special_dark-gray-3;
+    border-bottom: 1px solid $special_gray-1;
 
     h3 {
-      margin: 0;
+      margin: 0 0 -1px 1px;
       padding: 0 0 10px 0;
     }
 
     &:first-child {
-      border-top: 1px solid $special_dark-gray-3;
+      border-top: 1px solid $special_gray-1;
     }
 
     a {
       height: 40px;
-      padding: 10px 0;
+      padding: 9px 0;
+      margin: 0;
     }
   }
 
   .additional-goods__composition {
-    margin: 0 0 10px 0;
+    margin: 0 0 12px -4px;
 
     width: 100%;
 
-    td:nth-child(2) {
+    td:last-child {
       text-align: right;
     }
   }
@@ -123,7 +125,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    margin: 30px 0 35px 0;
+    margin: 34px 0 36px 0;
     min-height: 289px;
 
     text-align: center;
@@ -141,6 +143,7 @@
     p {
       padding: 20px;
       margin-top: 24px;
+      margin-left: -1px;
     }
   }
 }
@@ -153,7 +156,7 @@
   .additional-goods__title {
     position: relative;
     margin: 0 0 46px 0;
-    padding: 14px 20px 35px 36px;
+    padding: 14px 20px 34px 37px;
 
     font-weight: normal;
     font-size: 36px;
@@ -162,7 +165,7 @@
 
     &::after {
       top: 35px;
-      left: 59%;
+      left: 58%;
     }
 
     &::before {
@@ -182,10 +185,10 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
 
-    padding: 24px 37px;
+    padding: 25px 36px 27px 37px;
     width: 100%;
 
-    border: 1px solid $special_gray-3;
+    border: 1px solid $special_gray-1;
 
     &:nth-child(1),
     &:nth-child(2),
@@ -194,7 +197,7 @@
     }
 
     h3 {
-      margin: 0 0 30px 0;
+      margin: 0 0 28px 0;
       font-size: 20px;
       line-height: 20px;
     }
@@ -224,7 +227,7 @@
     grid-template-columns: 1fr 408px;
     grid-template-rows: 1fr;
     min-height: 200px;
-    margin: 76px 0;
+    margin: 68px 0 76px 0;
 
     background-image: url("../../img/gift-photo-tablet@1x.jpg");
 
@@ -266,12 +269,13 @@
 
 @media (min-width: $desktop-width) {
   .additional-goods {
-    padding: 0 30px 88px 30px;
+    padding: 0;
   }
 
   .additional-goods__title {
     padding-left: 0;
-    margin-bottom: 40px;
+    margin-top: 12px;
+    margin-bottom: 45px;
 
     &::after {
       left: 31%;
@@ -287,6 +291,8 @@
     grid-template-columns: auto 245px;
     grid-template-rows: 289px;
     grid-column-gap: 80px;
+
+    margin-bottom: 86px;
   }
 
   .additional-goods__promotion {
@@ -327,10 +333,10 @@
   .additional-goods__item {
     display: grid;
     grid-template-columns: 1fr 1fr 244px;
-    grid-template-rows: 1fr;
-    grid-column-gap: 50px;
+    grid-template-rows: 30px;
+    grid-column-gap: 20px;
 
-    padding: 18px 0;
+    padding: 21px 0 17px 0;
 
     border-right: none;
     border-left: none;
@@ -340,7 +346,7 @@
 
     h3 {
       margin: auto 0;
-      width: 165px;
+      width: 175px;
     }
 
     &:last-child {
@@ -353,7 +359,12 @@
     margin: auto 0;
 
     td {
+      padding-top: 7px;
       text-align: left;
+    }
+
+    td:nth-child(2) {
+      width: 60px;
     }
   }
 

@@ -28,13 +28,29 @@
 
 @media (max-width: $mobile-width-only) {
   .nutrition {
-    height: 480px;
+    height: 478px;
     margin: 0 auto;
 
     background-image: url("../../img/index-background-mobile@1x.jpg");
     background-position: top;
-    background-size: contain;
+    background-size: 320px 305px;
     background-repeat: no-repeat;
+
+    img {
+      margin-bottom: -2px;
+      padding: 0;
+    }
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 128%;
+      background: linear-gradient(to top, $basic_white 50%, #65a93c 50%);
+    }
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -45,12 +61,12 @@
 
   .nutrition__title {
     max-width: 300px;
-    padding-top: 28px;
+    padding-top: 26px;
     margin: 0 auto 0 auto;
   }
 
   .nutrition__lead {
-    margin: 26px 0;
+    margin: 25px 0 27px 0;
   }
 
   .nutrition__button {
@@ -62,7 +78,7 @@
 
 @media (min-width: $tablet-width) {
   .nutrition {
-    padding: 37px 140px 520px 87px;
+    padding: 37px 140px 520px 88px;
     margin: 0 auto;
     width: 709px;
 
@@ -94,7 +110,7 @@
 
   .nutrition img {
     position: absolute;
-    top: 236px;
+    top: 238px;
     left: -2px;
 
     width: 709px;
@@ -104,7 +120,10 @@
   }
 
   .nutrition__button {
-    width: 240px;
+    position: relative;
+    left: -5px;
+    z-index: 2;
+    width: 244px;
     padding: 17px 10px;
     margin: 0;
 
@@ -143,16 +162,24 @@
 
   .nutrition__wrapper {
     width: 1220px;
-    padding: 84px 100px 0 110px;
+    padding: 84px 100px 0 80px;
     margin: 0 auto;
   }
 
   .nutrition img {
     position: absolute;
-    top: 0;
-    left: 40%;
+    top: 2px;
+    left: 38.9%;
 
     width: 552px;
     height: 499px;
+  }
+
+  .nutrition__lead {
+    padding-bottom: 52px;
+  }
+
+  .nutrition__button {
+    left: 0;
   }
 }
