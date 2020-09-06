@@ -27,9 +27,7 @@
     line-height: 18px;
     text-transform: uppercase;
     color: $special_dark-gray;
-    outline: none;
-    border-color: $basic_gray;
-    border-style: solid;
+    border: 1px solid #e7e7e7;
   }
 
   input::placeholder,
@@ -191,14 +189,14 @@
 
 .program__filter-option label {
   position: relative;
-  margin-left: 40px;
+  margin-left: 46px;
 }
 
 .program__filter-option label::before {
   content: "";
   position: absolute;
   top: -3px;
-  left: -40px;
+  left: -45px;
   width: 30px;
   height: 30px;
   border: 1px solid $special_gray-1;
@@ -215,7 +213,7 @@
 
   position: absolute;
   top: -3px;
-  left: -40px;
+  left: -45px;
 
   width: 30px;
   height: 30px;
@@ -267,7 +265,7 @@
       width: 100%;
       height: 150px;
 
-      border: 1px solid $basic_gray;
+      border: 1px solid #e7e7e7;
     }
 
     &:first-child {
@@ -411,7 +409,7 @@
 
     input {
       flex-grow: 22;
-      padding: 24px 0 24px 16px;
+      padding: 24px 0 26px 16px;
       margin-bottom: 6px;
       height: 46px;
     }
@@ -451,6 +449,23 @@
   .program__user-contacts svg {
     right: 17px;
   }
+
+  .program__user-contacts {
+    label {
+      padding-top: 2px;
+      padding-right: 3px;
+      flex-grow: 1;
+    }
+
+    &:nth-child(2) label {
+      margin-left: -4px;
+      padding-right: 2px;
+    }
+
+    input {
+      padding-left: 20px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -476,6 +491,17 @@
     }
   }
 
+  .program-form__cat-characters {
+    label {
+      padding-top: 2px;
+      padding-left: 2px;
+    }
+
+    input {
+      padding-left: 21px;
+    }
+  }
+
   .program__item-title {
     padding: 14px 0;
     margin: 0 0 50px 0;
@@ -492,21 +518,16 @@
   }
 
   .program__item-contact {
-    margin-bottom: 60px;
+    margin-bottom: 62px;
 
     &::after {
       top: 35px;
-      left: 43%;
+      left: 43.2%;
     }
   }
 
-  .program__user-contacts svg {
-    top: 17px;
-    right: 17px;
-  }
-
   .program__item-comment {
-    margin-bottom: 59px;
+    margin: -2px 0 59px 0;
 
     &::before {
       top: 35px;
@@ -533,16 +554,16 @@
     margin: 0;
   }
 
-  .program__cat-characters {
-    label {
-      padding-top: 2px;
-      padding-left: 2px;
-      padding-right: 3px;
-      flex-grow: 1;
-    }
-  }
-
   .program__user-contacts {
+    input {
+      padding-left: 18px;
+    }
+
+    svg {
+      top: 17px;
+      right: 17px;
+    }
+
     label {
       padding-top: 5px;
       padding-left: 2px;
@@ -571,6 +592,6 @@
     grid-template-rows: 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 0;
-    margin-bottom: 51px;
+    margin-bottom: 52px;
   }
 }
