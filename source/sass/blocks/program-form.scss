@@ -32,7 +32,7 @@
 
   input::placeholder,
   textarea::placeholder {
-    color: $special_dark-gray;
+    color: #444444;
   }
 
   textarea {
@@ -124,10 +124,11 @@
 .filter-input-radio + label {
   position: relative;
   margin-left: 45px;
+  cursor: pointer;
 }
 
-.filter-input-radio:active + label {
-  outline: none;
+.filter-input-radio:focus + label {
+  outline: 2px solid #000000;
 }
 
 .filter-input-radio:disabled + label,
@@ -179,7 +180,7 @@
 
   .filter-input-radio:checked + label::after {
     top: 7px;
-    left: -49px;
+    left: -49.5px;
     width: 17px;
     height: 17px;
   }
@@ -190,16 +191,26 @@
 .program__filter-option label {
   position: relative;
   margin-left: 46px;
+  cursor: pointer;
 }
 
 .program__filter-option label::before {
-  content: "";
   position: absolute;
+  z-index: 1;
   top: -3px;
   left: -45px;
+
+  content: "\00A0";
+  display: inline-block;
   width: 30px;
   height: 30px;
+  background-color: white;
   border: 1px solid $special_gray-1;
+
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  vertical-align: baseline;
 
   cursor: pointer;
 }
@@ -209,28 +220,16 @@
 }
 
 .filter-input-checkbox:checked + label::before {
-  content: "";
-
-  position: absolute;
-  top: -3px;
-  left: -45px;
-
-  width: 30px;
-  height: 30px;
-
-  background-image: url("../../img/icon-tick.svg");
-  background-size: 15px 15px;
-  background-repeat: no-repeat;
-  background-position: center;
+  content: "\2714";
+  color: $basic_green;
 }
 
-.filter-input-checkbox:active + label {
-  outline: none;
+.filter-input-checkbox:focus + label {
+  outline: 2px solid #000000;
 }
 
 @media (min-width: $tablet-width) {
   .program__filter-option label {
-    position: relative;
     margin-left: 60px;
   }
 
@@ -239,14 +238,8 @@
     left: -59px;
     width: 40px;
     height: 40px;
-  }
-
-  .filter-input-checkbox:checked + label::before {
-    top: -5px;
-    left: -59px;
-
-    width: 40px;
-    height: 40px;
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 
@@ -486,7 +479,7 @@
     textarea {
       padding: 10px 20px 20px 18px;
       margin-bottom: 12px;
-      width: 100%;
+      width: 1220px;
       height: 174px;
     }
   }
