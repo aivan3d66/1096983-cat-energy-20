@@ -55,7 +55,7 @@ exports.server = server;
 // HTML
 
 const minifyHTML = () => {
-  return gulp.src("source/*.html")
+  return gulp.src("build/*.html")
     .pipe(htmlMinimizer({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
@@ -63,7 +63,7 @@ const minifyHTML = () => {
 exports.minifyHTML = minifyHTML;
 
 const html = () => {
-  return gulp.src('source/*.html')
+  return gulp.src('build/*.html')
     .pipe(posthtml([include()]))
     .pipe(gulp.dest('build'));
 }
@@ -73,7 +73,7 @@ exports.html = html;
 // JSmin
 
 const jsmini = () => {
-  return gulp.src("source/js/*.js")
+  return gulp.src("build/js/*.js")
     .pipe(jsmin())
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build/js"));
@@ -89,7 +89,8 @@ const copy = () => {
     "source/fonts/*.{woff,woff2}",
     "source/js/**",
     "source/*.ico",
-    "source/*.html"
+    "source/*.html",
+    "source/css/normalize.css"
   ],{
     base:"source"
   })
@@ -127,7 +128,7 @@ const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
   .pipe(svgstore())
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("source/img"));
+  .pipe(gulp.dest("build/img"));
 }
 
 exports.sprite = sprite;
@@ -144,12 +145,12 @@ exports.clean = clean;
 const webpic = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
   .pipe(webp({ality:90}))
-  .pipe(gulp.dest("source/img"))
+  .pipe(gulp.dest("build/img"))
 }
 exports.webpic = webpic;
 
 // Create build
 
-const build = gulp.series(clean, images, copy, styles);
+const build = gulp.series(clean, images, sprite, webpic, copy, jsmini, html, minifyHTML, styles);
 
 exports.build = build;
