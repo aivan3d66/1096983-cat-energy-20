@@ -114,7 +114,7 @@
     width: 323px;
     height: 427px;
 
-    padding: 50px 28px 38px 28px;
+    padding: 50px 34px 38px 34px;
 
     border: 2px solid $basic_gray;
     background: none;
@@ -141,7 +141,7 @@
   .catalog__description {
     width: 177px;
     margin: 0 auto;
-    margin-bottom: 67px;
+    margin-bottom: 74px;
     padding: 0 5px;
 
     font-size: 16px;
@@ -155,7 +155,7 @@
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: $desktop-width) {
   .catalog {
     margin: 0 auto;
     padding: 20px 0;
@@ -178,7 +178,7 @@
 
   .catalog__show-more {
     position: relative;
-    bottom: -110px;
+    bottom: -114px;
 
     padding-top: 50px;
 
@@ -189,5 +189,9 @@
 
   .catalog__title {
     width: 100%;
+  }
+
+  .catalog__description {
+    margin-bottom: 72px;
   }
 }

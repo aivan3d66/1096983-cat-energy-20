@@ -168,7 +168,7 @@
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: $desktop-width) {
   .product-card {
     height: 540px;
     max-width: 245px;
@@ -190,6 +190,10 @@
         margin: 0;
         height: 210px;
       }
+    }
+
+    span {
+      line-height: 16px;
     }
   }
 
