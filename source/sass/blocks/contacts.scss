@@ -1,7 +1,7 @@
 .contacts__lead {
   font-weight: normal;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 21px;
   text-transform: uppercase;
 }
 
@@ -51,21 +51,24 @@
   border: none;
 }
 
-.contacts .contacts__text-info--gray {
-  background-color: $basic_gray;
+.contacts__text-info {
+  height: 114px;
+  background-color: $basic_white;
 }
 
-.contacts__text-info {
-  background-color: $basic_white;
+.contacts__text-info--gray {
+  padding: 0;
+  margin: 0;
+  background-color: $basic_gray;
 }
 
 @media (max-width: $mobile-width-only) {
   .contacts__text-info {
     display: grid;
     grid-template-columns: auto 140px;
-    grid-template-rows: 100px;
+    grid-template-rows: 1fr;
 
-    padding: 13px 20px 0 20px;
+    padding: 10px 20px 10px 20px;
 
     p {
       width: 140px;
@@ -73,7 +76,7 @@
   }
 
   .contacts__address {
-    margin-top: 15px;
+    margin-top: 16px;
     padding: 0;
 
     p {
@@ -85,7 +88,7 @@
   .contacts__map-wrapepr::after {
     position: absolute;
     z-index: 3;
-    top: 39%;
+    top: 38%;
     left: 41%;
 
     content: "";
@@ -117,18 +120,25 @@
   .contacts__text-info {
     display: flex;
     justify-content: space-between;
-    height: 200px;
-    padding: 48px 70px 40px 70px;
+    align-items: center;
+    padding: 0 70px;
+    margin-top: 7px;
+    min-height: 194px;
 
     p {
       width: 160px;
-      margin: 17px 0 19px 0;
+      margin: 16px 0 20px 0;
       padding: 0 2px 0 0;
     }
   }
 
+  .contacts__text-info--gray {
+    min-height: 200px;
+  }
+
   .contacts__map-wrapepr {
     height: 400px;
+    margin: 0;
 
     &::after {
       position: absolute;
@@ -187,7 +197,7 @@
   .contacts__map-wrapepr::after {
     position: absolute;
     z-index: 3;
-    top: 132px;
+    top: 134px;
     left: 62.5%;
   }
 
@@ -197,15 +207,20 @@
     top: 98px;
     left: 0;
     width: 570px;
+    min-height: 201px;
     margin: 0;
-    padding: 46px 85px 45px 76px;
+    padding: 56px 85px 41px 76px;
 
     p {
       text-align: left;
     }
+
+    .contacts__address p {
+      margin-top: 12px;
+    }
   }
 
-  .contacts .contacts__text-info--gray {
+  .contacts__text-info--gray {
     background-color: #ffffff;
   }
 }

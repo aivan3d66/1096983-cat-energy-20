@@ -7,17 +7,21 @@
 
   h2 {
     padding: 0 20px;
-    margin: 24px 0 17px 0;
+    margin: 27px 0 17px 0;
     font-weight: normal;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  fieldset:not(.program-form__fieldset-weigth) {
+    border: none;
   }
 }
 
 .program__lead {
   width: 280px;
-  padding: 20px 20px 15px 20px;
-  margin: 0 20px 0 0;
+  padding: 0 20px;
+  margin: 36px 20px 15px 0;
 
   font-size: 14px;
   line-height: 18px;
@@ -38,14 +42,14 @@
   .program {
     small {
       position: absolute;
-      bottom: -38px;
+      bottom: -37px;
       left: 0;
       width: 100%;
       margin: 0 auto;
     }
 
     button {
-      margin: 20px auto 70px auto;
+      margin: 22px auto 70px auto;
       width: 280px;
     }
   }
@@ -72,7 +76,7 @@
 
     small {
       position: absolute;
-      bottom: 92px;
+      bottom: 86px;
       right: 22.8%;
 
       font-size: 16px;
@@ -82,7 +86,7 @@
     button {
       width: 282px;
       height: 52px;
-      margin-bottom: 72px;
+      margin-bottom: 66px;
 
       font-size: 20px;
     }
@@ -91,7 +95,7 @@
   .program__lead {
     width: 323px;
     padding: 0;
-    margin: 0 20px 31px 50px;
+    margin: 0 20px 45px 50px;
 
     font-size: 20px;
     line-height: 30px;
@@ -112,13 +116,13 @@
     }
 
     small {
-      bottom: 99px;
+      bottom: 96px;
       right: 32%;
     }
 
     button {
       width: 568px;
-      margin: 0 0 81px 2px;
+      margin: 0 0 78px 2px;
     }
   }
 

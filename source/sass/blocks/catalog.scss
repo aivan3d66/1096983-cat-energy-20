@@ -53,7 +53,7 @@
 
   .catalog__main-title {
     margin: 0;
-    padding: 28px 20px 39px 20px;
+    padding: 28px 20px 40px 20px;
 
     text-align: left;
 
@@ -63,20 +63,24 @@
   .catalog__show-more {
     position: relative;
     display: block;
-    padding: 70px 20px 25px 20px;
+    padding: 68px 20px 24px 20px;
     margin: 0;
 
     background-color: $basic_white;
+
+    a {
+      width: 279px;
+    }
   }
 
   .catalog__title {
-    margin: 10px 0 8px 0;
+    margin: 10px 0 9px 0;
     padding: 0;
   }
 
   .catalog__description {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 }
 
@@ -103,7 +107,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-column-gap: 60px;
-    grid-row-gap: 59px;
+    grid-row-gap: 58px;
 
     margin: 0 auto;
   }
@@ -114,7 +118,7 @@
     width: 323px;
     height: 427px;
 
-    padding: 50px 34px 38px 34px;
+    padding: 50px 34px 35px 34px;
 
     border: 2px solid $basic_gray;
     background: none;
@@ -162,7 +166,8 @@
 
     h2 {
       margin-top: 27px;
-      margin-bottom: 56px;
+      margin-left: 1px;
+      margin-bottom: 58px;
     }
   }
 
@@ -172,13 +177,13 @@
     grid-template-rows: auto;
     grid-column-gap: 80px;
     grid-row-gap: 33px;
-
     margin-bottom: 30px;
   }
 
   .catalog__show-more {
     position: relative;
-    bottom: -114px;
+    bottom: -110px;
+    height: 430px;
 
     padding-top: 50px;
 

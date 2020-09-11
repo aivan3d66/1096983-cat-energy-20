@@ -45,7 +45,7 @@
     left: 88%;
 
     width: 300%;
-    height: 3px;
+    height: 2px;
 
     background-color: $basic_green;
   }
@@ -71,9 +71,16 @@
   }
 }
 
+.additional-goods__button {
+  font-size: 16px;
+  line-height: 20px;
+}
 
 @media (max-width: $mobile-width-only) {
   .additional-goods__wrapepr-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     margin: 0;
     padding: 0;
   }
@@ -90,8 +97,9 @@
   }
 
   .additional-goods__item {
+    max-height: 130px;
     margin: 0;
-    padding: 14px 0 18px 0;
+    padding: 12px 0 19px 0;
 
     border-bottom: 1px solid $special_gray-1;
 
@@ -103,18 +111,11 @@
     &:first-child {
       border-top: 1px solid $special_gray-1;
     }
-
-    a {
-      height: 40px;
-      padding: 9px 0;
-      margin: 0;
-    }
   }
 
   .additional-goods__composition {
     margin: 0 0 12px -4px;
-
-    width: 100%;
+    width: 102.4%;
 
     td:last-child {
       text-align: right;
@@ -125,14 +126,14 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    margin: 34px 0 36px 0;
+    margin: 39px 0 34px 0;
     min-height: 289px;
 
     text-align: center;
 
     svg {
       position: relative;
-      top: 66px;
+      top: 65px;
       width: 60px;
       height: 60px;
 
@@ -142,7 +143,7 @@
 
     p {
       padding: 20px;
-      margin-top: 24px;
+      margin-top: 22px;
       margin-left: -1px;
     }
   }
@@ -156,7 +157,7 @@
   .additional-goods__title {
     position: relative;
     margin: 0 0 46px 0;
-    padding: 10px 20px 34px 37px;
+    padding: 13px 20px 34px 37px;
 
     font-weight: normal;
     font-size: 36px;
@@ -164,7 +165,7 @@
     text-align: left;
 
     &::after {
-      top: 32px;
+      top: 34px;
       left: 58%;
       height: 2px;
     }
@@ -172,7 +173,7 @@
     &::before {
       position: absolute;
       content: "";
-      top: 32px;
+      top: 34px;
       left: -50%;
       width: 50%;
       height: 2px;
@@ -184,7 +185,7 @@
   .additional-goods__item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr;
 
     padding: 25px 36px 27px 37px;
     width: 100%;
@@ -198,19 +199,17 @@
     }
 
     h3 {
-      margin: 0 0 28px 0;
+      margin: 0 0 26px 0;
       font-size: 20px;
       line-height: 20px;
-    }
-
-    a {
-      height: 38px;
-      padding: 10px 10px;
     }
   }
 
   .additional-goods__composition {
+    padding-top: 1px;
+    width: 101%;
     margin: 0;
+    margin-left: -1px;
 
     td {
       text-align: right;
@@ -275,8 +274,7 @@
 
   .additional-goods__title {
     padding: 0;
-    margin-top: 27px;
-    margin-bottom: 80px;
+    margin: 25px 0 80px 1px;
 
     &::after {
       top: 23px;
@@ -295,7 +293,7 @@
     grid-template-rows: 289px;
     grid-column-gap: 80px;
 
-    margin-bottom: 86px;
+    margin-bottom: 82px;
   }
 
   .additional-goods__promotion {
@@ -360,6 +358,10 @@
   .additional-goods__composition {
     position: relative;
     margin: auto 0;
+    padding-top: 3px;
+    width: 101%;
+    margin-left: -2px;
+
 
     td {
       padding-top: 6px;

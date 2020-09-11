@@ -15,7 +15,7 @@
 .programs__item a {
   font-weight: normal;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 16px;
 
   text-transform: uppercase;
 }
@@ -32,8 +32,8 @@
   z-index: 1;
 
   width: 100%;
-  padding: 18px 20px;
-  margin: 0 auto 20px auto;
+  padding: 18px 20px 16px 20px;
+  margin: 0 auto;
 
   background-color: $basic_gray;
 
@@ -64,7 +64,7 @@
     position: absolute;
     content: "";
     top: 6px;
-    right: -37px;
+    right: -38px;
 
     width: 22px;
     height: 15px;
@@ -90,38 +90,45 @@
   }
 }
 
+.programs__button-pro::after {
+  right: -40px;
+}
+
 @media (max-width: $mobile-width-only) {
   .programs {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-  }
+    grid-row-gap: 20px;
 
-  .programs__item {
     svg {
       position: absolute;
-      top: 16px;
-      left: 13px;
-
-      width: 50px;
-      height: 53px;
     }
+  }
 
-    svg:nth-child(2) {
-      top: 21px;
-      width: 67px;
-      height: 50px;
-    }
+  .programs__cat-slim {
+    top: 21px;
+    left: 23px;
+
+    width: 50px;
+    height: 49px;
+  }
+
+  .programs__cat-pro {
+    top: 24px;
+    left: 13px;
+    width: 67px;
+    height: 50px;
   }
 
   .programs__fat h3 {
-    margin-left: 40px;
+    margin-left: 39px;
   }
 
   .programs__description {
     margin: 0;
+    margin-top: 32px;
     margin-bottom: 16px;
-    padding-top: 30px;
     padding-bottom: 22px;
 
     border-bottom: 1px solid $special_gray-2;
@@ -146,7 +153,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    height: 372px;
+    min-height: 372px;
     padding: 42px 30px 0 30px;
     width: 708px;
 
@@ -174,11 +181,11 @@
   .programs__cat-slim {
     position: absolute;
     z-index: 1;
-    top: 82px;
-    right: 92px;
+    top: 81px;
+    right: 91px;
 
-    width: 140px;
-    height: 190px;
+    width: 142px;
+    height: 192px;
   }
 
   .programs__cat-pro {
@@ -192,7 +199,7 @@
 
   .programs__title {
     padding: 0 22px;
-    margin: 35px 0 14px 0;
+    margin: 35px 0 15px 0;
 
     text-align: left;
     font-size: 36px;
@@ -215,10 +222,10 @@
 
   .programs__button {
     &::after {
-      top: 10px;
-      right: 4px;
+      top: 11px;
+      right: 6px;
       width: 22px;
-      height: 15px;
+      height: 16px;
     }
 
     &:hover::after,
@@ -229,6 +236,10 @@
       width: 32px;
       height: 15px;
     }
+  }
+
+  .programs__button-pro::after {
+    right: 10px;
   }
 }
 
@@ -289,5 +300,24 @@
     left: 33px;
     width: 134px;
     height: 56px;
+  }
+
+  .programs__button {
+    &::after {
+      right: 2px;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      top: 10px;
+      right: -8px;
+
+      width: 32px;
+      height: 15px;
+    }
+  }
+
+  .programs__button-pro::after {
+    right: 8px;
   }
 }

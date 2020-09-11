@@ -8,7 +8,7 @@
     grid-template-columns: auto auto auto;
     grid-template-rows: 1fr;
 
-    padding: 22px 0 18px 0;
+    padding: 22px 0 16px 0;
     text-align: center;
 
     width: 100%;
@@ -18,8 +18,8 @@
     border-bottom: 1px solid $special_gray-3;
 
     li:first-child {
-      margin-left: 40px;
-      margin-right: -40px;
+      margin-left: 37px;
+      margin-right: -39px;
     }
 
     li:last-child {
@@ -39,11 +39,16 @@
     display: flex;
     align-items: center;
     width: 220px;
+    margin-top: 10px;
 
     border: none;
 
     li {
       margin-right: 26px;
+    }
+
+    li:nth-child(2) {
+      margin-right: 22px;
     }
   }
 
@@ -76,6 +81,7 @@
   .social__item-link--vkontakte svg {
     width: 30px;
     height: 22px;
+    margin-right: 2px;
   }
 
   .social__item-link--facebook svg {

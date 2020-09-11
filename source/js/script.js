@@ -1,8 +1,8 @@
-var catName = document.querySelector('.input-name');
-var userMail = document.querySelector('.input-mail');
-var userPhone = document.querySelector('.input-phone');
-var mailIcon = document.querySelector('.mail-icon');
-var phoneIcon = document.querySelector('.phone-icon');
+var catName = document.querySelector('.program-form__input-text');
+var userMail = document.querySelector('.program-form__input-mail');
+var userPhone = document.querySelector('.program-form__input-phone');
+var mailIcon = document.querySelector('.program-form__svg-mail');
+var phoneIcon = document.querySelector('.program-form__svg-phone');
 var grayBtn = document.querySelector('.product-card__modal-button');
 
 userMail.addEventListener('input', function () {
@@ -10,7 +10,7 @@ userMail.addEventListener('input', function () {
   if (userMail.validity.typeMismatch) {
     userMail.setCustomValidity('Почта указана неверно');
     userMail.style.borderColor = 'red';
-    mailIcon.style.fill = 'red';
+    mailIcon.style.fill = '#FF0000';
   } else {
     userMail.setCustomValidity('');
     userMail.style.borderColor = '#68B738';
@@ -22,8 +22,8 @@ userPhone.addEventListener('input', function () {
   'use strict';
   if (userPhone.validity.patternMismatch) {
     userPhone.setCustomValidity('Номер указан некорректно');
-    userPhone.style.borderColor = 'red';
-    phoneIcon.style.fill = 'red';
+    userPhone.style.borderColor = '#FF0000';
+    phoneIcon.style.fill = '#FF0000';
   } else {
     userPhone.setCustomValidity('');
     userPhone.style.borderColor = '#68B738';
@@ -35,7 +35,7 @@ catName.addEventListener('input', function () {
   'use strict';
   if (catName.validity.patternMismatch) {
     catName.setCustomValidity('Только кириллица');
-    catName.style.borderColor = 'red';
+    catName.style.borderColor = '#FF0000';
   } else {
     catName.setCustomValidity('');
     catName.style.borderColor = '#68B738';

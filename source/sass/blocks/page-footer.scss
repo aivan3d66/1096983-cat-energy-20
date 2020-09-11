@@ -22,10 +22,6 @@
   margin: 0 auto;
 }
 
-.page-footer__copyright-logo {
-  position: relative;
-}
-
 .page-footer__academy-logo {
   position: absolute;
   top: 0;
@@ -55,7 +51,7 @@
   .page-footer__logo {
     width: 128px;
     margin: 0 auto;
-    padding: 20px 0 24px 0;
+    padding: 18px 0 25px 0;
   }
 
   .page-footer__copyright {
@@ -63,12 +59,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 18px 0 0 0;
+    margin-top: 18px;
   }
 
   .page-footer__copyright-logo {
     position: relative;
-    right: -10px;
+    right: -12px;
     width: 45px;
     height: 40px;
   }
@@ -87,7 +83,7 @@
   .page-footer__logo {
     display: block;
     width: 130px;
-    padding: 20px 0;
+    padding: 20px 0 20px 0;
     margin: auto 0;
   }
 
@@ -118,11 +114,11 @@
   }
 
   .page-footer__logo {
-    padding-top: 29px;
+    margin-top: 46px;
   }
 
   .page-footer__copyright {
-    padding-top: 14px;
+    padding-top: 17px;
     margin-right: -1px;
   }
 }
