@@ -65,13 +65,13 @@
         </div>
         <nav class="main-nav">
           <div class="main-nav__toggle">
-            <input type="checkbox" id="checkbox1" class="checkbox1 visually-hidden">
-            <label for="checkbox1">
-              <span class="hamburger hamburger1">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-                <span class="bar bar4"></span>
+            <input class="main-nav__toggle-checkbox visually-hidden" type="checkbox" id="hamburger-checkbox">
+            <label for="hamburger-checkbox">
+              <span class="main-nav__toggle-hamburger main-nav__toggle-bars">
+                <span class="main-nav__toggle-bar main-nav__toggle-bar1"></span>
+                <span class="main-nav__toggle-bar main-nav__toggle-bar2"></span>
+                <span class="main-nav__toggle-bar main-nav__toggle-bar3"></span>
+                <span class="main-nav__toggle-bar main-nav__toggle-bar4"></span>
               </span>
             </label>
             <ul class="main-nav__list">
@@ -99,79 +99,81 @@
         </p>
         <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="program-form__wrapper-inner">
-            <div class="program-form__item program-form__cat-characters">
-              <p class="program__cat-characters">
-                <label for="cat__name">Имя:*</label>
-                <input class="program-form__input input-name form-field" type="text" id="cat__name" name="name" placeholder="Барсик" minlength="3" pattern="^[А-Яа-яЁё\s]+$" required>
+            <fieldset class="program-form__fieldset program-form__fieldset-characters">
+              <legend class="visually-hidden">Характеристики вашего кота</legend>
+              <p>
+                <label class="program-form__field program-form__field-name" for="cat__name">Имя:*</label>
+                <input class="program-form__input program-form__input-text" type="text" id="cat__name" name="name" placeholder="Барсик" minlength="3" pattern="^[А-Яа-яЁё\s]+$" required>
               </p>
-              <p class="program__cat-characters">
-                <label for="cat__weigth">Вес (кг):*</label>
-                <input class="program-form__input input-weigth form-field" type="number" id="cat__weigth" name="text" placeholder="7" required>
+              <p>
+                <label class="program-form__field program-form__field-weight" for="cat__weigth">Вес (кг):*</label>
+                <input class="program-form__input" type="number" id="cat__weigth" name="text" placeholder="7" required>
               </p>
-              <p class="program__cat-characters">
-                <label for="cat__age">Возраст (лет):*</label>
-                <input class="program-form__input input-age form-field" type="number" id="cat__age" name="text" placeholder="7" required>
+              <p>
+                <label class="program-form__field program-form__field-age" for="cat__age">Возраст (лет):*</label>
+                <input class="program-form__input" type="number" id="cat__age" name="text" placeholder="7" required>
               </p>
-            </div>
-            <div class="program-form__item program-form__item-weigth">
-              <p class="program__weigth">
-                <input class="visually-hidden filter-input-radio" id="filter-slim" type="radio" name="program" value="slim" checked>
+            </fieldset>
+            <fieldset class="program-form__fieldset program-form__fieldset-weigth">
+              <legend class="visually-hidden">Выбор программы</legend>
+              <p>
+                <input class="visually-hidden program-form__field-radio" id="filter-slim" type="radio" name="program" value="slim" checked>
                 <label for="filter-slim">Похудение</label>
               </p>
-              <p class="program__weigth">
-                <input class="visually-hidden filter-input-radio" id="filter-fat" type="radio" name="program" value="weigth">
+              <p>
+                <input class="visually-hidden program-form__field-radio" id="filter-fat" type="radio" name="program" value="weigth">
                 <label for="filter-fat">Набор массы</label>
               </p>
-              <p class="program__weigth">
-                <input class="visually-hidden filter-input-radio" id="filter-random" type="radio" name="program" value="random">
+              <p>
+                <input class="visually-hidden program-form__field-radio" id="filter-random" type="radio" name="program" value="random">
                 <label for="filter-random">Не знаю (Нужен ваш совет)</label>
               </p>
-            </div>
+            </fieldset>
           </div>
-          <div class="program-form__item program-form__item-contacts">
-            <h3 class="program__item-title program__item-contact">Контактные данные (владельца кота)</h3>
+          <fieldset class="program-form__fieldset program-form__fieldset-contact">
+            <legend class="program-form__legend program-form__legend-contact">Контактные данные (владельца кота)</legend>
             <div class="program-form__wrapper-inner">
-              <p class="program__user-contacts">
-                <label for="user-mail">E-mail:*</label>
-                <input class="user-mail form-field input-mail program-form__input" type="email" id="user-mail" name="text" placeholder="kuklachev@gmail.com" maxlength="30" required>
-                <svg class="program__user-mail mail-icon">
+              <p>
+                <label class="program-form__field program-form__field-mail" for="user-mail">E-mail:*</label>
+                <input class="program-form__input program-form__input-mail" type="email" id="user-mail" name="text" placeholder="kuklachev@gmail.com" maxlength="30" required>
+                <svg class="program-form__svg program-form__svg-mail">
                   <use xlink:href="#icon-mail"></use>
                 </svg>
               </p>
-              <p class="program__user-contacts">
-                <label for="user-phone">Телефон:*</label>
-                <input class="user-phone form-field input-phone program-form__input" type="tel" id="user-phone" name="phone" placeholder="8 (960) 900-60-90" maxlength="11" minlength="11" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
-                <svg class="program__user-phone phone-icon">
+              <p>
+                <label class="program-form__field program-form__field-phone" for="user-phone">Телефон:*</label>
+                <input class="program-form__input program-form__input-phone" type="tel" id="user-phone" name="phone" placeholder="8 (960) 900-60-90" maxlength="11" minlength="11" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+                <svg class="program-form__svg program-form__svg-phone">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
               </p>
             </div>
-          </div>
-          <div class="program-form__item">
-            <h3 class="program__item-title program__item-comment">Комментарий</h3>
-            <textarea class="program-form__comment" cols="30" rows="10"  placeholder="Расскажите обо всех повадках кота"></textarea>
-          </div>
-          <div class="program-form__item">
-            <h3 class="program__item-title program__item-more">Дополнительно</h3>
+          </fieldset>
+          <fieldset class="program-form__fieldset program-form__fieldset-comment">
+            <legend class="program-form__legend program-form__legend-comment">Комментарий</legend>
+            <textarea class="program-form__textarea" cols="30" rows="10"  placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="program-form__fieldset">
+            <legend class="program-form__legend program-form__legend-more">Дополнительно</legend>
             <div class="program-form__item-wrapper">
-              <p class="program__filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-splenda" type="checkbox" name="Сахарохзаменитель" checked>
+              <p class="program-form__field">
+                <input class="visually-hidden program-form__field-checkbox" id="filter-splenda" type="checkbox" name="Сахарохзаменитель" checked>
                 <label for="filter-splenda">Сахарозаменитель</label>
               </p>
-              <p class="program__filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-water" type="checkbox" name="Питьевая вода">
+              <p class="program-form__field">
+                <input class="visually-hidden program-form__field-checkbox" id="filter-water" type="checkbox" name="Питьевая вода">
                 <label for="filter-water">Питьевая вода</label>
               </p>
-              <p class="program__filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-milk" type="checkbox" name="Молоко">
+              <p class="program-form__field">
+                <input class="visually-hidden program-form__field-checkbox" id="filter-milk" type="checkbox" name="Молоко">
                 <label for="filter-milk">Молоко</label>
               </p>
-              <p class="program__filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-vitamines" type="checkbox" name="Витамины">
+              <p class="program-form__field">
+                <input class="visually-hidden program-form__field-checkbox" id="filter-vitamines" type="checkbox" name="Витамины">
                 <label for="filter-vitamines">Витамины</label>
               </p>
             </div>
-          </div>
+          </fieldset>
           <button class="btn program-form__button" type="submit">Отправить заявку</button>
         </form>
         <small class="program__legend">

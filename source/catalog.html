@@ -69,13 +69,13 @@
         </div>
         <nav class="main-nav">
           <div class="main-nav__toggle main-nav__toggle--nojs">
-            <input type="checkbox" id="checkbox1" class="checkbox1 visually-hidden">
-            <label for="checkbox1">
-              <span class="hamburger hamburger1">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-                <span class="bar bar4"></span>
+            <input class="main-nav__toggle-checkbox visually-hidden" type="checkbox" id="hamburger-checkbox">
+            <label for="hamburger-checkbox">
+              <span class="main-nav__toggle-hamburger main-nav__toggle-bars">
+                <span class="main-nav__toggle-bar main-nav__toggle-bar1"></span>
+                <span class="main-nav__toggle-bar main-nav__toggle-bar2"></span>
+                <span class="main-nav__toggle-bar main-nav__toggle-bar3"></span>
+                <span class="main-nav__toggle-bar main-nav__toggle-bar4"></span>
               </span>
             </label>
             <ul class="main-nav__list">
@@ -120,10 +120,10 @@
             <table class="product-card__composition">
               <tr>
                 <td>Масса</td>
-                <td>500 г</td>
+                <td class="product-card__composition-mass">500 г</td>
               </tr>
               <tr>
-                <td>Вкус</td>
+                <td class="product-card__composition-taste">Вкус</td>
                 <td>Курица</td>
               </tr>
               <tr>
@@ -154,7 +154,7 @@
             <table class="product-card__composition">
               <tr>
                 <td>Масса</td>
-                <td>1000 г</td>
+                <td class="product-card__composition-mass">1000 г</td>
               </tr>
               <tr>
                 <td>Вкус</td>
@@ -188,7 +188,7 @@
             <table class="product-card__composition">
               <tr>
                 <td>Масса</td>
-                <td>500 г</td>
+                <td class="product-card__composition-mass">500 г</td>
               </tr>
               <tr>
                 <td>Вкус</td>
@@ -222,7 +222,7 @@
             <table class="product-card__composition">
               <tr>
                 <td>Масса</td>
-                <td>1000 г</td>
+                <td class="product-card__composition-mass">1000 г</td>
               </tr>
               <tr>
                 <td>Вкус</td>
@@ -256,7 +256,7 @@
             <table class="product-card__composition">
               <tr>
                 <td>Масса</td>
-                <td>500 г</td>
+                <td class="product-card__composition-mass">500 г</td>
               </tr>
               <tr>
                 <td>Вкус</td>
@@ -290,11 +290,11 @@
             <table class="product-card__composition">
               <tr>
                 <td>Масса</td>
-                <td>1000 г</td>
+                <td class="product-card__composition-mass">1000 г</td>
               </tr>
               <tr>
                 <td>Вкус</td>
-                <td>Курица</td>
+                <td>Гречка</td>
               </tr>
               <tr>
                 <td>Цена</td>
@@ -303,7 +303,7 @@
             </table>
             <a class="btn product-card__button" href="#">Заказать</a>
           </article>
-          <article class="product-card">
+          <article class="product-card product-card--rice">
             <a href="rice-small.html" class="product-card__link">
               <picture>
                 <source type="image/webp" media="(min-width: 1220px)" srcset="img/rice-small-desktop@1x.webp 1x, img/rice-small-desktop@2x.webp 2x">
@@ -324,7 +324,7 @@
             <table class="product-card__composition">
               <tr>
                 <td>Масса</td>
-                <td>500 г</td>
+                <td class="product-card__composition-mass">500 г</td>
               </tr>
               <tr>
                 <td>Вкус</td>
@@ -357,7 +357,7 @@
               <table class="additional-goods__composition">
                 <tr>
                   <td>1 упаковка (100 г)</td>
-                  <td>200 Р.</td>
+                  <td class="additional-goods__composition-price">200 Р.</td>
                 </tr>
               </table>
               <a class="btn additional-goods__button" href="#">Заказать</a>

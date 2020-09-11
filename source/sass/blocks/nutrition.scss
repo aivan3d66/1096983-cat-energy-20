@@ -66,25 +66,23 @@
   }
 
   .nutrition__lead {
-    margin: 25px 0 27px 0;
+    margin: 27px 0 27px -1px;
   }
 
   .nutrition__button {
     max-width: 280px;
     margin: 0 auto;
-    padding: 11px 10px 10px 10px;
+
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .nutrition {
-    padding: 37px 140px 520px 88px;
+    padding: 37px 140px 518px 88px;
     margin: 0 auto;
     width: 709px;
-
-    a {
-      height: 52px;
-    }
   }
 
   .nutrition__title {
@@ -124,7 +122,8 @@
     left: -5px;
     z-index: 2;
     width: 244px;
-    padding: 17px 10px;
+    min-height: 54px;
+    padding: 17px 20px;
     margin: 0;
 
     font-size: 20px;
@@ -176,10 +175,12 @@
   }
 
   .nutrition__lead {
+    max-width: 290px;
     padding-bottom: 52px;
   }
 
   .nutrition__button {
+    min-height: 54px;
     left: 0;
   }
 }

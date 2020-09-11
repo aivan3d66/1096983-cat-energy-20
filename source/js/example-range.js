@@ -32,14 +32,22 @@ var initSlider = () => {
         window.addEventListener('mouseup', sliderRangePointerOnMouseUp);
     }
 
-    const slider = document.querySelector('.example__slider');
-    const sliderItem = slider.querySelector('.example__item-cat');
-    const sliderRange = slider.querySelector('.example__range-wrapper');
-    const sliderRangePointer = slider.querySelector('.example__range');
+    const slider = document.querySelector('.example-slider');
+    const sliderItem = slider.querySelector('.example-slider__item-cat');
+    const sliderRange = slider.querySelector('.example-slider__range-wrapper');
+    const sliderRangePointer = slider.querySelector('.example-slider__range');
     sliderRangePointer.addEventListener('mousedown', sliderRangePointerOnMouseDown);
 
-    let posInPersents = 53;
+    let posInPersents;
+    let windowWidth = Math.max(document.documentElement.clientWidth);
+      if (windowWidth > 768) {
+        posInPersents = 51;
+      } else {
+        posInPersents = 50;
+      }
     updateSlider(posInPersents);
+
+
 
     let start = null;
     let shift = null;

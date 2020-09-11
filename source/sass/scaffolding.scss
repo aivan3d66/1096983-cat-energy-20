@@ -37,31 +37,3 @@ a {
   text-decoration: none;
   color: $basic_black;
 }
-
-// Стилизация кнопок
-
-.btn {
-  display: block;
-  padding: 10px;
-  height: 40px;
-
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
-  text-transform: uppercase;
-  text-align: center;
-  color: $basic_white;
-
-  background-color: $basic_green;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background-color: $basic_green-2;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
-}

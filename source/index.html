@@ -94,13 +94,13 @@
         </div>
         <nav class="main-nav">
           <div class="main-nav__toggle">
-            <input type="checkbox" id="checkbox1" class="checkbox1 visually-hidden">
-            <label for="checkbox1">
-              <span class="hamburger hamburger1">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-                <span class="bar bar4"></span>
+            <input class="main-nav__toggle-checkbox visually-hidden" type="checkbox" id="hamburger-checkbox">
+            <label for="hamburger-checkbox">
+              <span class="main-nav__toggle-hamburger main-nav__toggle-bars">
+                <span class="main-nav__toggle-bar main-nav__toggle-bar1"></span>
+                <span class="main-nav__toggle-bar main-nav__toggle-bar2"></span>
+                <span class="main-nav__toggle-bar main-nav__toggle-bar3"></span>
+                <span class="main-nav__toggle-bar main-nav__toggle-bar4"></span>
               </span>
             </label>
             <ul class="main-nav__list">
@@ -149,7 +149,7 @@
           <p class="programs__description">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
-          <a href="program-slim.html" class="programs__button ">Каталог Slim</a>
+          <a href="program-slim.html" class="programs__button programs__button-slim">Каталог Slim</a>
         </div>
         <div class="programs__item programs__fat">
           <h3 class="programs__title programs__title-slim">Набор массы </h3>
@@ -159,7 +159,7 @@
           <p class="programs__description programs__description-pro">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
           </p>
-          <a href="program-pro.html" class="programs__button ">Каталог Pro</a>
+          <a href="program-pro.html" class="programs__button programs__button-pro">Каталог Pro</a>
         </div>
       </section>
 
@@ -178,7 +178,7 @@
           </li>
           <li class="explanation__item">
             <p class="explanation__description explanation__description--eat">
-              Замените один-два приёма обычной еды на наше функциональьное питание.
+              Замените один-два приёма обычной еды на наше функциональное питание.
             </p>
           </li>
           <li class="explanation__item">
@@ -212,13 +212,13 @@
             </div>
           </div>
           <div class="example__wrapper-column-right">
-            <div class="example__slider">
-              <input type="radio" class="example__slider-input1" name="slider" id="slide1" checked/>
-              <input type="radio" class="example__slider-input2" name="slider" id="slide2" />
-              <div class="slides">
-                <div class="overflow">
-                  <div class="slides__wrapper example__slider-comparsion">
-                    <div class="slides__item slides__item--hidden">
+            <div class="example-slider">
+              <input type="radio" class="example-slider__input1" name="slider" id="slide1" checked/>
+              <input type="radio" class="example-slider__input2" name="slider" id="slide2" />
+              <div class="example-slider__slides">
+                <div class="example-slider__overflow">
+                  <div class="example-slider__wrapper example-slider__comparsion">
+                    <div class="example-slider__item example-slider__item--hidden">
                       <picture>
                         <source type="image/webp" media="(min-width: 1220px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
                         <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
@@ -230,7 +230,7 @@
                         <img src="img/before-tablet@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Картинка толстого кота">
                       </picture>
                     </div>
-                    <div class="slides__item example__item-cat">
+                    <div class="example-slider__item example-slider__item-cat">
                       <picture>
                         <source type="image/webp" media="(min-width: 1220px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
                         <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
@@ -242,7 +242,7 @@
                         <img src="img/before-tablet@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Картинка толстого кота">
                       </picture>
                     </div>
-                    <div class="slides__item slider__item-after">
+                    <div class="example-slider__item example-slider__item-after">
                       <picture>
                         <source type="image/webp" media="(min-width: 1220px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
                         <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
@@ -254,21 +254,21 @@
                         <img src="img/after-mobile@2x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Картинка худого кота">
                       </picture>
                     </div>
-                    <div class="example__range-wrapper">
-                      <span class="example__range"></span>
+                    <div class="example-slider__range-wrapper">
+                      <span class="example-slider__range"></span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="active">
-                <label class="active__dots" for="slide1"></label>
-                <label class="active__dots" for="slide2"></label>
+              <div class="example-slider__active">
+                <label class="example-slider__active-dots" for="slide1"></label>
+                <label class="example-slider__active-dots" for="slide2"></label>
               </div>
 
-              <div class="example__slider-description">
-                <span class="example__slider-btn btn-before example__slider-item">Было</span>
-                <span class="example__slider-btn btn-after example__slider-item">Стало</span>
+              <div class="example-slider__description">
+                <span class="example-slider__btn btn-before example__slider-item">Было</span>
+                <span class="example-slider__btn btn-after example__slider-item">Стало</span>
               </div>
             </div>
           </div>
@@ -335,6 +335,7 @@
       </div>
     </footer>
     <script src="js/script.min.js"></script>
+    <script src="js/addBr.min.js"></script>
     <script src="js/example-range.min.js"></script>
   </body>
 </html>
