@@ -1,3 +1,12 @@
+.catalog {
+  position: relative;
+  min-width: 320px;
+  max-width: 1220px;
+
+  padding: 0;
+  margin: 0 auto;
+}
+
 .catalog__main-title {
   font-weight: normal;
   font-size: 36px;
@@ -24,21 +33,14 @@
   text-align: center;
 }
 
-.catalog {
-  position: relative;
-  min-width: 320px;
-  max-width: 1220px;
-
-  padding: 0;
-  margin: 0 auto;
-}
-
 .catalog__show-more svg {
   position: absolute;
   top: 26px;
   left: 145px;
   width: 30px;
   height: 30px;
+  fill: #d3d3d3;
+  color: #d3d3d3;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -129,7 +131,6 @@
       left: 130px;
       width: 60px;
       height: 60px;
-      fill: $basic_gray;
     }
   }
 
@@ -165,9 +166,9 @@
     padding: 20px 0;
 
     h2 {
-      margin-top: 27px;
+      margin-top: 28px;
       margin-left: 1px;
-      margin-bottom: 58px;
+      margin-bottom: 57px;
     }
   }
 
