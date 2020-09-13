@@ -47,8 +47,6 @@ var initSlider = () => {
       }
     updateSlider(posInPersents);
 
-
-
     let start = null;
     let shift = null;
     let shiftInPersents = null;

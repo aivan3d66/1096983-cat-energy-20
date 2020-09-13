@@ -1,16 +1,20 @@
 .contacts__lead {
   font-weight: normal;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 20px;
   text-transform: uppercase;
+
+  margin: auto 0;
 }
 
 .contacts__address {
   font-family: $additional_font;
   font-weight: normal;
   font-size: 14px;
-  line-height: 143%;
+  line-height: 20px;
   color: $special_dark-gray;
+
+  margin: auto 0;
 }
 
 .contacts {
@@ -195,10 +199,7 @@
   }
 
   .contacts__map-wrapepr::after {
-    position: absolute;
-    z-index: 3;
-    top: 134px;
-    left: 62.5%;
+    display: none;
   }
 
   .contacts__text-info {
@@ -216,7 +217,7 @@
     }
 
     .contacts__address p {
-      margin-top: 12px;
+      margin-top: 9px;
     }
   }
 
