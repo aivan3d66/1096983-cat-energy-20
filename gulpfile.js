@@ -11,7 +11,6 @@ const imagemin = require("gulp-imagemin");
 const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
 const del = require("del");
-const jsmin = require("gulp-jsmin");
 const htmlMinimizer = require("gulp-html-minimizer");
 const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
@@ -69,17 +68,6 @@ const html = () => {
 }
 
 exports.html = html;
-
-// JSmin
-
-const jsmini = () => {
-  return gulp.src("build/js/*.js")
-    .pipe(jsmin())
-    .pipe(rename({suffix: ".min"}))
-    .pipe(gulp.dest("build/js"));
-};
-
-exports.jsmini = jsmini;
 
 // Copying build
 
@@ -151,6 +139,6 @@ exports.webpic = webpic;
 
 // Create build
 
-const build = gulp.series(clean, images, sprite, webpic, copy, jsmini, html, minifyHTML, styles);
+const build = gulp.series(clean, images, sprite, webpic, copy, html, minifyHTML, styles);
 
 exports.build = build;
