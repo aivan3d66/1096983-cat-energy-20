@@ -12,7 +12,7 @@ Course: HTML и CSS. Adaptive Website Coding and Automation. Level 2.
 To get started, clone repo and run:
 ### `terminal`
 
-In project folder:
+In the project directory:
 ### `npm install`
 
 And:
