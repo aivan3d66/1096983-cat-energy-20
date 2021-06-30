@@ -1,20 +1,20 @@
-# Личный проект «Кэт энерджи» 
+# Project «Cat Energy» 
 
 HTML Academy.
-Курс: HTML и CSS. Профессиональная вёрстка сайтов. Уровень 2. 
-- свёрстаны 3 страницы: главная, каталог и форма обратной связи
-- разметка по БЭМ
-- адаптивные сетки (Desktop, tablet, mobile) используя флексы и гриды
-- используется адаптивная, векторная и ретиновая графика
-- используется препроцессор SASS
-- автоматизация сборки проекта с помощью Gulp
+Course: HTML и CSS. Adaptive Website Coding and Automation. Level 2. 
+- was created 3 pages: main, catalog and feedback form
+- BEM markup
+- adaptive design (desktop, tablet, mobile) flex and grid-based layout, "Mobile first"
+- adaptive, vector and retina graphics
+- used SASS preprocessor
+- automation by Gulp
 
-Для запуска приложения необходимо клонировать репозиторий через:
+To get started, clone repo and run:
 ### `terminal`
 
-В папке проекта:
+In project folder:
 ### `npm install`
 
-Затем:
+And:
 ### `npm start`
 
